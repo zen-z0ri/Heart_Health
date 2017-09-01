@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import {AuthServiceProvider, User} from '../../providers/auth-service/auth-service';
-import {ProfilePage} from "../profile/profile";
-import {MedicinePage} from "../medicine/medicine";
-import {SettingPage} from "../setting/setting";
+import { IonicPage, NavController } from 'ionic-angular';
+import { AuthServiceProvider, User } from '../../providers/auth-service/auth-service';
+import { ProfilePage} from "../profile/profile";
+import { MedicinePage} from "../medicine/medicine";
+import { SettingPage} from "../setting/setting";
 
 
 /**

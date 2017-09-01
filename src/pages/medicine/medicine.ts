@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, AlertController } from 'ionic-angular';
+import { BarcodeScanner, BarcodeScannerOptions, BarcodeScanResult} from "@ionic-native/barcode-scanner";
+
 
 /**
  * Generated class for the MedicinePage page.
@@ -14,12 +16,18 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'medicine.html',
 })
 export class MedicinePage {
+  options: BarcodeScannerOptions;
+  results: BarcodeScanResult;
+  constructor(public navCtrl: NavController, private barcodeScanner: BarcodeScanner, private alertCtrl: AlertController,) {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad MedicinePage');
+  }
+  async scanBarcode(){
+    this.results = await this.barcodeScanner.scan();
+    console.log(this.results);
   }
 
 }
