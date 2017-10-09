@@ -20,10 +20,10 @@
     <preference name="SplashMaintainAspectRatio" value="true" />
     <preference name="AutoHideSplashScreen" value="false" />
     <preference name="loadUrlTimeoutValue" value="700000" />
-    <preference name="FadeSplashScreenDuration" value="300" />
+    <preference name="FadeSplashScreenDuration" value="2000" />
     <preference name="SplashShowOnlyFirstTime" value="false" />
     <preference name="SplashScreen" value="screen" />
-    <preference name="SplashScreenDelay" value="4000" />
+    <preference name="SplashScreenDelay" value="2000" />
     <platform name="android">
         <preference name="ShowSplashScreenSpinner" value="ture" />
         <icon density="ldpi" src="resources/android/icon/drawable-ldpi-icon.png" />

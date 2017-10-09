@@ -10,6 +10,7 @@ import { AuthServiceProvider } from '../providers/auth-service/auth-service';
 import { MedicinePage} from "../pages/medicine/medicine";
 import { ProfilePage} from "../pages/profile/profile";
 import { SettingPage} from "../pages/setting/setting";
+import { SplashPage} from "../pages/splash/splash";
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { SettingPage} from "../pages/setting/setting";
     MedicinePage,
     ProfilePage,
     SettingPage,
+    SplashPage,
   ],
   imports: [
     BrowserModule,
@@ -27,7 +29,8 @@ import { SettingPage} from "../pages/setting/setting";
     MyApp,
     MedicinePage,
     ProfilePage,
-    SettingPage
+    SettingPage,
+    SplashPage,
   ],
   providers: [
     StatusBar,
