@@ -1,3 +1,10 @@
+$new-color: #b71c1c;
 page-home {
 
+  $toolbar-ios-background:($new-color);
+  $toolbar-md-background:($new-color);
+  $toolbar-wp-background:($new-color);
+}
+.nav {
+  background-color: #b71c1c;
 }

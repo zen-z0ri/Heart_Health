@@ -6,7 +6,9 @@
 -->
 <ion-header>
 
-  <ion-navbar>
+  <ion-navbar color="red_dark">
+
+
     <ion-buttons end>
       <button ion-button (click)="logout()">
         <ion-icon name="log-out"></ion-icon>
@@ -17,10 +19,10 @@
 </ion-header>
 
 
-<ion-content class="home" padding>
+<ion-content class="home" >
   <ion-tabs selectedIndex="0">
-    <ion-tab [root]="tab1Root" tabTitle="Discover" tabIcon="compass"></ion-tab>
-    <ion-tab [root]="tab2Root" tabTitle="Me" tabIcon="aperture"></ion-tab>
-    <ion-tab [root]="tab3Root" tabTitle="Chats" tabIcon="contacts"></ion-tab>
+    <ion-tab [root]="tab1Root" tabTitle="Medicine" tabIcon="pulse"></ion-tab>
+    <ion-tab [root]="tab2Root" tabTitle="Profile" tabIcon="aperture"></ion-tab>
+    <ion-tab [root]="tab3Root" tabTitle="Setting" tabIcon="cog"></ion-tab>
   </ion-tabs>
 </ion-content>
