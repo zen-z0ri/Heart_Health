@@ -1,9 +1,17 @@
-$new-color: #b71c1c;
-page-home {
 
-  $toolbar-ios-background:($new-color);
-  $toolbar-md-background:($new-color);
-  $toolbar-wp-background:($new-color);
+page-home {
+  ion-navbar{
+    span {
+      color: #F8F8F8;
+      font-size: large;
+      position: relative;
+      left: 16px;
+    }
+    button {
+      right: 10px;
+    }
+  }
+
 }
 .nav {
   background-color: #b71c1c;

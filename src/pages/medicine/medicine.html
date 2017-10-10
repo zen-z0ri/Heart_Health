@@ -9,69 +9,54 @@
 </ion-header>
 
 
-<ion-content padding>
-  <ion-fab center middle>
-    <button ion-fab color="danger"><ion-icon name="md-share"></ion-icon></button>
-    <ion-fab-list side="top">
-      <button ion-fab color="primary"><ion-icon name="logo-vimeo"></ion-icon></button>
-    </ion-fab-list>
-    <ion-fab-list side="bottom">
-      <button ion-fab color="secondary"><ion-icon name="logo-facebook"></ion-icon></button>
-    </ion-fab-list>
-    <ion-fab-list side="left">
-      <button ion-fab color="light"><ion-icon name="logo-googleplus"></ion-icon></button>
-    </ion-fab-list>
-    <ion-fab-list side="right">
-      <button ion-fab color="dark"><ion-icon name="logo-twitter"></ion-icon></button>
-    </ion-fab-list>
-  </ion-fab>
+<ion-content padding [attr.noScroll]="shouldScroll" class="bg-style">
+  <ion-content id="quick_acc">
+    <div id="content">
+      <ion-fab center middle>
 
-  <br/>
+        <button ion-fab color="primary"><ion-icon name="heart"></ion-icon></button>
+        <ion-fab-list side="top">
+          <button ion-fab color="red_dark"><ion-icon name="add"></ion-icon></button>
+        </ion-fab-list>
+        <ion-fab-list side="left">
+          <button ion-fab color="light"><ion-icon name="card"></ion-icon></button>
+        </ion-fab-list>
+        <ion-fab-list side="right">
+          <button ion-fab color="dark"><ion-icon name="analytics"></ion-icon></button>
+        </ion-fab-list>
+      </ion-fab>
+    </div>
+  </ion-content>
 
-  <button ion-button (click)="scanBarcode()">fs</button>
-  <div *ngIf="results">
-    <p>{{results.text}}</p>
-    <p>{{results.format}}</p>
-    <p>{{results.cancelled}}</p>
+  <!--<button ion-button (click)="scanBarcode()">fs</button>-->
+  <!--<div *ngIf="results">-->
+    <!--<p>{{results.text}}</p>-->
+    <!--<p>{{results.format}}</p>-->
+    <!--<p>{{results.cancelled}}</p>-->
+  <!--</div>-->
+
+
+  <div class="card-background-page">
+
+    <ion-card>
+      <img src="assets/img/My-Medicines.jpg"/>
+      <div class="card-title">My Medicines</div>
+      <div class="card-subtitle">Check your medicines</div>
+    </ion-card>
+
+    <ion-card>
+      <img src="assets/img/Health-Tips.jpg"/>
+      <div class="card-title">Health Tips</div>
+      <div class="card-subtitle">Health Tips from Doctor</div>
+    </ion-card>
+
+    <ion-card>
+      <img src="assets/img/Information.jpg"/>
+      <div class="card-title">Information</div>
+      <div class="card-subtitle">User Manual</div>
+    </ion-card>
+
+
+
   </div>
-
-
-  <ion-card>
-    <ion-card-header>
-      Explore Nearby
-    </ion-card-header>
-
-    <ion-list>
-      <button ion-item>
-        <ion-icon name="cart" item-start></ion-icon>
-        Shopping
-      </button>
-
-      <button ion-item>
-        <ion-icon name="medical" item-start></ion-icon>
-        Hospital
-      </button>
-
-      <button ion-item>
-        <ion-icon name="cafe" item-start></ion-icon>
-        Cafe
-      </button>
-
-      <button ion-item>
-        <ion-icon name="paw" item-start></ion-icon>
-        Dog Park
-      </button>
-
-      <button ion-item>
-        <ion-icon name="beer" item-start></ion-icon>
-        Pub
-      </button>
-
-      <button ion-item>
-        <ion-icon name="planet" item-start></ion-icon>
-        Space
-      </button>
-
-    </ion-list>
-  </ion-card>
 </ion-content>

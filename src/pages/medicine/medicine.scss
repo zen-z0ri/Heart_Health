@@ -1,3 +1,50 @@
+[noScroll] {
+  overflow: hidden;
+}
+
 page-medicine {
+  background-color: #f05545;
+  #quick_acc {
+    background-color: transparent;
+    height: 50%;
+    border: none !important;
+    box-shadow: none !important;
+    #content {
+      position: relative;
+      margin-top: 110px;
+      background-color: white;
+      box-shadow: 0px -1px 0px rgba(0,0,0,0.4);
+      padding-top: 100px;
+      ion-fab {
+        position: absolute;
+        top: 0;
+      }
+    }
+  }
+
+  ion-card {
+    background-color: #030303;
+    position: relative;
+    text-align: center;
+    margin-bottom: 41px;
+  }
+
+  .card-title {
+    position: absolute;
+    top: 36%;
+    font-size: 2.3em;
+    width: 100%;
+    font-weight: bold;
+    color: #ffffff;
+  }
+
+  .card-subtitle {
+    font-size: 1.0em;
+    position: absolute;
+    top: 52%;
+    width: 100%;
+    color: #fff;
+  }
+
 
 }
