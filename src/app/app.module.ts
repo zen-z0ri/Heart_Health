@@ -5,7 +5,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 import { BarcodeScanner } from "@ionic-native/barcode-scanner";
 
-import { MyApp } from './app.component';
+import { HeartLink } from './app.component';
 import { AuthServiceProvider } from '../providers/auth-service/auth-service';
 import { MedicinePage} from "../pages/medicine/medicine";
 import { ProfilePage} from "../pages/profile/profile";
@@ -14,7 +14,7 @@ import { SplashPage} from "../pages/splash/splash";
 
 @NgModule({
   declarations: [
-    MyApp,
+    HeartLink,
     MedicinePage,
     ProfilePage,
     SettingPage,
@@ -22,11 +22,11 @@ import { SplashPage} from "../pages/splash/splash";
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(HeartLink)
   ],
   bootstrap: [IonicApp],
   entryComponents: [
-    MyApp,
+    HeartLink,
     MedicinePage,
     ProfilePage,
     SettingPage,

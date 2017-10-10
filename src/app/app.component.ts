@@ -7,7 +7,7 @@ import { SplashPage} from "../pages/splash/splash";
 @Component({
   templateUrl: 'app.html'
 })
-export class MyApp {
+export class HeartLink {
   rootPage:any = 'LoginPage';
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen, modalCtrl:ModalController) {
