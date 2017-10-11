@@ -5,8 +5,6 @@
 page-medicine {
   background-color: #f05545;
   #quick_acc {
-    background-color: transparent;
-    height: 50%;
     border: none !important;
     box-shadow: none !important;
     #content {
@@ -24,9 +22,10 @@ page-medicine {
 
   ion-card {
     background-color: #030303;
+    height: 180px;
     position: relative;
     text-align: center;
-    margin-bottom: 41px;
+    margin-bottom: 66px;
   }
 
   .card-title {
@@ -35,15 +34,15 @@ page-medicine {
     font-size: 2.3em;
     width: 100%;
     font-weight: bold;
-    color: #ffffff;
+    color: #480000;
   }
 
   .card-subtitle {
     font-size: 1.0em;
     position: absolute;
-    top: 52%;
+    top: 60%;
     width: 100%;
-    color: #fff;
+    color: #480000;
   }
 
 

@@ -27,7 +27,7 @@ export class HomePage {
 
   constructor(public navCtrl: NavController, public auth: AuthServiceProvider) {
     let info: User = this.auth.userInfo;
-    this.username = info.name;
+    this.username = info.name+'';
   }
 
   ionViewDidLoad() {

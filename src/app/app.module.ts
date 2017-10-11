@@ -11,6 +11,7 @@ import { MedicinePage} from "../pages/medicine/medicine";
 import { ProfilePage} from "../pages/profile/profile";
 import { SettingPage} from "../pages/setting/setting";
 import { SplashPage} from "../pages/splash/splash";
+import { HeartRatePage} from "../pages/heart-rate/heart-rate";
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { SplashPage} from "../pages/splash/splash";
     ProfilePage,
     SettingPage,
     SplashPage,
+    HeartRatePage,
   ],
   imports: [
     BrowserModule,
@@ -31,6 +33,7 @@ import { SplashPage} from "../pages/splash/splash";
     ProfilePage,
     SettingPage,
     SplashPage,
+    HeartRatePage,
   ],
   providers: [
     StatusBar,

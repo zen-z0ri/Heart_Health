@@ -10,5 +10,34 @@
 
 
 <ion-content padding>
+  <ion-card>
 
+    <ion-item>
+      <h2>Dr. Yang</h2>
+    </ion-item>
+    <img src="assets/img/Call-doctor.jpg">
+
+    <ion-row>
+      <ion-col>
+        <button ion-button icon-left clear small>
+          <ion-icon name="call"></ion-icon>
+          <div>Make Call</div>
+        </button>
+      </ion-col>
+      <ion-col>
+        <button ion-button icon-left clear small>
+          <ion-icon name="settings"></ion-icon>
+          <div>Change Number</div>
+        </button>
+      </ion-col>
+    </ion-row>
+
+  </ion-card>
+
+  <ion-list>
+    <button ion-item *ngFor="let item of items" (click)="openNavDetailsPage(item)" icon-start>
+      <ion-icon [name]="item.iconN" [ngStyle]="{'color': item.color}" item-start></ion-icon>
+      {{ item.title }}
+    </button>
+  </ion-list>
 </ion-content>

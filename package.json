@@ -21,11 +21,13 @@
         "@angular/platform-browser": "^4.3.6",
         "@angular/platform-browser-dynamic": "^4.3.6",
         "@ionic-native/barcode-scanner": "^4.2.1",
+        "@ionic-native/call-number": "^4.3.1",
         "@ionic-native/core": "^4.2.1",
         "@ionic-native/health": "^4.3.1",
         "@ionic-native/splash-screen": "^4.2.1",
         "@ionic-native/status-bar": "^4.2.1",
         "@ionic/storage": "2.0.1",
+        "call-number": "^1.0.1",
         "cordova-android": "^6.2.3",
         "cordova-browser": "^5.0.0",
         "cordova-ios": "^4.4.0",
@@ -42,7 +44,8 @@
         "rxjs": "^5.4.3",
         "simple-plist": "^0.2.1",
         "sw-toolbox": "3.6.0",
-        "zone.js": "^0.8.17"
+        "zone.js": "^0.8.17",
+        "mx.ferreyra.callnumber": "~0.0.2"
     },
     "devDependencies": {
         "@ionic/app-scripts": "2.1.4",
@@ -58,7 +61,8 @@
             "cordova-plugin-whitelist": {},
             "ionic-plugin-keyboard": {},
             "phonegap-plugin-barcodescanner": {},
-            "cordova-plugin-health": {}
+            "cordova-plugin-health": {},
+            "mx.ferreyra.callnumber": {}
         },
         "platforms": [
             "android",
