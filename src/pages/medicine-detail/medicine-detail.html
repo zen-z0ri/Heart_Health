@@ -5,10 +5,42 @@
   Ionic pages and navigation.
 -->
 <ion-header>
-
+  <ion-navbar color="red_light">
+    <ion-title>Medicine Detail</ion-title>
+  </ion-navbar>
 </ion-header>
 
 
 <ion-content padding>
+  <ion-item>
+    <ion-label>Name</ion-label>
+
+  </ion-item>
+  <ion-item>
+    <ion-label>BarCode</ion-label>
+
+  </ion-item>
+  <ion-item>
+    <ion-label>Discription</ion-label>
+
+  </ion-item>
+
+
+  <ion-list class="timeList">
+    <ion-list-header>
+      Alarm time
+    </ion-list-header>
+    <ion-item>
+      <ion-label>Alarm</ion-label>
+      <ion-datetime displayFormat="h:mm A" pickerFormat="h mm A" [(ngModel)]="event.timeStarts"></ion-datetime>
+    </ion-item>
+    <ion-item>
+      <ion-label>Alarm</ion-label>
+      <ion-datetime displayFormat="h:mm A" pickerFormat="h mm A" [(ngModel)]="event.timeStarts"></ion-datetime>
+    </ion-item>
+    <button ion-item icon-start>
+      Add
+    </button>
+  </ion-list>
 
 </ion-content>

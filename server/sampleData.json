@@ -1,0 +1,49 @@
+[
+  {
+    "user": {
+      "name": "dong",
+      "email": "tungreeboo@gmail.com",
+      "password": "heart"
+    },
+    "medicine": [
+      {
+        "medName": "oreo",
+        "barcode": 121212,
+        "discription": "good cookie"
+      },
+      {
+        "medName": "burger",
+        "barcode": 3434343,
+        "discription": "Big Mac"
+      }
+    ],
+    "doctor":{
+      "docName": "Nagasawa Masami",
+      "phoneNumber": 1393102020
+    }
+  },
+  {
+    "user": {
+      "name": "DYB",
+      "email": "DYB@gmail.com",
+      "password": "DYB"
+    },
+    "medicine": [
+      {
+        "medName": "oreo",
+        "barcode": 121212,
+        "discription": "good cookie"
+      },
+      {
+        "medName": "fries",
+        "barcode": 80890898,
+        "discription": "Better with coke"
+      }
+    ],
+    "doctor":{
+      "docName": "Aragaki Yui",
+      "phoneNumber": 888888888
+    }
+  }
+
+]

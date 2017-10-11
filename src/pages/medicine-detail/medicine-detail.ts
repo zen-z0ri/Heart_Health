@@ -14,6 +14,12 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'medicine-detail.html',
 })
 export class MedicineDetailPage {
+  public event = {
+    month: '1990-02-19',
+    timeStarts: '07:43',
+    timeEnds: '1990-02-20'
+  }
+
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
