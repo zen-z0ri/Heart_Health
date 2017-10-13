@@ -4,6 +4,7 @@ import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 import { BarcodeScanner } from "@ionic-native/barcode-scanner";
+import { HttpModule} from '@angular/http';
 
 import { HeartLink } from './app.component';
 import { AuthServiceProvider } from '../providers/auth-service/auth-service';
@@ -27,6 +28,7 @@ import { MedicineDetailPage} from "../pages/medicine-detail/medicine-detail";
     MedicineDetailPage,
   ],
   imports: [
+    HttpModule,
     BrowserModule,
     IonicModule.forRoot(HeartLink)
   ],

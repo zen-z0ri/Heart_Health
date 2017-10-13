@@ -3,23 +3,33 @@
     "user": {
       "name": "dong",
       "email": "tungreeboo@gmail.com",
-      "password": "heart"
-    },
-    "medicine": [
-      {
-        "medName": "oreo",
-        "barcode": 121212,
-        "discription": "good cookie"
-      },
-      {
-        "medName": "burger",
-        "barcode": 3434343,
-        "discription": "Big Mac"
+      "password": "heart",
+      "medicine": [
+        {
+          "medName": "oreo",
+          "barcode": 121212,
+          "medInfo": "good cookie"
+        },
+        {
+          "medName": "burger",
+          "barcode": 3434343,
+          "medInfo": "Big Mac"
+        }
+      ],
+      "Health":[
+        {"HealthID": "Blood Presure",
+          "HealthVal": 121},
+        {"HealthID": "Blood Presure",
+          "HealthVal": 110},
+        {"HealthID": "Blood Presure",
+          "HealthVal": 130},
+        {"HealthID": "Heart rate",
+          "HealthVal": 90}
+      ],
+      "doctor":{
+        "docName": "Nagasawa Masami",
+        "phoneNumber": 1393102020
       }
-    ],
-    "doctor":{
-      "docName": "Nagasawa Masami",
-      "phoneNumber": 1393102020
     }
   },
   {
@@ -32,18 +42,26 @@
       {
         "medName": "oreo",
         "barcode": 121212,
-        "discription": "good cookie"
+        "medInfo": "good cookie"
       },
       {
         "medName": "fries",
         "barcode": 80890898,
-        "discription": "Better with coke"
+        "medInfo": "Better with coke"
       }
     ],
     "doctor":{
       "docName": "Aragaki Yui",
       "phoneNumber": 888888888
-    }
+    },
+    "Health":[
+      {"HealthID": "Blood Presure",
+        "HealthVal": 121},
+      {"HealthID": "Blood Presure",
+        "HealthVal": 110},
+      {"HealthID": "Blood Presure",
+        "HealthVal": 130}
+    ]
   }
 
 ]

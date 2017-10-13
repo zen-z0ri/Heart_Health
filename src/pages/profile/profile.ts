@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { HeartRatePage} from "../heart-rate/heart-rate";
+import { AuthServiceProvider, MedicineInfo, User, Health} from "../../providers/auth-service/auth-service";
 
 /**
  * Generated class for the ProfilePage page.
@@ -18,6 +19,7 @@ export class ProfilePage {
 
 
   items = [];
+
 
   constructor(public nav: NavController) {
     this.items = [
@@ -52,5 +54,5 @@ export class ProfilePage {
   openNavDetailsPage(item) {
     this.nav.push(HeartRatePage, { item: item });
   }
-
 }
+

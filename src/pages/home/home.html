@@ -7,8 +7,8 @@
 <ion-header>
 
   <ion-navbar color="primary">
-    <span>Heart Link</span>
-
+    <span>Heart Link for: </span>
+    <span >{{this.auth.userInfo.name}}</span>
     <ion-buttons end>
       <button ion-button (click)="logout()">
         <ion-icon name="log-out"></ion-icon>

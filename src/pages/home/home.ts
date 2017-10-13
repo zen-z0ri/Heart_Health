@@ -1,9 +1,11 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController } from 'ionic-angular';
-import { AuthServiceProvider, User } from '../../providers/auth-service/auth-service';
+import { AuthServiceProvider, MedicineInfo, User, Health} from "../../providers/auth-service/auth-service";
 import { ProfilePage} from "../profile/profile";
 import { MedicinePage} from "../medicine/medicine";
 import { SettingPage} from "../setting/setting";
+
+
 
 
 /**
@@ -19,7 +21,7 @@ import { SettingPage} from "../setting/setting";
   templateUrl: 'home.html',
 })
 export class HomePage {
-  username: string = '';
+  // username: string = '';
 
   tab1Root = MedicinePage;
   tab2Root = ProfilePage;
@@ -27,7 +29,7 @@ export class HomePage {
 
   constructor(public navCtrl: NavController, public auth: AuthServiceProvider) {
     let info: User = this.auth.userInfo;
-    this.username = info.name+'';
+    // this.username = info.name+'';
   }
 
   ionViewDidLoad() {

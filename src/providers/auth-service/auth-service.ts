@@ -1,32 +1,60 @@
 import { Injectable } from '@angular/core';
 import { Observable} from 'rxjs/Observable';
+import { Http, Headers } from '@angular/http';
+
 import 'rxjs/add/operator/map';
 
+export class MedicineInfo {
+  medName: string;
+  barcode: string;
+  medInfo: string;
+
+  constructor(medName: string, barcode: string, medInfo: string) {
+    this.medName = medName;
+    this.barcode = barcode;
+    this.medInfo = medInfo;
+  }
+}
+export class Health {
+  HealthID: string;
+  HealthVal: number;
+  constructor(HealthID: string, HealthVal: number) {
+    this.HealthID = HealthID;
+    this.HealthVal = HealthVal;
+  }
+}
 export class User {
   name: string;
   email: string;
   password: string;
-
-  constructor(name: string, email: string, password: string) {
-    this.name = name;
-    this.email = email;
-    this.password = password;
-  }
+  medicineList: [MedicineInfo];
+  healthInfo: [Health];
+  // constructor(name: string, email: string, password: string) {
+  //   this.name = name;
+  //   this.email = email;
+  //   this.password = password;
+  // }
 }
 
 @Injectable()
 export class AuthServiceProvider {
   currentUser: User;
 
+  // data:User;
+  constructor(public http: Http) {
+  }
   public login(credentials) {
     if (credentials.email === null || credentials.password === null) {
       return Observable.throw("Please insert credentials");
     } else {
+      this.http.get('http://localhost:8080/login'+'?name='+credentials.name+"&password="+credentials.password).map(res => res.json()).subscribe(data => this.currentUser = data);
       return Observable.create(observer => {
         // fix to add more code to check login
         //root pass word
-        let access = (credentials.email === "q" && credentials.password === "q");
-        this.currentUser = new User('zen-z0ri', 'tungreeboo@gmail.com', 'qqq');
+
+        let access = (this.currentUser!==null);
+
+        // this.currentUser = new User("f", this.data.user.email, this.data.user.password);
         observer.next(access);
         observer.complete();
       });

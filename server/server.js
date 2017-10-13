@@ -4,19 +4,17 @@ let app      = express();                               // create our app w/ exp
 let mongoose = require('mongoose');                     // mongoose for mongodb
 let morgan = require('morgan');             // log requests to the console (express4)
 let bodyParser = require('body-parser');    // pull information from HTML POST (express4)
-let methodOverride = require('method-override'); // simulate DELETE and PUT (express4)
 let cors = require('cors');
 
 // Configuration
 mongoose.connect('mongodb://localhost/heart', function () {
-			console.log('mongodb connected');
-		});
+  console.log('mongodb connected');
+});
 
 app.use(morgan('dev'));                                         // log every request to the console
 app.use(bodyParser.urlencoded({'extended':'true'}));            // parse application/x-www-form-urlencoded
 app.use(bodyParser.json());                                     // parse application/json
 app.use(bodyParser.json({ type: 'application/vnd.api+json' })); // parse application/vnd.api+json as json
-app.use(methodOverride());
 app.use(cors());
 
 app.use(function(req, res, next) {
@@ -27,52 +25,57 @@ app.use(function(req, res, next) {
 });
 
 // Models
-var InfoSchema = mongoose.Schema('information', {
+let InfoSchema = mongoose.Schema({
 	user: {
 		name: String,
 		email: String,
 		password: String
 	},
-	medicine: [
-		{
-			medName: String,
-			barcode: Number,
-			discription: String,
-			time:[String],
-		}
-	],
+	medicine: [{
+    medName: String,
+    barcode: String,
+    medInfo: String,
+  }],
 	doctor:{
 		docName: String,
 		phoneNumber: Number
-	}
+	},
+  Health:[{
+    HealthID: String,
+    HealthVal: Number
+  }]
 });
 
+// let MedicineSchema = mongoose.Schema('medicine',{
+//   medName: String,
+//   barcode: Stirng,
+//   medInfo: String,
+// });
+// let HealthSchema = mongoose.Schema('health',{
+//   HealthID: String,
+//   HealthVal: Number
+// });
 const Information = mongoose.model('heart', InfoSchema, 'information');
+// const Medicine = mongoose.model('heart', MedicineSchema, 'information');
+// const Health = mongoose.model('heart', HealthSchema, 'information');
+
 // Routes
+app.get('/login', function(req, res) {
 
-// Get reviews
-app.get('/api/reviews', function(req, res) {
-
-	console.log("fetching reviews");
-
-	// use mongoose to get all reviews in the database
-	Review.find(function(err, reviews) {
-
+	console.log("login");
+  Information.find({ "user.name": req.query.name, $and: [ { "user.password": req.query.password } ] },function(err, information) {
 		// if there is an error retrieving, send the error. nothing after res.send(err) will execute
-		if (err)
-			res.send(err)
-
-		res.json(reviews); // return all reviews in JSON format
+		if (err) res.send(err);
+		console.log(information.toString());
+		res.json(information); // return all reviews in JSON format
 	});
 });
 
 // create review and send back all reviews after creation
-app.post('/api/reviews', function(req, res) {
-
+app.post('/update', function(req, res) {
 	console.log("creating review");
-
 	// create a review, information comes from request from Ionic
-	Review.create({
+  Information.update({
 		title : req.body.title,
 		description : req.body.description,
 		rating: req.body.rating,
@@ -88,16 +91,27 @@ app.post('/api/reviews', function(req, res) {
 			res.json(reviews);
 		});
 	});
-
 });
 
-// delete a review
-app.delete('/api/reviews/:review_id', function(req, res) {
-	Review.remove({
-		_id : req.params.review_id
-	}, function(err, review) {
+app.post('/update', function(req, res) {
+  console.log("creating review");
+  // create a review, information comes from request from Ionic
+  Information.update({
+    title : req.body.title,
+    description : req.body.description,
+    rating: req.body.rating,
+    done : false
+  }, function(err, review) {
+    if (err)
+      res.send(err);
 
-	});
+    // get and return all the reviews after you create another
+    Review.find(function(err, reviews) {
+      if (err)
+        res.send(err)
+      res.json(reviews);
+    });
+  });
 });
 
 

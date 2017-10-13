@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, AlertController, LoadingController, Loading } from 'ionic-angular';
-import { AuthServiceProvider, User} from "../../providers/auth-service/auth-service";
+import { AuthServiceProvider, MedicineInfo, User, Health} from "../../providers/auth-service/auth-service";
 
 /**
  * Generated class for the LoginPage page.
@@ -22,12 +22,9 @@ export class LoginPage {
               private auth: AuthServiceProvider,
               private alertCtrl: AlertController,
               private loadingCtrl: LoadingController) {}
-
-
   public createAccount() {
     this.navCtrl.push('RegisterPage');
   }
-
   public login() {
     this.showLoading();
     this.auth.login(this.registerCredentials).subscribe(allowed => {
