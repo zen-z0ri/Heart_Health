@@ -5,17 +5,28 @@
   Ionic pages and navigation.
 -->
 <ion-header>
-  <ion-navbar color="red_light">
-    <ion-title>Medicine List</ion-title>
-  </ion-navbar>
+  <!--<ion-navbar color="red_light">-->
+    <!--<ion-title>Medicine List</ion-title>-->
+  <!--</ion-navbar>-->
 </ion-header>
 
 
 <ion-content padding>
   <ion-list>
-    <button ion-item *ngFor="let item of items" (click)="openNavDetailsPage(item)" icon-start>
-      <ion-icon [name]="item.iconN" [ngStyle]="{'color': item.color}" item-start></ion-icon>
-      {{ item.title }}
+    <ion-item-sliding *ngFor="let medicine of medicines" (press)="openNavDetailsPage(medicine)">
+    <!--<ion-item-sliding *ngFor="let medicine of medicines" >-->
+      <ion-item>
+        <ion-icon name="medkit" color="red_light" item-start></ion-icon>
+        {{medicine.medName}}
+      </ion-item>
+
+      <ion-item-options side="right">
+        <button ion-button danger><ion-icon name="trash"></ion-icon></button>
+      </ion-item-options>
+    </ion-item-sliding>
+
+    <button ion-button class="btn" [color]="red_light" full (click)="addMedi()">
+      Add Medicine
     </button>
   </ion-list>
 

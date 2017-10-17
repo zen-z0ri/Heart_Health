@@ -40,21 +40,12 @@ let InfoSchema = mongoose.Schema({
 		docName: String,
 		phoneNumber: Number
 	},
-  Health:[{
-    HealthID: String,
-    HealthVal: Number
-  }]
+  heart_rate:     [Number],
+  bmi:            [Number],
+  blood_pressure: [String],
+  Emotion:        [Number]
 });
 
-// let MedicineSchema = mongoose.Schema('medicine',{
-//   medName: String,
-//   barcode: Stirng,
-//   medInfo: String,
-// });
-// let HealthSchema = mongoose.Schema('health',{
-//   HealthID: String,
-//   HealthVal: Number
-// });
 const Information = mongoose.model('heart', InfoSchema, 'information');
 // const Medicine = mongoose.model('heart', MedicineSchema, 'information');
 // const Health = mongoose.model('heart', HealthSchema, 'information');
@@ -81,13 +72,10 @@ app.post('/update', function(req, res) {
 		rating: req.body.rating,
 		done : false
 	}, function(err, review) {
-		if (err)
-			res.send(err);
-
+		if (err) res.send(err);
 		// get and return all the reviews after you create another
 		Review.find(function(err, reviews) {
-			if (err)
-				res.send(err)
+			if (err) res.send(err);
 			res.json(reviews);
 		});
 	});

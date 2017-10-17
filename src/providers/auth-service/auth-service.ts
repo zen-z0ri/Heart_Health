@@ -13,14 +13,6 @@ export class MedicineInfo {
     this.medInfo = medInfo;
   }
 }
-export class Health {
-  HealthID: string;
-  HealthVal: number;
-  constructor(HealthID: string, HealthVal: number) {
-    this.HealthID = HealthID;
-    this.HealthVal = HealthVal;
-  }
-}
 export class User {
   name: string;
   email: string;
@@ -31,19 +23,27 @@ export class User {
     this.password = password;
   }
 }
-export class Info {
-  ID?: string;
-  user: User;
-  medicineList?: [MedicineInfo];
-  healthInfo?: [Health];
+export class Doctor{
+  docName: string;
+  phoneNumber: number;
 }
 
+export class Info {
+  ID: string;
+  user: User;
+  medcineList: [MedicineInfo];
+  heart_rate: [Number];
+  bmi: [Number];
+  doctor: Doctor;
+  BP: [String];
+  Emotion: [Number];
+}
 
 @Injectable()
 export class AuthServiceProvider {
-
   currentUserInfo: Info = new Info();
   API_URL: string = "http://localhost:8080/api/";
+  // API_URL: string = "http://10.0.2.2:8080/api/";
   constructor(private http: Http) {
   }
 
@@ -65,11 +65,14 @@ export class AuthServiceProvider {
               observer.next(access);
               observer.complete();
             }else{
-              console.log(data[0]._id);
               this.currentUserInfo.ID = data[0]._id;
               this.currentUserInfo.user = data[0].user;
-              this.currentUserInfo.healthInfo = data[0].Health;
-              this.currentUserInfo.medicineList = data[0].medicine;
+              this.currentUserInfo.heart_rate = data[0].heart_rate;
+              this.currentUserInfo.bmi = data[0].bmi;
+              this.currentUserInfo.BP = data[0].BP;
+              this.currentUserInfo.Emotion = data[0].Emotion;
+              this.currentUserInfo.doctor = data[0].doctor;
+              this.currentUserInfo.medcineList = data[0].medicine;
               console.log(this.currentUserInfo);
               let access = (this.currentUserInfo!==null||this.currentUserInfo!== undefined);
               observer.next(access);
@@ -79,9 +82,6 @@ export class AuthServiceProvider {
       });
     }
   }
-
-
-
   public register(credentials) {
     if (credentials.email === null || credentials.password === null) {
       return Observable.throw("Please insert credentials");

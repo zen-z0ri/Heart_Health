@@ -3,127 +3,66 @@
     "user": {
       "name": "dong",
       "email": "tungreeboo@gmail.com",
-      "password": "heart",
-      "medicine": [
-        {
-          "medName": "Warfarin",
-          "barcode": 4632847461,
-          "medInfo": "Prevent blood clots forming and treats existing clots"
-        },{
-          "medName": "Aspirin",
-          "barcode": 7894342940,
-          "medInfo": "Stop blood clots from forming in a narrow artery and reduce the risk of heart attack and stroke."
-        },{
-          "medName": "Beta-blockers",
-          "barcode": 3095489472,
-          "medInfo": "Make your heart beat more slowly"
-        },{
-          "medName": "Statins",
-          "barcode": 3563456393,
-          "medInfo": "Reduce your risk of heart attack and stroke by helping to lower your cholesterol"
-        },{
-          "medName": "Nitrates",
-          "barcode": 8957499834,
-          "medInfo": "Increase blood flow to your heart by widening blood vessels"
-        }
-      ],
-      "Health":[
-        {"HealthID": "Blood Presure",
-          "HealthVal": "99:160"},
-        {"HealthID": "Blood Presure",
-          "HealthVal": "74:105"},
-        {"HealthID": "Blood Presure",
-          "HealthVal": "80:110"},
-        {"HealthID": "Heart rate",
-          "HealthVal": "85:120"},
-        {"HealthID": "Blood Presure",
-          "HealthVal": "99:120"},
-        {"HealthID": "Blood Presure",
-          "HealthVal": "77:112"},
-        {"HealthID": "Heart rate",
-          "HealthVal": "66:105"},
-
-        {"HealthID": "Blood Presure",
-          "HealthVal": "99:160"},
-        {"HealthID": "Blood Presure",
-          "HealthVal": "74:105"},
-        {"HealthID": "Blood Presure",
-          "HealthVal": "80:110"},
-        {"HealthID": "Heart rate",
-          "HealthVal": "85:120"},
-        {"HealthID": "Blood Presure",
-          "HealthVal": "99:120"},
-        {"HealthID": "Blood Presure",
-          "HealthVal": "77:112"},
-        {"HealthID": "Heart rate",
-          "HealthVal": "66:105"},
-
-        {"HealthID": "BMI",
-          "HealthVal": "21.3"},
-        {"HealthID": "BMI",
-          "HealthVal": "21.3"},
-        {"HealthID": "BMI",
-          "HealthVal": "21.3"},
-        {"HealthID": "BMI",
-          "HealthVal": "21.3"},
-        {"HealthID": "BMI",
-          "HealthVal": "21.3"},
-        {"HealthID": "BMI",
-          "HealthVal": "21.3"},
-        {"HealthID": "BMI",
-          "HealthVal": "21.3"},
-
-
-
-        {"HealthID": "Blood Presure",
-          "HealthVal": "21.3"},
-        {"HealthID": "Blood Presure",
-          "HealthVal": "80:110"},
-        {"HealthID": "Heart rate",
-          "HealthVal": "85:120"},
-        {"HealthID": "Blood Presure",
-          "HealthVal": "99:120"},
-        {"HealthID": "Blood Presure",
-          "HealthVal": "77:112"},
-        {"HealthID": "Heart rate",
-          "HealthVal": "66:105"}
-      ],
-      "doctor":{
-        "docName": "Nagasawa Masami",
-        "phoneNumber": 1393102020
-      }
-    }
-  },
-  {
-    "user": {
-      "name": "DYB",
-      "email": "DYB@gmail.com",
-      "password": "DYB"
+      "password": "heart"
     },
     "medicine": [
       {
-        "medName": "oreo",
-        "barcode": 121212,
-        "medInfo": "good cookie"
-      },
-      {
-        "medName": "fries",
-        "barcode": 80890898,
-        "medInfo": "Better with coke"
+        "medName": "Warfarin",
+        "barcode": 4632847461,
+        "medInfo": "Prevent blood clots forming and treats existing clots"
+      },{
+        "medName": "Aspirin",
+        "barcode": 7894342940,
+        "medInfo": "Stop blood clots from forming in a narrow artery and reduce the risk of heart attack and stroke."
+      },{
+        "medName": "Beta-blockers",
+        "barcode": 3095489472,
+        "medInfo": "Make your heart beat more slowly"
+      },{
+        "medName": "Statins",
+        "barcode": 3563456393,
+        "medInfo": "Reduce your risk of heart attack and stroke by helping to lower your cholesterol"
+      },{
+        "medName": "Nitrates",
+        "barcode": 8957499834,
+        "medInfo": "Increase blood flow to your heart by widening blood vessels"
       }
     ],
+    "heart_rate":     [72, 86, 79, 88, 90, 91, 77],
+    "bmi":            [22.2, 22.2, 22.3, 22.4, 22.5, 22.5],
+    "BP": ["99:160", "74:105", "80:110", "85:120", "99:120", "77:112", "66:105"],
+    "Emotion":        [4,   4,  5,  3,  3,  4,  5],
+    "doctor":{
+      "docName": "Nagasawa Masami",
+      "phoneNumber": 1393102020
+    }
+
+  },
+
+  {
+    "user": {
+      "name": "tung",
+      "email": "fjsdofsd@gmail.com",
+      "password": "tung"
+    },
+    "medicine": [
+      {
+        "medName": "Warfarin",
+        "barcode": 4632847461,
+        "medInfo": "Prevent blood clots forming and treats existing clots"
+      },{
+        "medName": "Aspirin",
+        "barcode": 7894342940,
+        "medInfo": "Stop blood clots from forming in a narrow artery and reduce the risk of heart attack and stroke."
+      }
+    ],
+    "heart_rate":     [72, 86, 79, 88, 90, 91, 77],
+    "bmi":            [22.2, 22.2, 22.3, 22.4, 22.5, 22.5],
+    "BP": ["99:160", "74:105", "80:110", "85:120", "99:120", "77:112", "66:105"],
+    "Emotion":        [4,   4,  5,  3,  3,  4,  5],
     "doctor":{
       "docName": "Aragaki Yui",
-      "phoneNumber": 888888888
-    },
-    "Health":[
-      {"HealthID": "Blood Presure",
-        "HealthVal": 121},
-      {"HealthID": "Blood Presure",
-        "HealthVal": 110},
-      {"HealthID": "Blood Presure",
-        "HealthVal": 130}
-    ]
+      "phoneNumber": 4032132189
+    }
   }
-
 ]

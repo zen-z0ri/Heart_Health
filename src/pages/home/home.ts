@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController } from 'ionic-angular';
-import { AuthServiceProvider, MedicineInfo, User, Health} from "../../providers/auth-service/auth-service";
+import { AuthServiceProvider, MedicineInfo, User} from "../../providers/auth-service/auth-service";
 import { ProfilePage} from "../profile/profile";
 import { MedicinePage} from "../medicine/medicine";
 import { SettingPage} from "../setting/setting";

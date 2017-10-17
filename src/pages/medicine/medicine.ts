@@ -28,6 +28,7 @@ export class MedicinePage {
   }
   async scanBarcode(){
     this.results = await this.barcodeScanner.scan();
+    // this.navCtrl.push();
     console.log(this.results);
   }
   showMedcines(e){

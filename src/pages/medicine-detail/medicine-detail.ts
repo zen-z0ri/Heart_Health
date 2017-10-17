@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { MedicineListPage } from "../medicine-list/medicine-list";
 
 /**
  * Generated class for the MedicineDetailPage page.
@@ -14,18 +15,20 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'medicine-detail.html',
 })
 export class MedicineDetailPage {
-  public event = {
-    month: '1990-02-19',
-    timeStarts: '07:43',
-    timeEnds: '1990-02-20'
-  }
 
+  Alarms: [string] = ['07:30'];
 
+  theMedic: any;
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+    this.theMedic = this.navParams.data.medicine;
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad MedicineDetailPage');
+  }
+
+  private addAlarm(): void{
+    this.Alarms.push('07:30');
   }
 
 }

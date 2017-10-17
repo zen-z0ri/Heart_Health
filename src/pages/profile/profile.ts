@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { HeartRatePage} from "../heart-rate/heart-rate";
-import { AuthServiceProvider, MedicineInfo, User, Health} from "../../providers/auth-service/auth-service";
+import { AuthServiceProvider, MedicineInfo, User} from "../../providers/auth-service/auth-service";
 
 /**
  * Generated class for the ProfilePage page.
