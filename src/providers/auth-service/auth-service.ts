@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Observable} from 'rxjs/Observable';
 import { Http, Headers } from '@angular/http';
-
 import 'rxjs/add/operator/map';
 
 export class MedicineInfo {
@@ -27,36 +26,50 @@ export class User {
   name: string;
   email: string;
   password: string;
-  medicineList: [MedicineInfo];
-  healthInfo: [Health];
+  medicineList?: [MedicineInfo];
+  healthInfo?: [Health];
   constructor(name: string, email: string, password: string) {
     this.name = name;
     this.email = email;
     this.password = password;
   }
 }
+export class Info {
+  user: User;
+
+}
 
 @Injectable()
 export class AuthServiceProvider {
   currentUser: User;
-
-  // data:User;
-  constructor(public http: Http) {
+  API_URL: string = "http://localhost:8080/api/";
+  constructor(private http: Http) {
   }
+
   public login(credentials) {
     if (credentials.email === null || credentials.password === null) {
       return Observable.throw("Please insert credentials");
-    } else {
-      this.http.get('http://localhost:8080/login'+'?name='+credentials.name+"&password="+credentials.password).map(res => res.json()).subscribe(data => this.currentUser = data);
+    }else if(credentials.email === null || credentials.password === null){
+
+    }else {
       return Observable.create(observer => {
         // fix to add more code to check login
         //root pass word
-
-        let access = (this.currentUser!==null);
-
-        // this.currentUser = new User("f", this.data.user.email, this.data.user.password);
-        observer.next(access);
-        observer.complete();
+        this.http.get(this.API_URL+'login?name='+credentials.name+"&password="+credentials.password)
+          .map(res => res.json())
+          .subscribe(data =>{
+            console.log(data);
+            if (data.length === 0){
+              let access = false;
+              observer.next(access);
+              observer.complete();
+            }
+            this.currentUser = data[0].user;
+            console.log(this.currentUser);
+            let access = (this.currentUser!==null||this.currentUser!== undefined);
+            observer.next(access);
+            observer.complete();
+          });
       });
     }
   }
@@ -84,5 +97,6 @@ export class AuthServiceProvider {
       observer.complete();
     });
   }
+
 
 }

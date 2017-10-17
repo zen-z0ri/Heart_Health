@@ -28,17 +28,12 @@ export class HomePage {
   tab3Root = SettingPage;
 
   constructor(public navCtrl: NavController, public auth: AuthServiceProvider) {
-    let info: User = this.auth.userInfo;
+    let info = this.auth.currentUser.name;
     // this.username = info.name+'';
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad HomePage');
-  }
-  public logout() {
-    this.auth.logout().subscribe(succ => {
-      this.navCtrl.setRoot('LoginPage')
-    });
   }
 
 }

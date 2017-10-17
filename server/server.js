@@ -60,7 +60,7 @@ const Information = mongoose.model('heart', InfoSchema, 'information');
 // const Health = mongoose.model('heart', HealthSchema, 'information');
 
 // Routes
-app.get('/login', function(req, res) {
+app.get('/api/login', function(req, res) {
 
 	console.log("login");
   Information.find({ "user.name": req.query.name, $and: [ { "user.password": req.query.password } ] },function(err, information) {
@@ -108,7 +108,7 @@ app.post('/update', function(req, res) {
     // get and return all the reviews after you create another
     Review.find(function(err, reviews) {
       if (err)
-        res.send(err)
+        res.send(err);
       res.json(reviews);
     });
   });
