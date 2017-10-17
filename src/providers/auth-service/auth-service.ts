@@ -7,7 +7,6 @@ export class MedicineInfo {
   medName: string;
   barcode: string;
   medInfo: string;
-
   constructor(medName: string, barcode: string, medInfo: string) {
     this.medName = medName;
     this.barcode = barcode;
@@ -26,22 +25,24 @@ export class User {
   name: string;
   email: string;
   password: string;
-  medicineList?: [MedicineInfo];
-  healthInfo?: [Health];
-  constructor(name: string, email: string, password: string) {
+  constructor (name: string, email: string, password: string){
     this.name = name;
     this.email = email;
     this.password = password;
   }
 }
 export class Info {
+  ID?: string;
   user: User;
-
+  medicineList?: [MedicineInfo];
+  healthInfo?: [Health];
 }
+
 
 @Injectable()
 export class AuthServiceProvider {
-  currentUser: User;
+
+  currentUserInfo: Info = new Info();
   API_URL: string = "http://localhost:8080/api/";
   constructor(private http: Http) {
   }
@@ -63,16 +64,23 @@ export class AuthServiceProvider {
               let access = false;
               observer.next(access);
               observer.complete();
+            }else{
+              console.log(data[0]._id);
+              this.currentUserInfo.ID = data[0]._id;
+              this.currentUserInfo.user = data[0].user;
+              this.currentUserInfo.healthInfo = data[0].Health;
+              this.currentUserInfo.medicineList = data[0].medicine;
+              console.log(this.currentUserInfo);
+              let access = (this.currentUserInfo!==null||this.currentUserInfo!== undefined);
+              observer.next(access);
+              observer.complete();
             }
-            this.currentUser = data[0].user;
-            console.log(this.currentUser);
-            let access = (this.currentUser!==null||this.currentUser!== undefined);
-            observer.next(access);
-            observer.complete();
           });
       });
     }
   }
+
+
 
   public register(credentials) {
     if (credentials.email === null || credentials.password === null) {
@@ -86,13 +94,13 @@ export class AuthServiceProvider {
     }
   }
 
-  public get userInfo(): User {
-    return this.currentUser;
+  public get userInfo(): Info {
+    return this.currentUserInfo;
   }
 
   public logout() {
     return Observable.create(observer => {
-      this.currentUser = null;
+      this.currentUserInfo = null;
       observer.next(true);
       observer.complete();
     });

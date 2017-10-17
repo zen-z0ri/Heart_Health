@@ -1,7 +1,5 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { AuthServiceProvider, MedicineInfo, User, Health} from "../../providers/auth-service/auth-service";
-
 
 /**
  * Generated class for the SettingPage page.
@@ -17,16 +15,12 @@ import { AuthServiceProvider, MedicineInfo, User, Health} from "../../providers/
 })
 export class SettingPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public auth: AuthServiceProvider) {
+  constructor(public navCtrl: NavController) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad SettingPage');
   }
 
-  public logout() {
-    this.auth.logout().subscribe(succ => {
-      this.navCtrl.setRoot('LoginPage')
-    });
-  }
+
 }

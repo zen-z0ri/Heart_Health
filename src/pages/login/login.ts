@@ -16,7 +16,7 @@ import { AuthServiceProvider, MedicineInfo, User, Health} from "../../providers/
 })
 export class LoginPage {
   loading: Loading;
-  registerCredentials: User = new User('', '', '');
+  registerCredentials: User = new User("", "", "");
 
   constructor(public navCtrl: NavController,
               private auth: AuthServiceProvider,
@@ -28,7 +28,7 @@ export class LoginPage {
   public login() {
     this.showLoading();
     this.auth.login(this.registerCredentials).subscribe(allowed => {
-        (allowed) ? this.navCtrl.setRoot('HomePage') : this.showError("Access Denied")
+        (allowed) ? this.navCtrl.setRoot('HomePage') : this.showError("Please Check your Detail")
       },
       error => {
         this.showError(error);
@@ -47,7 +47,7 @@ export class LoginPage {
     this.loading.dismiss();
     let alert = this.alertCtrl.create({
       title: 'Fail',
-      subTitle: text,
+      message: text,
       buttons: ['OK']
     });
     alert.present();

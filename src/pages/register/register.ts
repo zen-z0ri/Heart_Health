@@ -16,7 +16,7 @@ import { AuthServiceProvider, User} from "../../providers/auth-service/auth-serv
 })
 export class RegisterPage {
   createSuccess: boolean = false;
-  registerCredentials: User = new User('', '', '');
+  registerCredentials: User = new User("", "", "");
   passwdRepeat: string = '';
 
   constructor(private navCtrl: NavController,

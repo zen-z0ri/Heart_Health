@@ -26,14 +26,17 @@ export class HomePage {
   tab1Root = MedicinePage;
   tab2Root = ProfilePage;
   tab3Root = SettingPage;
-
+  name: string;
   constructor(public navCtrl: NavController, public auth: AuthServiceProvider) {
-    let info = this.auth.currentUser.name;
-    // this.username = info.name+'';
+    this.name = this.auth.currentUserInfo.user.name;
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad HomePage');
   }
-
+  public logout() {
+    this.auth.logout().subscribe(success => {
+      this.navCtrl.setRoot('LoginPage')
+    });
+  }
 }
