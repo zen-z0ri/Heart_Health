@@ -45,22 +45,40 @@ let InfoSchema = mongoose.Schema({
   blood_pressure: [String],
   Emotion:        [Number]
 });
+let MedicineSchema = mongoose.Schema({
+    medName: String,
+    barcode: String,
+    medInfo: String,
+  });
 
-const Information = mongoose.model('heart', InfoSchema, 'information');
-// const Medicine = mongoose.model('heart', MedicineSchema, 'information');
+const Information = mongoose.model('information', InfoSchema);
+const Medicine = mongoose.model('medicine', MedicineSchema);
 // const Health = mongoose.model('heart', HealthSchema, 'information');
 
 // Routes
 app.get('/api/login', function(req, res) {
-
 	console.log("login");
   Information.find({ "user.name": req.query.name, $and: [ { "user.password": req.query.password } ] },function(err, information) {
-		// if there is an error retrieving, send the error. nothing after res.send(err) will execute
+  //   Information.find({  },function(err, information) {
+
+      // if there is an error retrieving, send the error. nothing after res.send(err) will execute
 		if (err) res.send(err);
 		console.log(information.toString());
 		res.json(information); // return all reviews in JSON format
 	});
 });
+
+app.get('/api/search', function(req, res) {
+  console.log("search");
+  // Medicine.find({ "barcode": req.query.barcode},function(err, medicine) {
+    Medicine.find({ },function(err, medicine) {
+    // if there is an error retrieving, send the error. nothing after res.send(err) will execute
+    if (err) res.send(err);
+    console.log(medicine.toString());
+    res.json(medicine); // return all reviews in JSON format
+  });
+});
+
 
 // create review and send back all reviews after creation
 app.post('/update', function(req, res) {
