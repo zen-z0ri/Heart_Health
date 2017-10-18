@@ -15,6 +15,8 @@ import { SplashPage} from "../pages/splash/splash";
 import { HeartRatePage} from "../pages/heart-rate/heart-rate";
 import { MedicineListPage} from "../pages/medicine-list/medicine-list";
 import { MedicineDetailPage} from "../pages/medicine-detail/medicine-detail";
+import { AddNewMedicinePage} from "../pages/add-new-medicine/add-new-medicine";
+
 
 @NgModule({
   declarations: [
@@ -26,6 +28,7 @@ import { MedicineDetailPage} from "../pages/medicine-detail/medicine-detail";
     HeartRatePage,
     MedicineListPage,
     MedicineDetailPage,
+    AddNewMedicinePage,
   ],
   imports: [
     HttpModule,
@@ -42,6 +45,7 @@ import { MedicineDetailPage} from "../pages/medicine-detail/medicine-detail";
     HeartRatePage,
     MedicineListPage,
     MedicineDetailPage,
+    AddNewMedicinePage,
   ],
   providers: [
     StatusBar,

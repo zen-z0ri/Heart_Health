@@ -1,0 +1,32 @@
+<!--
+  Generated template for the AddNewMedicinePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+</ion-header>
+
+
+<ion-content padding>
+  <h1> Do you want to add this medicine to your medkit?</h1>
+  <ion-label>Name:</ion-label>
+  <ion-item>
+    {{medicine.medName}}
+  </ion-item>
+  <ion-label>BarCode:</ion-label>
+  <ion-item>
+    {{medicine.barcode}}
+  </ion-item>
+  <ion-label>Discription:</ion-label>
+  <ion-item>
+    {{medicine.medInfo}}
+  </ion-item>
+  <button ion-button class="btn" [color]="red_light" full (click)="addAlarm()">
+    Add
+  </button>
+  <button ion-button class="btn" [color]="red_light" full (click)="cancelAdd()">
+    Cancel
+  </button>
+</ion-content>

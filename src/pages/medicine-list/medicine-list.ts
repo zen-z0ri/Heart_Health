@@ -26,7 +26,7 @@ export class MedicineListPage {
     this.nav.push(MedicineDetailPage, { medicine: medicine });
   }
 
-  private addMedi():void{
+  private addMedicine():void{
 
   }
 }

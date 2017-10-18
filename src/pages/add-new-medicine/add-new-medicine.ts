@@ -1,9 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { MedicineListPage } from "../medicine-list/medicine-list";
 
 /**
- * Generated class for the MedicineDetailPage page.
+ * Generated class for the AddNewMedicinePage page.
  *
  * See http://ionicframework.com/docs/components/#navigation for more info
  * on Ionic pages and navigation.
@@ -11,23 +10,20 @@ import { MedicineListPage } from "../medicine-list/medicine-list";
 
 @IonicPage()
 @Component({
-  selector: 'page-medicine-detail',
-  templateUrl: 'medicine-detail.html',
+  selector: 'page-add-new-medicine',
+  templateUrl: 'add-new-medicine.html',
 })
-export class MedicineDetailPage {
-  Alarms: [string] = ['07:30'];
+export class AddNewMedicinePage {
   medicine: any;
   constructor(public navCtrl: NavController, public navParams: NavParams) {
-    console.log(this.medicine);
     this.medicine = this.navParams.data.medicine;
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad MedicineDetailPage');
+    console.log('ionViewDidLoad AddNewMedicinePage');
   }
-
-  private addAlarm(): void{
-    this.Alarms.push('07:30');
+  cancelAdd() {
+    this.navCtrl.pop();
   }
 
 }

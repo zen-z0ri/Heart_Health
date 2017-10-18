@@ -4,7 +4,9 @@ import { BarcodeScanner, BarcodeScannerOptions, BarcodeScanResult} from "@ionic-
 import { AuthServiceProvider} from "../../providers/auth-service/auth-service";
 import { MedicineListPage} from "../medicine-list/medicine-list";
 import { Http, Headers} from "@angular/http";
+import { AddNewMedicinePage} from "../add-new-medicine/add-new-medicine";
 
+import 'rxjs/add/operator/toPromise';
 /**
  * Generated class for the MedicinePage page.
  *
@@ -17,10 +19,11 @@ import { Http, Headers} from "@angular/http";
   selector: 'page-medicine',
   templateUrl: 'medicine.html',
 })
+
 export class MedicinePage {
   options: BarcodeScannerOptions;
   bar_results: BarcodeScanResult;
-  newMed: any;
+  medicine: any;
   thisAuth: any;
   constructor(public navCtrl: NavController,
               private barcodeScanner: BarcodeScanner,
@@ -34,13 +37,10 @@ export class MedicinePage {
     console.log('ionViewDidLoad MedicinePage');
   }
   async scanBarcode(){
-
     this.bar_results = await this.barcodeScanner.scan();
-    await this.http.get(this.thisAuth.API_URL+'search?'+this.bar_results)
-      .map(res => res.json()).subscribe(data => {this.newMed = data});
-
-    await console.log(this.newMed.toString());
-
+    await this.http.get(this.thisAuth.API_URL+'medicine?barcode='+this.bar_results.text)
+                    .toPromise().then(res => this.medicine = res.json());
+    await this.navCtrl.push(AddNewMedicinePage, { medicine: this.medicine[0] });
   }
   showMedcines(e){
     this.navCtrl.push(MedicineListPage);
