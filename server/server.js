@@ -31,7 +31,7 @@ let InfoSchema = mongoose.Schema({
 		email: String,
 		password: String
 	},
-	medicine: [{
+  medicineList: [{
     medName: String,
     barcode: Number,
     medInfo: String,
@@ -59,7 +59,10 @@ app.get('/api/login', function(req, res) {
 	console.log("login");
   Information.find({ "user.name": req.query.name,
                     $and: [ { "user.password": req.query.password } ]
-                    },
+                    },{
+                      "user.password": 0,
+                      "user.email": 0
+                      },
     function(err, information) {
     console.log(req.query.name);
     if (err) res.send(err);

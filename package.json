@@ -29,6 +29,7 @@
         "@ionic/storage": "2.0.1",
         "bower": "^1.8.2",
         "call-number": "^1.0.1",
+        "chart.js": "^2.7.0",
         "cordova-android": "^6.2.3",
         "cordova-browser": "^5.0.0",
         "cordova-ios": "^4.4.0",
@@ -51,6 +52,8 @@
     },
     "devDependencies": {
         "@ionic/app-scripts": "2.1.4",
+        "async": "^2.5.0",
+        "jshint": "^2.9.5",
         "typescript": "^2.5.2"
     },
     "description": "An Ionic project",

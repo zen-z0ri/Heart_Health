@@ -3,10 +3,11 @@ import { IonicPage, NavController, AlertController } from 'ionic-angular';
 import { BarcodeScanner, BarcodeScannerOptions, BarcodeScanResult} from "@ionic-native/barcode-scanner";
 import { AuthServiceProvider} from "../../providers/auth-service/auth-service";
 import { MedicineListPage} from "../medicine-list/medicine-list";
-import { Http, Headers} from "@angular/http";
+import { Http} from "@angular/http";
 import { AddNewMedicinePage} from "../add-new-medicine/add-new-medicine";
 
 import 'rxjs/add/operator/toPromise';
+import {ChartPage} from "../chart/chart";
 /**
  * Generated class for the MedicinePage page.
  *
@@ -45,5 +46,7 @@ export class MedicinePage {
   showMedcines(e){
     this.navCtrl.push(MedicineListPage);
   }
-
+  showChart(){
+    this.navCtrl.push(ChartPage);
+  }
 }

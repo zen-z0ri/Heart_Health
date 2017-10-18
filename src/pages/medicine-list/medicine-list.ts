@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { MedicineDetailPage} from "../medicine-detail/medicine-detail";
-import { AuthServiceProvider, MedicineInfo} from "../../providers/auth-service/auth-service";
+import { AuthServiceProvider} from "../../providers/auth-service/auth-service";
+import { MedicineInfo} from "../../providers/auth-service/Info";
 
 /**
  * Generated class for the MedicineListPage page.
@@ -19,14 +20,10 @@ export class MedicineListPage {
 
   medicines:  [MedicineInfo];
   constructor(public nav: NavController, public auth: AuthServiceProvider) {
-    this.medicines = auth.currentUserInfo.medcineList;
+    this.medicines = auth.currentUserInfo.medicineList;
   }
 
   openNavDetailsPage(medicine) {
     this.nav.push(MedicineDetailPage, { medicine: medicine });
-  }
-
-  private addMedicine():void{
-
   }
 }

@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 /**
- * Generated class for the HeartRatePage page.
+ * Generated class for the QRcodePage page.
  *
  * See http://ionicframework.com/docs/components/#navigation for more info
  * on Ionic pages and navigation.
@@ -10,20 +10,16 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 @IonicPage()
 @Component({
-  selector: 'page-heart-rate',
-  templateUrl: 'heart-rate.html',
+  selector: 'page-q-rcode',
+  templateUrl: 'q-rcode.html',
 })
-export class HeartRatePage {
-  item;
+export class QRcodePage {
+
   constructor(public navCtrl: NavController, public navParams: NavParams) {
-    this.item = this.navParams.data.item;
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad HeartRatePage');
+    console.log('ionViewDidLoad QRcodePage');
   }
 
-  cancelAdd() {
-    this.navCtrl.pop();
-  }
 }

@@ -1,16 +1,23 @@
 <!--
-  Generated template for the HeartRatePage page.
+  Generated template for the BloodPreasurePage page.
 
   See http://ionicframework.com/docs/components/#navigation for more info on
   Ionic pages and navigation.
 -->
 <ion-header>
+
+
 </ion-header>
+
 
 <ion-content padding>
   <ion-list>
     <ion-item>
-      <ion-label floating>{{item.title}} Value</ion-label>
+      <ion-label floating>Systolic Blood Pressure</ion-label>
+      <ion-input type="text" value="" required ng-pattern="/\d{2,3}/"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>Diastolic Blood Pressure</ion-label>
       <ion-input type="text" value="" required ng-pattern="/\d{2,3}/"></ion-input>
     </ion-item>
   </ion-list>
@@ -18,6 +25,5 @@
   <div padding>
     <button class="btn" ion-button color="primary" block>Update</button>
     <button class="btn" ion-button color="primary" block (click)="cancelAdd()">Cancel</button>
-
   </div>
 </ion-content>
