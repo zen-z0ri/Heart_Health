@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, AlertController } from 'ionic-angular';
-import { AuthServiceProvider, User} from "../../providers/auth-service/auth-service";
+import { AuthServiceProvider } from "../../providers/auth-service/auth-service";
+import { User} from "../../providers/auth-service/Info";
 
 /**
  * Generated class for the RegisterPage page.
@@ -16,7 +17,7 @@ import { AuthServiceProvider, User} from "../../providers/auth-service/auth-serv
 })
 export class RegisterPage {
   createSuccess: boolean = false;
-  registerCredentials: User = new User('', '', '');
+  registerCredentials: User = new User("", "", "");
   passwdRepeat: string = '';
 
   constructor(private navCtrl: NavController,

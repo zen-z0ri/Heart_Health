@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 /**
- * Generated class for the HeartRatePage page.
+ * Generated class for the BloodPreasurePage page.
  *
  * See http://ionicframework.com/docs/components/#navigation for more info
  * on Ionic pages and navigation.
@@ -10,20 +10,22 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 @IonicPage()
 @Component({
-  selector: 'page-heart-rate',
-  templateUrl: 'heart-rate.html',
+  selector: 'page-blood-preasure',
+  templateUrl: 'blood-preasure.html',
 })
-export class HeartRatePage {
+export class BloodPreasurePage {
+
   item;
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.item = this.navParams.data.item;
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad HeartRatePage');
+
   }
 
   cancelAdd() {
     this.navCtrl.pop();
   }
+
 }

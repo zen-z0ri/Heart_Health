@@ -10,51 +10,42 @@
 
 
 
-  <ion-content id="quick_acc">
-    <div id="content">
-      <ion-fab center middle>
+<ion-content id="quick_acc">
+  <div id="content">
+    <ion-fab center middle>
 
-        <button ion-fab color="primary"><ion-icon name="heart"></ion-icon></button>
-        <ion-fab-list side="top">
-          <button ion-fab color="red_dark"><ion-icon name="add"></ion-icon></button>
-        </ion-fab-list>
-        <ion-fab-list side="left">
-          <button ion-fab color="light"><ion-icon name="card"></ion-icon></button>
-        </ion-fab-list>
-        <ion-fab-list side="right">
-          <button ion-fab color="dark"><ion-icon name="analytics"></ion-icon></button>
-        </ion-fab-list>
-      </ion-fab>
-    </div>
+      <button ion-fab color="primary"><ion-icon name="pulse"></ion-icon></button>
+      <ion-fab-list side="top">
+        <button ion-fab color="red_dark"><ion-icon name="add" (click)="scanBarcode()"></ion-icon></button>
+      </ion-fab-list>
+      <ion-fab-list side="left">
+        <button ion-fab color="light"><ion-icon name="card"></ion-icon></button>
+      </ion-fab-list>
+      <ion-fab-list side="right">
+        <button ion-fab color="dark"><ion-icon name="analytics" (click)="showChart()"></ion-icon></button>
+      </ion-fab-list>
+    </ion-fab>
+  </div>
 
+  <div class="card-background-page">
 
-  <!--<button ion-button (click)="scanBarcode()">fs</button>-->
-  <!--<div *ngIf="results">-->
-    <!--<p>{{results.text}}</p>-->
-    <!--<p>{{results.format}}</p>-->
-    <!--<p>{{results.cancelled}}</p>-->
-  <!--</div>-->
+    <ion-card (press)="showMedcines($event)">
+      <img src="assets/img/My-Medicines.jpg"/>
+      <div class="card-title">My Medicines</div>
+      <div class="card-subtitle">Check your medicines</div>
+    </ion-card>
 
+    <ion-card (press)="showTips($event)">
+      <img src="assets/img/Health-Tips.jpg"/>
+      <div class="card-title">Health Tips</div>
+      <div class="card-subtitle">Health Tips from Doctor</div>
+    </ion-card>
 
-    <div class="card-background-page">
-
-      <ion-card (press)="showMedcines($event)">
-        <img src="assets/img/My-Medicines.jpg"/>
-        <div class="card-title">My Medicines</div>
-        <div class="card-subtitle">Check your medicines</div>
-      </ion-card>
-
-      <ion-card (press)="showTips($event)">
-        <img src="assets/img/Health-Tips.jpg"/>
-        <div class="card-title">Health Tips</div>
-        <div class="card-subtitle">Health Tips from Doctor</div>
-      </ion-card>
-
-      <ion-card (press)="showInfo($event)">
-        <img src="assets/img/Information.jpg"/>
-        <div class="card-title">Information</div>
-        <div class="card-subtitle">User Manual</div>
-      </ion-card>
-    </div>
-  </ion-content>
+    <ion-card (press)="showInfo($event)">
+      <img src="assets/img/Information.jpg"/>
+      <div class="card-title">Information</div>
+      <div class="card-subtitle">User Manual</div>
+    </ion-card>
+  </div>
+</ion-content>
 

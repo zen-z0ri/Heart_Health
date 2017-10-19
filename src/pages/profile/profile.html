@@ -39,5 +39,10 @@
       <ion-icon [name]="item.iconN" [ngStyle]="{'color': item.color}" item-start></ion-icon>
       {{ item.title }}
     </button>
+    <button ion-item (click)="openBPDetailsPage(bp)" icon-start>
+      <ion-icon [name]="bp.iconN" [ngStyle]="{'color': bp.color}" item-start></ion-icon>
+      {{ bp.title }}
+    </button>
+
   </ion-list>
 </ion-content>

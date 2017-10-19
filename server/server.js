@@ -17,12 +17,12 @@ app.use(bodyParser.json());                                     // parse applica
 app.use(bodyParser.json({ type: 'application/vnd.api+json' })); // parse application/vnd.api+json as json
 app.use(cors());
 
-app.use(function(req, res, next) {
-	res.header("Access-Control-Allow-Origin", "*");
-	res.header('Access-Control-Allow-Methods', 'DELETE, PUT');
-	res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-	next();
-});
+// app.use(function(req, res, next) {
+// 	res.header("Access-Control-Allow-Origin", "*");
+// 	res.header('Access-Control-Allow-Methods', 'DELETE, PUT');
+// 	res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+// 	next();
+// });
 
 // Models
 let InfoSchema = mongoose.Schema({
@@ -31,88 +31,97 @@ let InfoSchema = mongoose.Schema({
 		email: String,
 		password: String
 	},
-	medicine: [{
+  medicineList: [{
     medName: String,
-    barcode: String,
+    barcode: Number,
     medInfo: String,
   }],
 	doctor:{
 		docName: String,
 		phoneNumber: Number
 	},
-  Health:[{
-    HealthID: String,
-    HealthVal: Number
-  }]
+  heart_rate:     [Number],
+  bmi:            [Number],
+  blood_pressure: [String],
+  Emotion:        [Number]
 });
+let MedicineSchema = mongoose.Schema({
+    medName: String,
+    barcode: Number,
+    medInfo: String,
+  });
 
-// let MedicineSchema = mongoose.Schema('medicine',{
-//   medName: String,
-//   barcode: Stirng,
-//   medInfo: String,
-// });
-// let HealthSchema = mongoose.Schema('health',{
-//   HealthID: String,
-//   HealthVal: Number
-// });
-const Information = mongoose.model('heart', InfoSchema, 'information');
-// const Medicine = mongoose.model('heart', MedicineSchema, 'information');
-// const Health = mongoose.model('heart', HealthSchema, 'information');
+const Information = mongoose.model('information', InfoSchema, 'information');
+const Medicine = mongoose.model('medicine', MedicineSchema, 'medicine');
 
 // Routes
-app.get('/login', function(req, res) {
-
+app.get('/api/login', function(req, res) {
 	console.log("login");
-  Information.find({ "user.name": req.query.name, $and: [ { "user.password": req.query.password } ] },function(err, information) {
-		// if there is an error retrieving, send the error. nothing after res.send(err) will execute
-		if (err) res.send(err);
+  Information.find({ "user.name": req.query.name,
+                    $and: [ { "user.password": req.query.password } ]
+                    },{
+                      "user.password": 0,
+                      "user.email": 0
+                      },
+    function(err, information) {
+    console.log(req.query.name);
+    if (err) res.send(err);
 		console.log(information.toString());
-		res.json(information); // return all reviews in JSON format
+		res.json(information);
 	});
 });
 
-// create review and send back all reviews after creation
-app.post('/update', function(req, res) {
-	console.log("creating review");
-	// create a review, information comes from request from Ionic
-  Information.update({
-		title : req.body.title,
-		description : req.body.description,
-		rating: req.body.rating,
-		done : false
-	}, function(err, review) {
-		if (err)
-			res.send(err);
-
-		// get and return all the reviews after you create another
-		Review.find(function(err, reviews) {
-			if (err)
-				res.send(err)
-			res.json(reviews);
-		});
-	});
-});
-
-app.post('/update', function(req, res) {
-  console.log("creating review");
-  // create a review, information comes from request from Ionic
-  Information.update({
-    title : req.body.title,
-    description : req.body.description,
-    rating: req.body.rating,
-    done : false
-  }, function(err, review) {
-    if (err)
-      res.send(err);
-
-    // get and return all the reviews after you create another
-    Review.find(function(err, reviews) {
-      if (err)
-        res.send(err)
-      res.json(reviews);
-    });
+app.get('/api/medicine', function(req, res) {
+  console.log("search");
+  Medicine.find({ "barcode": req.query.barcode},function(err, medicine) {
+  // Medicine.find({ "barcode": 4632847461},function(err, medicine) {
+    console.log(req.query.barcode);
+    if (err) res.send(err);
+    console.log(medicine.toString());
+    res.json(medicine);
   });
 });
+
+//
+// // create review and send back all reviews after creation
+// app.post('/update', function(req, res) {
+// 	console.log("creating review");
+// 	// create a review, information comes from request from Ionic
+//   Information.update({
+// 		title : req.body.title,
+// 		description : req.body.description,
+// 		rating: req.body.rating,
+// 		done : false
+// 	}, function(err, review) {
+// 		if (err) res.send(err);
+// 		// get and return all the reviews after you create another
+// 		Review.find(function(err, reviews) {
+// 			if (err) res.send(err);
+// 			res.json(reviews);
+// 		});
+// 	});
+// });
+//
+// app.post('/update', function(req, res) {
+//   console.log("creating review");
+//   // create a review, information comes from request from Ionic
+//   Information.update({
+//     title : req.body.title,
+//     description : req.body.description,
+//     rating: req.body.rating,
+//     done : false
+//   }, function(err, review) {
+//     if (err)
+//       res.send(err);
+//
+//     // get and return all the reviews after you create another
+//     Review.find(function(err, reviews) {
+//       if (err)
+//         res.send(err);
+//       res.json(reviews);
+//     });
+//   });
+// });
 
 
 // listen (start app with node server.js) ======================================

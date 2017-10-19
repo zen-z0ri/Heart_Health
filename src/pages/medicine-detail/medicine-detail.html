@@ -5,41 +5,39 @@
   Ionic pages and navigation.
 -->
 <ion-header>
-  <ion-navbar color="red_light">
-    <ion-title>Medicine Detail</ion-title>
-  </ion-navbar>
+
 </ion-header>
 
 
-<ion-content padding>
+<ion-content  padding>
+  <ion-label>Name:</ion-label>
   <ion-item>
-    <ion-label>Name</ion-label>
-
+    {{medicine.medName}}
   </ion-item>
+  <ion-label>BarCode:</ion-label>
   <ion-item>
-    <ion-label>BarCode</ion-label>
-
+    {{medicine.barcode}}
   </ion-item>
+  <ion-label>Discription:</ion-label>
   <ion-item>
-    <ion-label>Discription</ion-label>
-
+    {{medicine.medInfo}}
   </ion-item>
-
 
   <ion-list class="timeList">
-    <ion-list-header>
+    <ion-label>
       Alarm time
-    </ion-list-header>
-    <ion-item>
-      <ion-label>Alarm</ion-label>
-      <ion-datetime displayFormat="h:mm A" pickerFormat="h mm A" [(ngModel)]="event.timeStarts"></ion-datetime>
+    </ion-label>
+
+    <ion-item *ngFor="let a of Alarms; let i=index" (press)="delete(i)">
+      <ion-label>Alarm {{i+1}}</ion-label>
+      <ion-datetime displayFormat="h:mm A" pickerFormat="h mm A" [(ngModel)]="Alarms[i]"></ion-datetime>
     </ion-item>
-    <ion-item>
-      <ion-label>Alarm</ion-label>
-      <ion-datetime displayFormat="h:mm A" pickerFormat="h mm A" [(ngModel)]="event.timeStarts"></ion-datetime>
-    </ion-item>
-    <button ion-item icon-start>
-      Add
+
+    <button ion-button class="addAlarm" round outline  full (click)="addAlarm()">
+      Add Alarm
+    </button>
+    <button ion-button class="btn" [color]="red_light" full (click)="getOut()">
+      Back
     </button>
   </ion-list>
 

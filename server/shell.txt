@@ -1,0 +1,1 @@
+mongoimport --jsonArray --db heart --collection information --file sampleData.json

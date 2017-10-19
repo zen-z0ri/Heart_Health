@@ -1,62 +1,41 @@
 import { Injectable } from '@angular/core';
 import { Observable} from 'rxjs/Observable';
 import { Http, Headers } from '@angular/http';
-
 import 'rxjs/add/operator/map';
+import { Info} from "./Info";
 
-export class MedicineInfo {
-  medName: string;
-  barcode: string;
-  medInfo: string;
-
-  constructor(medName: string, barcode: string, medInfo: string) {
-    this.medName = medName;
-    this.barcode = barcode;
-    this.medInfo = medInfo;
-  }
-}
-export class Health {
-  HealthID: string;
-  HealthVal: number;
-  constructor(HealthID: string, HealthVal: number) {
-    this.HealthID = HealthID;
-    this.HealthVal = HealthVal;
-  }
-}
-export class User {
-  name: string;
-  email: string;
-  password: string;
-  medicineList: [MedicineInfo];
-  healthInfo: [Health];
-  // constructor(name: string, email: string, password: string) {
-  //   this.name = name;
-  //   this.email = email;
-  //   this.password = password;
-  // }
-}
 
 @Injectable()
 export class AuthServiceProvider {
-  currentUser: User;
+  currentUserInfo: Info = new Info();
 
-  // data:User;
-  constructor(public http: Http) {
+  API_URL: string = "http://localhost:8080/api/";
+  // API_URL: string = "http://10.0.2.2:8080/api/";
+  constructor(private http: Http) {
   }
+
   public login(credentials) {
     if (credentials.email === null || credentials.password === null) {
       return Observable.throw("Please insert credentials");
-    } else {
-      this.http.get('http://localhost:8080/login'+'?name='+credentials.name+"&password="+credentials.password).map(res => res.json()).subscribe(data => this.currentUser = data);
+    }else {
       return Observable.create(observer => {
-        // fix to add more code to check login
-        //root pass word
-
-        let access = (this.currentUser!==null);
-
-        // this.currentUser = new User("f", this.data.user.email, this.data.user.password);
-        observer.next(access);
-        observer.complete();
+        this.http.get(this.API_URL+'login?name='+credentials.name+"&password="+credentials.password)
+          .map(res => res.json())
+          .subscribe(data =>{
+            console.log(data);
+            if (data.length === 0){
+              let access = false;
+              observer.next(access);
+              observer.complete();
+            }else{
+              this.currentUserInfo = data[0];
+              this.currentUserInfo.medicineList.forEach(med => med.timeList = new Array());
+              console.log(this.currentUserInfo);
+              let access = (this.currentUserInfo!==null||this.currentUserInfo!== undefined);
+              observer.next(access);
+              observer.complete();
+            }
+          });
       });
     }
   }
@@ -73,16 +52,17 @@ export class AuthServiceProvider {
     }
   }
 
-  public get userInfo(): User {
-    return this.currentUser;
+  public get userInfo(): Info {
+    return this.currentUserInfo;
   }
 
   public logout() {
     return Observable.create(observer => {
-      this.currentUser = null;
+      this.currentUserInfo = null;
       observer.next(true);
       observer.complete();
     });
   }
+
 
 }
