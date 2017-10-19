@@ -84,26 +84,25 @@ app.get('/api/medicine', function(req, res) {
   });
 });
 
-//
-// // create review and send back all reviews after creation
-// app.post('/update', function(req, res) {
-// 	console.log("creating review");
-// 	// create a review, information comes from request from Ionic
-//   Information.update({
-// 		title : req.body.title,
-// 		description : req.body.description,
-// 		rating: req.body.rating,
-// 		done : false
-// 	}, function(err, review) {
-// 		if (err) res.send(err);
-// 		// get and return all the reviews after you create another
-// 		Review.find(function(err, reviews) {
-// 			if (err) res.send(err);
-// 			res.json(reviews);
-// 		});
-// 	});
-// });
-//
+// create new
+app.post('/update', function(req, res) {
+	console.log("creating new account");
+	// create a review, information comes from request from Ionic
+  Information.update({
+		title : req.body.title,
+		description : req.body.description,
+		rating: req.body.rating,
+		done : false
+	}, function(err, review) {
+		if (err) res.send(err);
+		// get and return all the reviews after you create another
+		Review.find(function(err, reviews) {
+			if (err) res.send(err);
+			res.json(reviews);
+		});
+	});
+});
+//// update
 // app.post('/update', function(req, res) {
 //   console.log("creating review");
 //   // create a review, information comes from request from Ionic

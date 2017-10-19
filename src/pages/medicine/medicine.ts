@@ -26,6 +26,7 @@ import { QRcodePage } from "../q-rcode/q-rcode";
 export class MedicinePage {
   options: BarcodeScannerOptions;
   bar_results: BarcodeScanResult;
+  result:{};
   medicine: any;
   thisAuth: any;
   constructor(public navCtrl: NavController,
@@ -51,7 +52,14 @@ export class MedicinePage {
   showChart(){
     this.navCtrl.push(ChartPage);
   }
-  qrcode(){
-    this.navCtrl.push(QRcodePage);
+  async qrcode(){
+    console.log(this.auth.currentUserInfo._id);
+    // const result = await this.barcode.encode(this.barcode.Encode.TEXT_TYPE, this.auth.currentUserInfo._id );
+    this.barcodeScanner.encode(this.barcodeScanner.Encode.TEXT_TYPE, this.auth.currentUserInfo._id ).then((encodedData) => {
+      console.log(encodedData);
+      this.result = encodedData;
+    }, (err) => {
+      console.log("Error occured : " + err);
+    });
   }
 }
