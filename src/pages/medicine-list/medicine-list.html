@@ -13,7 +13,7 @@
 
 <ion-content padding>
   <ion-list>
-    <ion-item-sliding *ngFor="let medicine of medicines" (press)="openNavDetailsPage(medicine)">
+    <ion-item-sliding *ngFor="let medicine of medicines; let idx=index" (press)="openNavDetailsPage(medicine, idx)">
     <!--<ion-item-sliding *ngFor="let medicine of medicines" >-->
       <ion-item>
         <ion-icon name="medkit" color="red_light" item-start></ion-icon>

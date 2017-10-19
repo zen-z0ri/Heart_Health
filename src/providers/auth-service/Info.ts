@@ -2,7 +2,7 @@ export class MedicineInfo {
   medName: string;
   barcode: number;
   medInfo: string;
-  timeList?: [string];
+  timeList: Array<string> = new Array();
   constructor(medName: string, barcode: number, medInfo: string) {
     this.medName = medName;
     this.barcode = barcode;

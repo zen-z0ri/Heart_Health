@@ -1,6 +1,10 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, Events} from 'ionic-angular';
 import { MedicineListPage } from "../medicine-list/medicine-list";
+import { AuthServiceProvider} from "../../providers/auth-service/auth-service";
+import { MedicineInfo} from "../../providers/auth-service/Info";
+import { Location }                 from '@angular/common';
+import { MedicineListPageModule} from "../medicine-list/medicine-list.module";
 
 /**
  * Generated class for the MedicineDetailPage page.
@@ -15,11 +19,20 @@ import { MedicineListPage } from "../medicine-list/medicine-list";
   templateUrl: 'medicine-detail.html',
 })
 export class MedicineDetailPage {
-  Alarms: [string] = ['07:30'];
-  medicine: any;
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
-    console.log(this.medicine);
+  Alarms: Array<string> = new Array();
+  medicine: MedicineInfo;
+  idx: number;
+  constructor(public navCtrl: NavController,
+              public navParams: NavParams,
+              private auth: AuthServiceProvider,
+              private location: Location,
+              public events: Events,) {
+
     this.medicine = this.navParams.data.medicine;
+    this.idx = this.navParams.data.idx;
+    this.Alarms = this.medicine.timeList;
+    console.log(this.medicine);
+    this.medicine.timeList = this.Alarms;
   }
 
   ionViewDidLoad() {
@@ -28,6 +41,20 @@ export class MedicineDetailPage {
 
   private addAlarm(): void{
     this.Alarms.push('07:30');
+    this.save();
   }
 
+  private save(): void{
+    this.auth.currentUserInfo.medicineList[this.idx] = this.medicine;
+    console.log(this.auth.currentUserInfo);
+    this.events.publish("shareObject", this.medicine);
+  }
+  private delete(idx): void{
+    this.Alarms.splice(idx,1);
+    this.save();
+  }
+  private getOut(): void{
+    this.save();
+    this.navCtrl.pop();
+  }
 }

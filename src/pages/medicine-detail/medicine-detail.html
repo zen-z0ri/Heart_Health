@@ -28,14 +28,16 @@
       Alarm time
     </ion-label>
 
-    <!--<ion-item *ngFor="let Alarm of Alarms" >-->
-    <ion-item *ngFor="let a of Alarms; let i=index">
+    <ion-item *ngFor="let a of Alarms; let i=index" (press)="delete(i)">
       <ion-label>Alarm {{i+1}}</ion-label>
       <ion-datetime displayFormat="h:mm A" pickerFormat="h mm A" [(ngModel)]="Alarms[i]"></ion-datetime>
     </ion-item>
 
-    <button ion-button class="btn" [color]="red_light" full (click)="addAlarm()">
+    <button ion-button class="addAlarm" round outline  full (click)="addAlarm()">
       Add Alarm
+    </button>
+    <button ion-button class="btn" [color]="red_light" full (click)="getOut()">
+      Back
     </button>
   </ion-list>
 

@@ -8,6 +8,7 @@ import { Info} from "./Info";
 @Injectable()
 export class AuthServiceProvider {
   currentUserInfo: Info = new Info();
+
   API_URL: string = "http://localhost:8080/api/";
   // API_URL: string = "http://10.0.2.2:8080/api/";
   constructor(private http: Http) {
@@ -28,6 +29,7 @@ export class AuthServiceProvider {
               observer.complete();
             }else{
               this.currentUserInfo = data[0];
+              this.currentUserInfo.medicineList.forEach(med => med.timeList = new Array());
               console.log(this.currentUserInfo);
               let access = (this.currentUserInfo!==null||this.currentUserInfo!== undefined);
               observer.next(access);
