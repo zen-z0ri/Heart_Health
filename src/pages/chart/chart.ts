@@ -254,5 +254,8 @@ export class ChartPage {
         }
       });
   }
+  back(){
+    this.navCtrl.pop();
+  }
 
 }

@@ -21,7 +21,7 @@ export class QRcodePage {
               public navParams: NavParams,
               private auth: AuthServiceProvider,
               private barcode: BarcodeScanner) {
-    this.showQR();
+    
   }
 
 
@@ -30,8 +30,9 @@ export class QRcodePage {
   }
 
   async showQR(){
+    console.log()
     // const result = await this.barcode.encode(this.barcode.Encode.TEXT_TYPE, this.auth.currentUserInfo._id );
-    this.barcode.encode(this.barcode.Encode.TEXT_TYPE,this.auth.currentUserInfo._id).then((encodedData) => {
+    this.barcode.encode(this.barcode.Encode.TEXT_TYPE, this.auth.currentUserInfo._id).then((encodedData) => {
       console.log(encodedData);
       this.result = encodedData;
     }, (err) => {

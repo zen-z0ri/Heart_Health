@@ -76,5 +76,32 @@
       "docName": "Aragaki Yui",
       "phoneNumber": 4032132189
     }
+  },
+
+  {
+    "user" : {
+      "name" : "dyb",
+      "email" : "tungreeboo@gmail.com",
+      "password" : "dyb"
+    },
+    "medicineList" : [
+
+    ],
+    "heart_rate" : [
+
+    ],
+    "bmi" : [
+
+    ],
+    "BP" : [
+
+    ],
+    "Emotion" : [
+
+    ],
+    "doctor" : {
+
+    }
   }
+
 ]
