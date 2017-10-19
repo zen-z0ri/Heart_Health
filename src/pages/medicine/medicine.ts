@@ -7,7 +7,9 @@ import { Http} from "@angular/http";
 import { AddNewMedicinePage} from "../add-new-medicine/add-new-medicine";
 
 import 'rxjs/add/operator/toPromise';
-import {ChartPage} from "../chart/chart";
+import { ChartPage } from "../chart/chart";
+import { QRcodePage } from "../q-rcode/q-rcode";
+
 /**
  * Generated class for the MedicinePage page.
  *
@@ -48,5 +50,8 @@ export class MedicinePage {
   }
   showChart(){
     this.navCtrl.push(ChartPage);
+  }
+  qrcode(){
+    this.navCtrl.push(QRcodePage);
   }
 }

@@ -19,6 +19,7 @@ import { MedicineDetailPage} from "../pages/medicine-detail/medicine-detail";
 import { AddNewMedicinePage} from "../pages/add-new-medicine/add-new-medicine";
 import { BloodPreasurePage} from "../pages/blood-preasure/blood-preasure";
 import { ChartPage} from "../pages/chart/chart";
+import { QRcodePage} from "../pages/q-rcode/q-rcode";
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { ChartPage} from "../pages/chart/chart";
     AddNewMedicinePage,
     BloodPreasurePage,
     ChartPage,
+    QRcodePage,
   ],
   imports: [
     HttpModule,
@@ -52,6 +54,7 @@ import { ChartPage} from "../pages/chart/chart";
     AddNewMedicinePage,
     BloodPreasurePage,
     ChartPage,
+    QRcodePage,
   ],
   providers: [
     StatusBar,

@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { BarcodeScanner, BarcodeScannerOptions, BarcodeScanResult} from "@ionic-native/barcode-scanner";
+import { AuthServiceProvider} from "../../providers/auth-service/auth-service";
 
 /**
  * Generated class for the QRcodePage page.
@@ -14,12 +16,27 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'q-rcode.html',
 })
 export class QRcodePage {
-
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  result: {};
+  constructor(public navCtrl: NavController,
+              public navParams: NavParams,
+              private auth: AuthServiceProvider,
+              private barcode: BarcodeScanner) {
+    this.showQR();
   }
+
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad QRcodePage');
+  }
+
+  async showQR(){
+    // const result = await this.barcode.encode(this.barcode.Encode.TEXT_TYPE, this.auth.currentUserInfo._id );
+    this.barcode.encode(this.barcode.Encode.TEXT_TYPE,this.auth.currentUserInfo._id).then((encodedData) => {
+      console.log(encodedData);
+      this.result = encodedData;
+    }, (err) => {
+      console.log("Error occured : " + err);
+    });
   }
 
 }
