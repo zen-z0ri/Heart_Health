@@ -28,9 +28,9 @@ export class Info {
   _id: string;
   user: User;
   medicineList: [MedicineInfo];
-  heart_rate: [Number];
-  bmi: [Number];
+  heart_rate: [number];
+  bmi: [number];
   doctor: Doctor;
   BP: [String];
-  Emotion: [Number];
+  Emotion: [number];
 }

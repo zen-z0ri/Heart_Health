@@ -33,7 +33,7 @@
       <ion-datetime displayFormat="h:mm A" pickerFormat="h mm A" [(ngModel)]="Alarms[i]"></ion-datetime>
     </ion-item>
 
-    <button ion-button class="addAlarm" round outline  full (click)="addAlarm()">
+    <button ion-button class="addAlarm" round outline  outline (click)="addAlarm()">
       Add Alarm
     </button>
     <button ion-button class="btn" [color]="red_light" full (click)="getOut()">
