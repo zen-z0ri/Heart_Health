@@ -41,7 +41,8 @@
     "doctor":{
       "docName": "Aragaki Yui",
       "phoneNumber": 1393102020
-    }
+    },
+    "token":""
 
   },
 
@@ -75,7 +76,8 @@
     "doctor":{
       "docName": "Aragaki Yui",
       "phoneNumber": 4032132189
-    }
+    },
+    "token":""
   },
 
   {
@@ -101,7 +103,8 @@
     ],
     "doctor" : {
 
-    }
+    },
+    "token":""
   }
 
 ]

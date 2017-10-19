@@ -8,7 +8,6 @@ import { AddNewMedicinePage} from "../add-new-medicine/add-new-medicine";
 
 import 'rxjs/add/operator/toPromise';
 import { ChartPage } from "../chart/chart";
-import { QRcodePage } from "../q-rcode/q-rcode";
 
 /**
  * Generated class for the MedicinePage page.
@@ -52,10 +51,21 @@ export class MedicinePage {
   showChart(){
     this.navCtrl.push(ChartPage);
   }
+
+  /**
+   * 1. request server make a toke -->
+   * 2. recieve the toke to create the qr code -->
+   * 3. doctor scan the token and use it to generate data
+   * @returns {Promise<void>}
+   */
   async qrcode(){
-    console.log(this.auth.currentUserInfo._id);
+    let code;
+    await  this.http.get(this.auth.API_URL+'token?name='+this.auth.currentUserInfo.user.name)
+      .toPromise()
+      .then(res => {code=res; console.log(code);});
+
     // const result = await this.barcode.encode(this.barcode.Encode.TEXT_TYPE, this.auth.currentUserInfo._id );
-    this.barcodeScanner.encode(this.barcodeScanner.Encode.TEXT_TYPE, this.auth.currentUserInfo._id ).then((encodedData) => {
+    await this.barcodeScanner.encode(this.barcodeScanner.Encode.TEXT_TYPE, this.auth.currentUserInfo._id ).then((encodedData) => {
       console.log(encodedData);
       this.result = encodedData;
     }, (err) => {
