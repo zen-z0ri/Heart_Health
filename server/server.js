@@ -95,7 +95,7 @@ app.get("/api/token", function(req, res){
       console.log(req.query.name);
       if (err) res.send(err);
       console.log(token.toString());
-      res.send(token);
+      res.json(token);
     });
 });
 // create new
