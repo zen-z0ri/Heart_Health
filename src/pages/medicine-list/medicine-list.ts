@@ -26,4 +26,11 @@ export class MedicineListPage {
   openNavDetailsPage(medicine, idx) {
     this.nav.push(MedicineDetailPage, { medicine: medicine, idx: idx });
   }
+  deleteMed(idx){
+    this.auth.currentUserInfo.medicineList.splice(idx,1);
+  }
+  private getOut(): void{
+
+    this.nav.pop();
+  }
 }

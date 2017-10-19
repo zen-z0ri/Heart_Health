@@ -14,18 +14,19 @@
 <ion-content padding>
   <ion-list>
     <ion-item-sliding *ngFor="let medicine of medicines; let idx=index" (press)="openNavDetailsPage(medicine, idx)">
-    <!--<ion-item-sliding *ngFor="let medicine of medicines" >-->
       <ion-item>
         <ion-icon name="medkit" color="red_light" item-start></ion-icon>
         {{medicine.medName}}
       </ion-item>
 
       <ion-item-options side="right">
-        <button ion-button danger><ion-icon name="trash"></ion-icon></button>
+        <button ion-button danger (click)="deleteMed(idx)" ><ion-icon name="trash"></ion-icon></button>
       </ion-item-options>
     </ion-item-sliding>
 
-
+    <button ion-button class="btn" [color]="red_light" outline (click)="getOut()">
+      Back
+    </button>
   </ion-list>
 
 </ion-content>

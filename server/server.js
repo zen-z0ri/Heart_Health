@@ -17,12 +17,12 @@ app.use(bodyParser.json());                                     // parse applica
 app.use(bodyParser.json({ type: 'application/vnd.api+json' })); // parse application/vnd.api+json as json
 app.use(cors());
 
-// app.use(function(req, res, next) {
-// 	res.header("Access-Control-Allow-Origin", "*");
-// 	res.header('Access-Control-Allow-Methods', 'DELETE, PUT');
-// 	res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-// 	next();
-// });
+app.use(function(req, res, next) {
+	res.header("Access-Control-Allow-Origin", "*");
+	res.header('Access-Control-Allow-Methods', 'DELETE, PUT');
+	res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+	next();
+});
 
 // Models
 let InfoSchema = mongoose.Schema({
@@ -42,8 +42,12 @@ let InfoSchema = mongoose.Schema({
 	},
   heart_rate:     [Number],
   bmi:            [Number],
-  blood_pressure: [String],
-  Emotion:        [Number]
+  blood_pressure: [{
+	  high_pressure: Number,
+    low_pressure: Number
+  }],
+  Emotion:        [Number],
+  token: String
 });
 let MedicineSchema = mongoose.Schema({
     medName: String,
@@ -70,11 +74,10 @@ app.get('/api/login', function(req, res) {
 		res.json(information);
 	});
 });
-
+// search medicine
 app.get('/api/medicine', function(req, res) {
   console.log("search");
   Medicine.find({ "barcode": req.query.barcode},function(err, medicine) {
-  // Medicine.find({ "barcode": 4632847461},function(err, medicine) {
     console.log(req.query.barcode);
     if (err) res.send(err);
     console.log(medicine.toString());
@@ -82,26 +85,38 @@ app.get('/api/medicine', function(req, res) {
   });
 });
 
-//
-// // create review and send back all reviews after creation
-// app.post('/update', function(req, res) {
-// 	console.log("creating review");
-// 	// create a review, information comes from request from Ionic
-//   Information.update({
-// 		title : req.body.title,
-// 		description : req.body.description,
-// 		rating: req.body.rating,
-// 		done : false
-// 	}, function(err, review) {
-// 		if (err) res.send(err);
-// 		// get and return all the reviews after you create another
-// 		Review.find(function(err, reviews) {
-// 			if (err) res.send(err);
-// 			res.json(reviews);
-// 		});
-// 	});
-// });
-//
+// token
+app.get("/api/token", function(req, res){
+  //generate random token
+  let token = Math.random().toString(36).substr(2);
+  Information.update({ "user.name": req.query.name
+    },{ $set : { "token" : token } },
+    function(err, information) {
+      console.log(req.query.name);
+      if (err) res.send(err);
+      console.log(token.toString());
+      res.send(token);
+    });
+});
+// create new
+app.post('/update', function(req, res) {
+	console.log("creating new account");
+	// create a review, information comes from request from Ionic
+  Information.update({
+		title : req.body.title,
+		description : req.body.description,
+		rating: req.body.rating,
+		done : false
+	}, function(err, review) {
+		if (err) res.send(err);
+		// get and return all the reviews after you create another
+		Review.find(function(err, reviews) {
+			if (err) res.send(err);
+			res.json(reviews);
+		});
+	});
+});
+//// update
 // app.post('/update', function(req, res) {
 //   console.log("creating review");
 //   // create a review, information comes from request from Ionic
