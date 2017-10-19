@@ -23,7 +23,11 @@ export class Doctor{
   docName: string;
   phoneNumber: number;
 }
+export class BloodPressure{
+  high_pressure: number;
+  low_pressure: number;
 
+}
 export class Info {
   _id: string;
   user: User;
@@ -31,6 +35,6 @@ export class Info {
   heart_rate: [number];
   bmi: [number];
   doctor: Doctor;
-  BP: [String];
+  BP: [BloodPressure];
   Emotion: [number];
 }

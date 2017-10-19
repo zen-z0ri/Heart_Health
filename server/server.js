@@ -42,7 +42,10 @@ let InfoSchema = mongoose.Schema({
 	},
   heart_rate:     [Number],
   bmi:            [Number],
-  blood_pressure: [String],
+  blood_pressure: [{
+	  high_pressure: Number,
+    low_pressure: Number
+  }],
   Emotion:        [Number]
 });
 let MedicineSchema = mongoose.Schema({
@@ -74,7 +77,6 @@ app.get('/api/login', function(req, res) {
 app.get('/api/medicine', function(req, res) {
   console.log("search");
   Medicine.find({ "barcode": req.query.barcode},function(err, medicine) {
-  // Medicine.find({ "barcode": 4632847461},function(err, medicine) {
     console.log(req.query.barcode);
     if (err) res.send(err);
     console.log(medicine.toString());

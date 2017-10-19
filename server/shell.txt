@@ -1,1 +1,2 @@
 mongoimport --jsonArray --db heart --collection information --file sampleData.json
+sudo service mongod restart

@@ -89,28 +89,32 @@ export class ChartPage {
       });
   }
   createBP(){
-    let highPressure: [number];
-    let lowPressure: [number];
+    let highPressure: Array<number> = new Array();
+    let lowPressure: Array<number> = new Array();
+    let max = Math.max(...highPressure);
+    let min = Math.min(...lowPressure);
     this.auth.currentUserInfo.BP.forEach(ele => {
-      let res = ele.split(":");
-      lowPressure.push(res[0]);
-      highPressure.push(res[1]);
+      lowPressure.push(ele["high_pressure"]);
+      highPressure.push(ele["low_pressure"]);
     });
-  }
-  createBMI() {
-    let max = Math.max(...this.auth.currentUserInfo.bmi);
-    let min = Math.min(...this.auth.currentUserInfo.bmi);
-    this.bmiChartEl = new Chart(this.bmi.nativeElement,
+    this.BPChartEL = new Chart(this.BP.nativeElement,
       {
         type: 'line',
         data: {
           labels: ["-6", "-5", "-4", "-3", "-2", "-1", "0"],
           datasets:[{
-            label: "BMI for last 7 updates",
-            borderColor: '#0CA9EA',
+            label: "Systolic Blood Pressure",
+            borderColor: '#F46529',
             fill: true,
             fillColor : "rgba(220,220,220,0.5)",
-            data: this.auth.currentUserInfo.Emotion}]
+            data: highPressure
+          }, {
+            label: "Diastolic Blood Pressure",
+            borderColor: '#00a826',
+            fill: true,
+            fillColor : "rgba(101,73,156,0.5)",
+            data: lowPressure
+          }]
         },
         options : {
           legend: {
@@ -132,8 +136,63 @@ export class ChartPage {
             yAxes: [{
               display: true,
               ticks: {
-                suggestedMax: max+1,
-                suggestedMin: min-1,
+                suggestedMax: max+3,
+                suggestedMin: min-3,
+              }
+            }],
+            xAxes: [{
+              display: true,
+              ticks: {
+                autoSkip: false
+              }
+            }]
+          }
+        }
+      });
+  }
+  createBMI() {
+    let max = Math.max(...this.auth.currentUserInfo.bmi);
+    console.log(max);
+
+    let min = Math.min(...this.auth.currentUserInfo.bmi);
+    console.log(min);
+    this.bmiChartEl = new Chart(this.bmi.nativeElement,
+      {
+        type: 'line',
+        data: {
+          labels: ["-6", "-5", "-4", "-3", "-2", "-1", "0"],
+          datasets:[{
+            label: "BMI for last 7 updates",
+            borderColor: '#0CA9EA',
+            fill: true,
+            fillColor : "rgba(220,220,220,0.5)",
+            data: this.auth.currentUserInfo.bmi
+            // data:  [ 22.2, 22.2, 22.3, 22.4, 22.5, 22.5 ]
+          }]
+        },
+        options : {
+          legend: {
+            display: false
+          },
+          responsive: true,
+          title:{
+            display:false,
+          },
+          tooltips: {
+            mode: 'index',
+            intersect: false,
+          },
+          hover: {
+            mode: 'nearest',
+            intersect: true
+          },
+          scales: {
+            yAxes: [{
+              display: true,
+              ticks: {
+                suggestedMax: max+0.1,
+                suggestedMin: min-0.1,
+                stepSize: 0.1
               }
             }],
             xAxes: [{
