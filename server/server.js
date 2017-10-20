@@ -27,33 +27,44 @@ app.use(function(req, res, next) {
 // Models
 let InfoSchema = mongoose.Schema({
 	user: {
-		name: String,
-		email: String,
-		password: String
+		name: { type: String, default: ""},
+		email: { type: String, default: ""},
+		password: { type: String, default: ""}
 	},
   medicineList: [{
-    medName: String,
+    medName: { type: String, default: ""},
     barcode: Number,
-    medInfo: String,
+    medInfo: { type: String, default: ""},
+    conflictList:  { type: [Number], default: []}
   }],
 	doctor:{
-		docName: String,
-		phoneNumber: Number
+		docName: { type: String, default: ""},
+		phoneNumber: { type: Number, default: 0}
 	},
-  heart_rate:     [Number],
-  bmi:            [Number],
-  blood_pressure: [{
-	  high_pressure: Number,
-    low_pressure: Number
-  }],
-  Emotion:        [Number],
-  token: String
+  heart_rate:{ type: [Number],
+              default: [0, 0, 0, 0, 0, 0, 0]},
+  bmi:       { type: [Number],
+            default: [0, 0, 0, 0, 0, 0, 0]},
+  BP: { type: [{
+        high_pressure: Number,
+        low_pressure: Number
+      }],
+        default: [{ high_pressure:0,low_pressure:0},
+          { high_pressure:0,low_pressure:0},
+          { high_pressure:0,low_pressure:0},
+          { high_pressure:0,low_pressure:0},
+          { high_pressure:0,low_pressure:0},
+          { high_pressure:0,low_pressure:0},
+          { high_pressure:0,low_pressure:0}]},
+  Emotion: { type: [Number],
+                  default: [0, 0, 0, 0, 0, 0, 0]},
+  token: { type: String, default: ""}
 });
 let MedicineSchema = mongoose.Schema({
     medName: String,
     barcode: Number,
     medInfo: String,
-
+    conflictList: [Number]
   });
 
 const Information = mongoose.model('information', InfoSchema, 'information');
@@ -85,7 +96,6 @@ app.get('/api/medicine', function(req, res) {
     res.json(medicine);
   });
 });
-
 // token
 app.get("/api/token", function(req, res){
   //generate random token
@@ -99,9 +109,9 @@ app.get("/api/token", function(req, res){
       res.json(token);
     });
 });
+// doctor get
 app.get("/api/patient", function(req, res){
   //generate random token
-
   Information.find({ "token": req.query.token
     },
     function(err, information) {
@@ -113,44 +123,30 @@ app.get("/api/patient", function(req, res){
 });
 
 // create new
-app.post('/update', function(req, res) {
+app.post('/api/create', function(req, res) {
 	console.log("creating new account");
-	// create a review, information comes from request from Ionic
-  Information.update({
-		title : req.body.title,
-		description : req.body.description,
-		rating: req.body.rating,
-		done : false
-	}, function(err, review) {
-		if (err) res.send(err);
-		// get and return all the reviews after you create another
-		Review.find(function(err, reviews) {
-			if (err) res.send(err);
-			res.json(reviews);
-		});
-	});
+  newAcc = new Information();
+  console.log(req.body);
+  newAcc.user = req.body;
+  newAcc.save(function (err, fluffy) {
+    if (err) return console.error(err);
+
+  });
 });
-//// update
-// app.post('/update', function(req, res) {
-//   console.log("creating review");
-//   // create a review, information comes from request from Ionic
-//   Information.update({
-//     title : req.body.title,
-//     description : req.body.description,
-//     rating: req.body.rating,
-//     done : false
-//   }, function(err, review) {
-//     if (err)
-//       res.send(err);
-//
-//     // get and return all the reviews after you create another
-//     Review.find(function(err, reviews) {
-//       if (err)
-//         res.send(err);
-//       res.json(reviews);
-//     });
-//   });
-// });
+//// save
+app.post('/api/save', function(req, res) {
+  console.log("save");
+  // create a review, information comes from request from Ionic
+  Information.findById(req.body._id, function (err, info) {
+    if (err) return handleError(err);
+    console.log(info);
+    info.set(req.body);
+    info.save(function (err, updatedTank) {
+      if (err) return handleError(err);
+      res.send(updatedTank);
+    });
+  });
+});
 
 
 // listen (start app with node server.js) ======================================

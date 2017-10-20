@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController } from 'ionic-angular';
 import { DoctorGetPage} from "../doctor-get/doctor-get";
-import { BarcodeScanner, BarcodeScannerOptions, BarcodeScanResult} from "@ionic-native/barcode-scanner";
+import { BarcodeScanner, BarcodeScanResult} from "@ionic-native/barcode-scanner";
 import { Http} from "@angular/http";
 import { AuthServiceProvider} from "../../providers/auth-service/auth-service";
 
@@ -38,4 +38,8 @@ export class SettingPage {
       });
     await this.navCtrl.push(DoctorGetPage, { info: this.info });
   }
+  saveBack(){
+    this.http.post(this.Auth.API_URL+'save',this.Auth.userInfo).subscribe();
+  }
+
 }

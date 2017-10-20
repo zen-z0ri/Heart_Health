@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Observable} from 'rxjs/Observable';
-import { Http, Headers } from '@angular/http';
+import { Http } from '@angular/http';
 import 'rxjs/add/operator/map';
 import { Info} from "./Info";
 
@@ -22,15 +22,12 @@ export class AuthServiceProvider {
         this.http.get(this.API_URL+'login?name='+credentials.name+"&password="+credentials.password)
           .map(res => res.json())
           .subscribe(data =>{
-            console.log(data);
             if (data.length === 0){
               let access = false;
               observer.next(access);
               observer.complete();
             }else{
               this.currentUserInfo = data[0];
-              this.currentUserInfo.medicineList.forEach(med => med.timeList = new Array());
-              console.log(this.currentUserInfo);
               let access = (this.currentUserInfo!==null||this.currentUserInfo!== undefined);
               observer.next(access);
               observer.complete();
@@ -40,11 +37,11 @@ export class AuthServiceProvider {
     }
   }
 
-  public register(credentials) {
-    if (credentials.email === null || credentials.password === null) {
+  public register(infoNew) {
+    if (infoNew.email === null || infoNew.password === null) {
       return Observable.throw("Please insert credentials");
     } else {
-      // add code to connect the DB
+      this.http.post(this.API_URL+"create", infoNew).subscribe();
       return Observable.create(observer => {
         observer.next(true);
         observer.complete();
@@ -62,6 +59,9 @@ export class AuthServiceProvider {
       observer.next(true);
       observer.complete();
     });
+  }
+  public update(){
+
   }
 
 

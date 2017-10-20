@@ -22,6 +22,7 @@ import { ChartPage} from "../pages/chart/chart";
 import { DoctorGetPage } from "../pages/doctor-get/doctor-get";
 import { ArticlePage} from "../pages/article/article";
 import { UserManualPage} from "../pages/user-manual/user-manual";
+import { ChangeDoctorPage} from "../pages/change-doctor/change-doctor";
 
 @NgModule({
   declarations: [
@@ -39,6 +40,7 @@ import { UserManualPage} from "../pages/user-manual/user-manual";
     DoctorGetPage,
     ArticlePage,
     UserManualPage,
+    ChangeDoctorPage,
   ],
   imports: [
     HttpModule,
@@ -61,6 +63,7 @@ import { UserManualPage} from "../pages/user-manual/user-manual";
     DoctorGetPage,
     ArticlePage,
     UserManualPage,
+    ChangeDoctorPage,
   ],
   providers: [
     StatusBar,

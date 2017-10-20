@@ -47,13 +47,18 @@ page-login {
       background: #480000;
       border-radius: 5px !important;
       font-size: larger;
+      text-transform: none;
     }
 
     .register-btn {
       color: #ffffff;
       font-size: 0.8em;
       font-size: medium;
+      text-transform: none;
     }
+  }
+  .submit-btn .register-btn {
+    text-transform: none;
   }
 
 }

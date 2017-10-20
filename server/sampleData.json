@@ -108,7 +108,8 @@
 
     ],
     "doctor" : {
-
+      "docName": "",
+      "phoneNumber": 0
     },
     "token":""
   }

@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController } from 'ionic-angular';
 import { HeartRatePage} from "../heart-rate/heart-rate";
 import { AuthServiceProvider} from "../../providers/auth-service/auth-service";
 import {BloodPreasurePage} from "../blood-preasure/blood-preasure";
-import { Doctor} from "../../providers/auth-service/Info";
 import { CallNumber } from '@ionic-native/call-number';
 import { ChartPage} from "../chart/chart";
+import { ChangeDoctorPage} from "../change-doctor/change-doctor";
 
 /**
  * Generated class for the ProfilePage page.
@@ -61,7 +61,7 @@ export class ProfilePage {
       .catch(() => console.log('Error launching dialer'));
   }
   resetPhone(){
-
+    this.nav.push(ChangeDoctorPage);
   }
 
   openNavDetailsPage(item) {

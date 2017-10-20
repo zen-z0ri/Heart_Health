@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController } from 'ionic-angular';
 import { MedicineDetailPage} from "../medicine-detail/medicine-detail";
 import { AuthServiceProvider} from "../../providers/auth-service/auth-service";
 import { MedicineInfo} from "../../providers/auth-service/Info";
@@ -18,7 +18,7 @@ import { Location }                 from '@angular/common';
 })
 export class MedicineListPage {
 
-  medicines:  [MedicineInfo];
+  medicines:  Array<MedicineInfo>;
   constructor(public nav: NavController, private auth: AuthServiceProvider, private location: Location,) {
     this.medicines = auth.currentUserInfo.medicineList;
   }
@@ -30,7 +30,7 @@ export class MedicineListPage {
     this.auth.currentUserInfo.medicineList.splice(idx,1);
   }
   private getOut(): void{
-
     this.nav.pop();
   }
+
 }
