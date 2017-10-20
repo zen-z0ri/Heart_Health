@@ -5,6 +5,8 @@ import { AuthServiceProvider} from "../../providers/auth-service/auth-service";
 import {BloodPreasurePage} from "../blood-preasure/blood-preasure";
 import { Doctor} from "../../providers/auth-service/Info";
 import { CallNumber } from '@ionic-native/call-number';
+import { ChartPage} from "../chart/chart";
+
 /**
  * Generated class for the ProfilePage page.
  *
@@ -67,6 +69,9 @@ export class ProfilePage {
   }
   openBPDetailsPage(item) {
     this.nav.push(BloodPreasurePage, { item: item });
+  }
+  goChart(){
+    this.nav.push(ChartPage);
   }
 }
 

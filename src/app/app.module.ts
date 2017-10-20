@@ -20,8 +20,8 @@ import { AddNewMedicinePage} from "../pages/add-new-medicine/add-new-medicine";
 import { BloodPreasurePage} from "../pages/blood-preasure/blood-preasure";
 import { ChartPage} from "../pages/chart/chart";
 import { DoctorGetPage } from "../pages/doctor-get/doctor-get";
-import { PatientLogPage} from "../pages/patient-log/patient-log";
 import { ArticlePage} from "../pages/article/article";
+import { UserManualPage} from "../pages/user-manual/user-manual";
 
 @NgModule({
   declarations: [
@@ -37,8 +37,8 @@ import { ArticlePage} from "../pages/article/article";
     BloodPreasurePage,
     ChartPage,
     DoctorGetPage,
-    PatientLogPage,
     ArticlePage,
+    UserManualPage,
   ],
   imports: [
     HttpModule,
@@ -59,8 +59,8 @@ import { ArticlePage} from "../pages/article/article";
     BloodPreasurePage,
     ChartPage,
     DoctorGetPage,
-    PatientLogPage,
     ArticlePage,
+    UserManualPage,
   ],
   providers: [
     StatusBar,

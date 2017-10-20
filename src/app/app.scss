@@ -18,14 +18,20 @@
 //  background: #f05545;
 //}
 
-.bg-style {
-  font-family: "Roboto", "Helvetica Neue", sans-serif;
+
+.back-button-md {
+  text-transform: none;
+}
+.tabs {
+  .tab-button {
+    .tab-button-text {
+      text-transform: none;
+    }
   }
-
-
+}
 .btn {
-
-  margin: 23px 10%;
+  text-transform: none;
+  margin: 18px 10%;
   border-radius: 6px;
   width: 80%;
   font-size: 0.8em;

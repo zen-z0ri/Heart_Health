@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 /**
- * Generated class for the PatientLogPage page.
+ * Generated class for the UserManualPage page.
  *
  * See http://ionicframework.com/docs/components/#navigation for more info
  * on Ionic pages and navigation.
@@ -10,16 +10,16 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 @IonicPage()
 @Component({
-  selector: 'page-patient-log',
-  templateUrl: 'patient-log.html',
+  selector: 'page-user-manual',
+  templateUrl: 'user-manual.html',
 })
-export class PatientLogPage {
+export class UserManualPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad PatientLogPage');
+    console.log('ionViewDidLoad UserManualPage');
   }
 
 }

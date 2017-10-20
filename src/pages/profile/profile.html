@@ -13,19 +13,19 @@
   <ion-card>
 
     <ion-item>
-      <h2>{{auth.currentUserInfo.doctor}}</h2>
+      <h2>{{auth.currentUserInfo.doctor.docName}}</h2>
     </ion-item>
     <img src="assets/img/Call-doctor.jpg">
 
     <ion-row>
       <ion-col>
-        <button ion-button icon-left clear small (press)="makeCall()">
+        <button class="small-btn" ion-button icon-left clear small (press)="makeCall()">
           <ion-icon name="call"></ion-icon>
           <div>Make Call</div>
         </button>
       </ion-col>
       <ion-col>
-        <button ion-button icon-left clear small (click)="resetPhone()">
+        <button class="small-btn" ion-button icon-left clear small (click)="resetPhone()">
           <ion-icon name="settings"></ion-icon>
           <div>Change Number</div>
         </button>
@@ -44,6 +44,9 @@
       <ion-icon [name]="bp.iconN" [ngStyle]="{'color': bp.color}" item-start></ion-icon>
       {{ bp.title }}
       <ion-icon name="arrow-forward" item-end></ion-icon>
+    </button>
+    <button ion-button class="btn" round clear (click)="goChart()">
+       Show Health Log <ion-icon name="arrow-dropright-circle" class="fig" itemid></ion-icon>
     </button>
 
   </ion-list>

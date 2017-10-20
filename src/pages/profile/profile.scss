@@ -1,5 +1,5 @@
 page-profile {
-  ion-card {
+  .ion-card {
     background-color: #030303;
     position: relative;
     text-align: center;
@@ -7,6 +7,12 @@ page-profile {
     img {
       height:auto;
     }
+  }
+  .small-btn{
+    text-transform: none;
+  }
+  .fig{
+    margin: 0 6px;
   }
 
 }

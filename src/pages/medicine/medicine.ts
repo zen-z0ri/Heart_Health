@@ -8,6 +8,8 @@ import { AddNewMedicinePage} from "../add-new-medicine/add-new-medicine";
 
 import 'rxjs/add/operator/toPromise';
 import { ChartPage } from "../chart/chart";
+import { ArticlePage} from "../article/article";
+import { UserManualPage} from "../user-manual/user-manual";
 
 /**
  * Generated class for the MedicinePage page.
@@ -45,7 +47,7 @@ export class MedicinePage {
                     .toPromise().then(res => this.medicine = res.json());
     await this.navCtrl.push(AddNewMedicinePage, { medicine: this.medicine[0] });
   }
-  showMedcines(e){
+  showMedcines(){
     this.navCtrl.push(MedicineListPage);
   }
   showChart(){
@@ -72,5 +74,11 @@ export class MedicinePage {
     }, (err) => {
       console.log("Error occured : " + err);
     });
+  }
+  showTips(){
+    this.navCtrl.push(ArticlePage);
+  }
+  showInfo(){
+    this.navCtrl.push(UserManualPage);
   }
 }
