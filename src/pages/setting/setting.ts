@@ -31,13 +31,11 @@ export class SettingPage {
   }
   async scanBarcode(){
     this.qr_result = await this.barcodeScanner.scan();
-    await this.http.get(this.Auth.API_URL+'patient?barcode='+this.qr_result.text)
+    await this.http.get(this.Auth.API_URL+'patient?token='+this.qr_result.text)
       .toPromise().then(res => {
         this.info = res.json();
         console.log(this.info);
       });
-    // await this.navCtrl.push(AddNewMedicinePage, { medicine: this.medicine[0] });
+    await this.navCtrl.push(DoctorGetPage, { info: this.info });
   }
-
-
 }

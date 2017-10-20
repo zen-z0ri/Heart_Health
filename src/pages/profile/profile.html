@@ -13,19 +13,19 @@
   <ion-card>
 
     <ion-item>
-      <h2>Dr. Yuki</h2>
+      <h2>{{auth.currentUserInfo.doctor}}</h2>
     </ion-item>
     <img src="assets/img/Call-doctor.jpg">
 
     <ion-row>
       <ion-col>
-        <button ion-button icon-left clear small>
+        <button ion-button icon-left clear small (press)="makeCall()">
           <ion-icon name="call"></ion-icon>
           <div>Make Call</div>
         </button>
       </ion-col>
       <ion-col>
-        <button ion-button icon-left clear small>
+        <button ion-button icon-left clear small (click)="resetPhone()">
           <ion-icon name="settings"></ion-icon>
           <div>Change Number</div>
         </button>
@@ -38,10 +38,12 @@
     <button ion-item *ngFor="let item of items" (click)="openNavDetailsPage(item)" icon-start>
       <ion-icon [name]="item.iconN" [ngStyle]="{'color': item.color}" item-start></ion-icon>
       {{ item.title }}
+      <ion-icon name="arrow-forward" item-end></ion-icon>
     </button>
     <button ion-item (click)="openBPDetailsPage(bp)" icon-start>
       <ion-icon [name]="bp.iconN" [ngStyle]="{'color': bp.color}" item-start></ion-icon>
       {{ bp.title }}
+      <ion-icon name="arrow-forward" item-end></ion-icon>
     </button>
 
   </ion-list>

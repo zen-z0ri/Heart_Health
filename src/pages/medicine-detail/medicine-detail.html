@@ -10,21 +10,24 @@
 
 
 <ion-content  padding>
-  <ion-label>Name:</ion-label>
+  <ion-list>
+  <!--<ion-label class="header">Name:</ion-label>-->
   <ion-item>
-    {{medicine.medName}}
+    <ion-label class="header">Name:</ion-label>
+    <button>{{medicine.medName}}</button>
   </ion-item>
-  <ion-label>BarCode:</ion-label>
+  <!--<ion-label class="header">BarCode:</ion-label>-->
   <ion-item>
-    {{medicine.barcode}}
+    <ion-label class="header">BarCode:</ion-label> {{medicine.barcode}}
   </ion-item>
-  <ion-label>Discription:</ion-label>
+  <ion-label class="header">Discription:</ion-label>
   <ion-item>
+    <ion-label class="header">Discription:</ion-label>
     {{medicine.medInfo}}
   </ion-item>
-
+  </ion-list>
   <ion-list class="timeList">
-    <ion-label>
+    <ion-label class="header">
       Alarm time
     </ion-label>
 

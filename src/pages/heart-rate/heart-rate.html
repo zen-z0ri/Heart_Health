@@ -11,12 +11,12 @@
   <ion-list>
     <ion-item>
       <ion-label floating>{{item.title}} Value</ion-label>
-      <ion-input type="text" value="" required ng-pattern="/\d{2,3}/"></ion-input>
+      <ion-input type="text" value="" required ng-pattern="/\d{2,3}/" [(ngModel)]="value"></ion-input>
     </ion-item>
   </ion-list>
 
   <div padding>
-    <button class="btn" ion-button color="primary" outline>Update</button>
+    <button class="btn" ion-button color="primary" outline (click)="saveinfo()" >Update</button>
     <button class="btn" ion-button color="primary" outline (click)="cancelAdd()">Cancel</button>
 
   </div>

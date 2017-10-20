@@ -1,0 +1,28 @@
+[
+  {
+    "medName": "Warfarin",
+    "barcode": 4632847461,
+    "medInfo": "Prevent blood clots forming and treats existing clots",
+    "conflictList": [7894342940, 8957499834]
+    },{
+    "medName": "Aspirin",
+    "barcode": 7894342940,
+    "medInfo": "Stop blood clots from forming in a narrow artery and reduce the risk of heart attack and stroke.",
+    "conflictList": [4632847461]
+  },{
+    "medName": "Beta-blockers",
+    "barcode": 3095489472,
+    "medInfo": "Make your heart beat more slowly",
+    "conflictList": []
+  },{
+    "medName": "Statins",
+    "barcode": 3563456393,
+    "medInfo": "Reduce your risk of heart attack and stroke by helping to lower your cholesterol",
+    "conflictList": []
+  },{
+    "medName": "Nitrates",
+    "barcode": 8957499834,
+    "medInfo": "Increase blood flow to your heart by widening blood vessels",
+    "conflictList": [4632847461]
+  }
+]

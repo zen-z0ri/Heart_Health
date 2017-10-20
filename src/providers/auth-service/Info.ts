@@ -2,7 +2,9 @@ export class MedicineInfo {
   medName: string;
   barcode: number;
   medInfo: string;
+  conflictList: Array<number> = new Array();
   timeList?: Array<string> = new Array();
+
   constructor(medName: string, barcode: number, medInfo: string) {
     this.medName = medName;
     this.barcode = barcode;
@@ -26,10 +28,13 @@ export class Doctor{
 export class BloodPressure{
   high_pressure: number;
   low_pressure: number;
-
+  constructor(high_pressure: number, low_pressure: number, ) {
+    this.high_pressure = high_pressure;
+    this.low_pressure = low_pressure;
+  }
 }
 export class Info {
-  _id: string;
+  _id?: string;
   user: User;
   medicineList: [MedicineInfo];
   heart_rate: [number];
@@ -37,4 +42,5 @@ export class Info {
   doctor: Doctor;
   BP: [BloodPressure];
   Emotion: [number];
+  alarmList: [string];
 }

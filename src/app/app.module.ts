@@ -5,7 +5,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 import { BarcodeScanner } from "@ionic-native/barcode-scanner";
 import { HttpModule} from '@angular/http';
-
+import { CallNumber} from "@ionic-native/call-number";
 
 import { HeartLink } from './app.component';
 import { AuthServiceProvider } from '../providers/auth-service/auth-service';
@@ -20,6 +20,8 @@ import { AddNewMedicinePage} from "../pages/add-new-medicine/add-new-medicine";
 import { BloodPreasurePage} from "../pages/blood-preasure/blood-preasure";
 import { ChartPage} from "../pages/chart/chart";
 import { DoctorGetPage } from "../pages/doctor-get/doctor-get";
+import { PatientLogPage} from "../pages/patient-log/patient-log";
+import { ArticlePage} from "../pages/article/article";
 
 @NgModule({
   declarations: [
@@ -35,7 +37,8 @@ import { DoctorGetPage } from "../pages/doctor-get/doctor-get";
     BloodPreasurePage,
     ChartPage,
     DoctorGetPage,
-
+    PatientLogPage,
+    ArticlePage,
   ],
   imports: [
     HttpModule,
@@ -56,7 +59,8 @@ import { DoctorGetPage } from "../pages/doctor-get/doctor-get";
     BloodPreasurePage,
     ChartPage,
     DoctorGetPage,
-
+    PatientLogPage,
+    ArticlePage,
   ],
   providers: [
     StatusBar,
@@ -64,6 +68,7 @@ import { DoctorGetPage } from "../pages/doctor-get/doctor-get";
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     AuthServiceProvider,
     BarcodeScanner,
+    CallNumber,
   ]
 })
 export class AppModule {}

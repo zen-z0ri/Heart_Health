@@ -53,6 +53,7 @@ let MedicineSchema = mongoose.Schema({
     medName: String,
     barcode: Number,
     medInfo: String,
+
   });
 
 const Information = mongoose.model('information', InfoSchema, 'information');
@@ -98,6 +99,19 @@ app.get("/api/token", function(req, res){
       res.json(token);
     });
 });
+app.get("/api/patient", function(req, res){
+  //generate random token
+
+  Information.find({ "token": req.query.token
+    },
+    function(err, information) {
+      console.log(req.query.name);
+      if (err) res.send(err);
+      console.log(token.toString());
+      res.json(information);
+    });
+});
+
 // create new
 app.post('/update', function(req, res) {
 	console.log("creating new account");
