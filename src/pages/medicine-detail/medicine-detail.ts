@@ -4,8 +4,7 @@ import { MedicineListPage } from "../medicine-list/medicine-list";
 import { AuthServiceProvider} from "../../providers/auth-service/auth-service";
 import { MedicineInfo} from "../../providers/auth-service/Info";
 import { Location }                 from '@angular/common';
-import { MedicineListPageModule} from "../medicine-list/medicine-list.module";
-
+import { LocalNotifications} from "@ionic-native/local-notifications";
 /**
  * Generated class for the MedicineDetailPage page.
  *
@@ -25,7 +24,7 @@ export class MedicineDetailPage {
   constructor(public navCtrl: NavController,
               public navParams: NavParams,
               private auth: AuthServiceProvider,
-              private location: Location,
+              private localNotifications: LocalNotifications,
               public events: Events,) {
 
     this.medicine = this.navParams.data.medicine;
@@ -48,6 +47,7 @@ export class MedicineDetailPage {
     this.auth.currentUserInfo.medicineList[this.idx] = this.medicine;
     console.log(this.auth.currentUserInfo);
     this.events.publish("shareObject", this.medicine);
+  
   }
   private delete(idx): void{
     this.Alarms.splice(idx,1);

@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { AuthServiceProvider} from "../../providers/auth-service/auth-service";
+import { BloodPressure} from "../../providers/auth-service/Info";
 
 /**
  * Generated class for the BloodPreasurePage page.
@@ -16,12 +18,21 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 export class BloodPreasurePage {
 
   item;
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  bp: BloodPressure;
+  constructor(public navCtrl: NavController, public navParams: NavParams,
+              private auth: AuthServiceProvider) {
+    this.bp = new BloodPressure(0,0);
     this.item = this.navParams.data.item;
   }
 
   ionViewDidLoad() {
 
+  }
+
+  saveinfo(){
+    this.auth.currentUserInfo[this.item.name].shift();
+    this.auth.currentUserInfo[this.item.name].push(this.bp);
+    this.navCtrl.pop();
   }
 
   cancelAdd() {

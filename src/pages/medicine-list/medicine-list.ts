@@ -21,12 +21,14 @@ import { LocalNotifications} from "@ionic-native/local-notifications";
 export class MedicineListPage {
 
   medicines:  Array<MedicineInfo>;
-  constructor(public nav: NavController, private auth: AuthServiceProvider, private location: Location,) {
+  constructor(public nav: NavController, private auth: AuthServiceProvider, private localNotifications: LocalNotifications) {
     this.medicines = auth.currentUserInfo.medicineList;
+    // this.setAlarm();
   }
 
   openNavDetailsPage(medicine, idx) {
     this.nav.push(MedicineDetailPage, { medicine: medicine, idx: idx });
+    // this.setAlarm();
   }
   deleteMed(idx){
     this.auth.currentUserInfo.medicineList.splice(idx,1);
@@ -34,5 +36,18 @@ export class MedicineListPage {
   private getOut(): void{
     this.nav.pop();
   }
+  //
+  // setAlarm(){
+  //   this.localNotifications.cancelAll();
+  //   this.medicines.forEach(med =>{
+  //     med.timeList.forEach( time =>{
+  //       this.localNotifications.schedule({
+  //         title: 'Take Medicine',
+  //         text: 'Take: '+med.medName,
+  //         at: new Date(new Date().getTime() + 5 * 1000)
+  //       });
+  //     });
+  //   });
+  // }
 
 }

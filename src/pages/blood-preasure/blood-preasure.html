@@ -14,16 +14,16 @@
   <ion-list>
     <ion-item>
       <ion-label floating>Systolic Blood Pressure</ion-label>
-      <ion-input type="text" value="" required ng-pattern="/\d{2,3}/"></ion-input>
+      <ion-input type="text" value="" required ng-pattern="/\d{2,3}/" [(ngModel)]="this.bp.high_pressure"></ion-input>
     </ion-item>
     <ion-item>
       <ion-label floating>Diastolic Blood Pressure</ion-label>
-      <ion-input type="text" value="" required ng-pattern="/\d{2,3}/"></ion-input>
+      <ion-input type="text" value="" required ng-pattern="/\d{2,3}/" [(ngModel)]="this.bp.low_pressure"></ion-input>
     </ion-item>
   </ion-list>
 
   <div padding>
-    <button class="btn" ion-button color="primary" full  >Update</button>
+    <button class="btn" ion-button color="primary" full  (click)="saveinfo()">Update</button>
     <button class="btn" ion-button color="primary" full (click)="cancelAdd()">Cancel</button>
   </div>
 </ion-content>

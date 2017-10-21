@@ -46,7 +46,7 @@ var LoginPageModule = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(13);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_auth_service_auth_service__ = __webpack_require__(20);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_auth_service_Info__ = __webpack_require__(336);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_auth_service_Info__ = __webpack_require__(337);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -72,7 +72,7 @@ var LoginPage = /** @class */ (function () {
         this.auth = auth;
         this.alertCtrl = alertCtrl;
         this.loadingCtrl = loadingCtrl;
-        this.registerCredentials = new __WEBPACK_IMPORTED_MODULE_3__providers_auth_service_Info__["b" /* User */]("", "", "");
+        this.registerCredentials = new __WEBPACK_IMPORTED_MODULE_3__providers_auth_service_Info__["c" /* User */]("", "", "");
     }
     LoginPage.prototype.createAccount = function () {
         this.navCtrl.push('RegisterPage');

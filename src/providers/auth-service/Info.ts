@@ -3,7 +3,7 @@ export class MedicineInfo {
   barcode: number;
   medInfo: string;
   conflictList: Array<number> ;
-  timeList?: Array<string> = new Array();
+  timeList: Array<string> = new Array();
   constructor(medName: string, barcode: number, medInfo: string) {
     this.medName = medName;
     this.barcode = barcode;
