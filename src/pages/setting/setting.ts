@@ -36,7 +36,7 @@ export class SettingPage {
         this.info = res.json();
         console.log(this.info);
       });
-    await this.navCtrl.push(DoctorGetPage, { info: this.info });
+    await this.navCtrl.push(DoctorGetPage, { info: this.info[0] });
   }
   saveBack(){
     this.http.post(this.Auth.API_URL+'save',this.Auth.userInfo).subscribe();

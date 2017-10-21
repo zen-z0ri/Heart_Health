@@ -3,7 +3,9 @@ import { IonicPage, NavController } from 'ionic-angular';
 import { MedicineDetailPage} from "../medicine-detail/medicine-detail";
 import { AuthServiceProvider} from "../../providers/auth-service/auth-service";
 import { MedicineInfo} from "../../providers/auth-service/Info";
-import { Location }                 from '@angular/common';
+
+import { LocalNotifications} from "@ionic-native/local-notifications";
+
 /**
  * Generated class for the MedicineListPage page.
  *

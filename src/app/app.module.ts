@@ -6,6 +6,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { BarcodeScanner } from "@ionic-native/barcode-scanner";
 import { HttpModule} from '@angular/http';
 import { CallNumber} from "@ionic-native/call-number";
+import { LocalNotifications } from "@ionic-native/local-notifications";
 
 import { HeartLink } from './app.component';
 import { AuthServiceProvider } from '../providers/auth-service/auth-service';
@@ -72,6 +73,7 @@ import { ChangeDoctorPage} from "../pages/change-doctor/change-doctor";
     AuthServiceProvider,
     BarcodeScanner,
     CallNumber,
+    LocalNotifications,
   ]
 })
 export class AppModule {}

@@ -6,13 +6,28 @@
 -->
 <ion-header>
 
-  <ion-navbar>
-    <ion-title>DoctorGet</ion-title>
-  </ion-navbar>
-
 </ion-header>
 
 
 <ion-content padding>
-
+  <ion-list>
+    <ion-item>
+      Name:         {{this.info.user.name}}
+    </ion-item>
+    <ion-item>
+      E-mail:      {{this.info.user.email}}
+    </ion-item>
+    <ion-label>Medicine List:</ion-label>
+    <ion-item *ngFor="let medicine of this.info.medicineList;">
+     {{medicine.medName}}
+    </ion-item>
+  </ion-list>
+  <ion-card>
+    <ion-card-header class="header">
+      Patient Health
+    </ion-card-header>
+    <ion-card-content>
+      <canvas #Health></canvas>
+    </ion-card-content>
+  </ion-card>
 </ion-content>

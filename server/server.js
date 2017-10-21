@@ -113,11 +113,10 @@ app.get("/api/token", function(req, res){
 app.get("/api/patient", function(req, res){
   //generate random token
   Information.find({ "token": req.query.token
-    },
+    },{"_id": 0, "user.password": 0, "doctor": 0, "token": 0},
     function(err, information) {
-      console.log(req.query.name);
+      console.log(information);
       if (err) res.send(err);
-      console.log(token.toString());
       res.json(information);
     });
 });
@@ -130,7 +129,6 @@ app.post('/api/create', function(req, res) {
   newAcc.user = req.body;
   newAcc.save(function (err, fluffy) {
     if (err) return console.error(err);
-
   });
 });
 //// save

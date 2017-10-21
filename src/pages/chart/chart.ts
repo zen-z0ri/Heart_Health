@@ -27,10 +27,6 @@ export class ChartPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private auth: AuthServiceProvider) {
     console.log(auth.currentUserInfo);
-    this.Emotion = auth.currentUserInfo.Emotion;
-    this.BP = auth.currentUserInfo.BP;
-    this.bmi = auth.currentUserInfo.bmi;
-    this.heart_rate = auth.currentUserInfo.heart_rate;
   }
 
   ionViewDidLoad() {

@@ -80,6 +80,8 @@
         <splash height="480" src="resources/ios/splash/Default~iphone.png" width="320" />
     </platform>
     <allow-navigation href="http://10.19.191.77:8102" />
+    <engine name="browser" spec="^5.0.0" />
+    <engine name="android" spec="~6.3.0" />
     <plugin name="cordova-plugin-console" spec="^1.0.7" />
     <plugin name="cordova-plugin-device" spec="^1.1.6" />
     <plugin name="cordova-plugin-splashscreen" spec="^4.0.3" />
@@ -90,7 +92,6 @@
     <plugin name="cordova-plugin-health" spec="^1.0.1" />
     <plugin name="mx.ferreyra.callnumber" spec="~0.0.2" />
     <plugin name="cordova-plugin-x-toast" spec="^2.6.0" />
-    <plugin name="cordova-plugin-app-event" spec="de.appplant.cordova.plugin.local-notification" />
+    <plugin name="cordova-plugin-app-event" spec="file:node_modules/cordova-plugin-app-event" />
     <plugin name="de.appplant.cordova.plugin.local-notification" spec="^0.8.5" />
-    <engine name="android" spec="~6.3.0" />
 </widget>
