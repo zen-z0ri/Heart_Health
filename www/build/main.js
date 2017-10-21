@@ -178,10 +178,13 @@ var MedicineDetailPage = /** @class */ (function () {
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
             selector: 'page-medicine-detail',template:/*ion-inline-start:"/home/tung/Documents/learnIonic/heart/src/pages/medicine-detail/medicine-detail.html"*/'<!--\n  Generated template for the MedicineDetailPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n</ion-header>\n\n\n<ion-content  padding>\n  <ion-list>\n    <ion-item>\n      Name:         {{medicine.medName}}\n    </ion-item>\n    <ion-item>\n      BarCode:      {{medicine.barcode}}\n    </ion-item>\n    <ion-item>\n      Discription:  {{medicine.medInfo}}\n    </ion-item>\n  </ion-list>\n  <ion-list class="timeList">\n    <ion-label class="header">\n      Alarm time\n    </ion-label>\n\n    <ion-item *ngFor="let a of Alarms; let i=index" (press)="delete(i)">\n      <ion-label>Alarm {{i+1}}</ion-label>\n      <ion-datetime displayFormat="h:mm A" pickerFormat="h mm A" [(ngModel)]="Alarms[i]"></ion-datetime>\n    </ion-item>\n\n    <button ion-button class="btn" round clear (click)="addAlarm()">\n      <ion-icon name="add-circle" class="add-alarm" itemid></ion-icon> Add Alarm\n    </button>\n    <button ion-button class="btn" [color]="red_light" full (click)="getOut()">\n      Back\n    </button>\n  </ion-list>\n\n</ion-content>\n'/*ion-inline-end:"/home/tung/Documents/learnIonic/heart/src/pages/medicine-detail/medicine-detail.html"*/,
         }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* NavParams */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__providers_auth_service_auth_service__["a" /* AuthServiceProvider */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__providers_auth_service_auth_service__["a" /* AuthServiceProvider */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_3__ionic_native_local_notifications__["a" /* LocalNotifications */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__ionic_native_local_notifications__["a" /* LocalNotifications */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* Events */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* Events */]) === "function" && _e || Object])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavController */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* NavParams */],
+            __WEBPACK_IMPORTED_MODULE_2__providers_auth_service_auth_service__["a" /* AuthServiceProvider */],
+            __WEBPACK_IMPORTED_MODULE_3__ionic_native_local_notifications__["a" /* LocalNotifications */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* Events */]])
     ], MedicineDetailPage);
     return MedicineDetailPage;
-    var _a, _b, _c, _d, _e;
 }());
 
 //# sourceMappingURL=medicine-detail.js.map
@@ -748,7 +751,8 @@ var AuthServiceProvider = /** @class */ (function () {
     function AuthServiceProvider(http) {
         this.http = http;
         this.currentUserInfo = new __WEBPACK_IMPORTED_MODULE_4__Info__["b" /* Info */]();
-        this.API_URL = "http://localhost:8080/api/";
+        // API_URL: string = "http://localhost:8080/api/";
+        this.API_URL = "http://192.168.1.6:8080/api/";
     }
     AuthServiceProvider.prototype.login = function (credentials) {
         var _this = this;
