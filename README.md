@@ -1,6 +1,7 @@
-#Heart Link App User Manual
 
-##1. Login
+# Heart Link App User Manual
+
+## 1. Login
 Enter your password and user name to login
 ![](./readmeImg/)
 
