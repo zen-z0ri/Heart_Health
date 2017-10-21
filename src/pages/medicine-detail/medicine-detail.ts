@@ -18,7 +18,7 @@ import { LocalNotifications} from "@ionic-native/local-notifications";
   templateUrl: 'medicine-detail.html',
 })
 export class MedicineDetailPage {
-  Alarms: Array<string> = new Array();
+  Alarms: Array<string>;
   medicine: MedicineInfo;
   idx: number;
   constructor(public navCtrl: NavController,
@@ -30,6 +30,7 @@ export class MedicineDetailPage {
     this.medicine = this.navParams.data.medicine;
     this.idx = this.navParams.data.idx;
     this.Alarms = this.medicine.timeList;
+    if (!this.Alarms) this.Alarms = new Array();
     console.log(this.medicine);
     this.medicine.timeList = this.Alarms;
   }
@@ -47,7 +48,7 @@ export class MedicineDetailPage {
     this.auth.currentUserInfo.medicineList[this.idx] = this.medicine;
     console.log(this.auth.currentUserInfo);
     this.events.publish("shareObject", this.medicine);
-  
+
   }
   private delete(idx): void{
     this.Alarms.splice(idx,1);
