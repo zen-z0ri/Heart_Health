@@ -34,7 +34,7 @@
       }
     ],
     "heart_rate":     [72, 86, 79, 88, 90, 91, 77],
-    "bmi":            [22.2, 22.2, 22.3, 22.4, 22.5, 22.5],
+    "bmi":            [23.2, 22.2, 22.3, 23.4, 22.5, 23.5, 22],
     "BP": [{"high_pressure": 99,"low_pressure": 160},
             {"high_pressure": 74,"low_pressure": 105},
             {"high_pressure": 80,"low_pressure": 110},
@@ -70,7 +70,7 @@
       }
     ],
     "heart_rate":     [72, 86, 79, 88, 90, 91, 77],
-    "bmi":            [22.2, 22.2, 22.3, 22.4, 22.5, 22.5],
+    "bmi":            [22.2, 22.2, 22.3, 22.4, 22.5, 22.5, 22.7],
     "BP": [{"high_pressure": 99,"low_pressure": 160},
             {"high_pressure": 74,"low_pressure": 105},
             {"high_pressure": 80,"low_pressure": 110},

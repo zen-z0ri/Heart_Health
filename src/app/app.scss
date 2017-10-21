@@ -42,3 +42,12 @@
   font-family: "Roboto", "Helvetica Neue", sans-serif;
   align-content: center;
 }
+
+.no-scroll {
+  .scroll-content {
+    overflow: auto !important;
+  }
+}
+.custom-icon {
+  color : #f05545;
+}

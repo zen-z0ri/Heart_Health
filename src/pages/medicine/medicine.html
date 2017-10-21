@@ -10,7 +10,7 @@
 
 
 
-<ion-content id="quick_acc">
+<ion-content class="no-scroll" id="quick_acc">
   <div id="content">
     <ion-fab center middle>
 
@@ -29,19 +29,19 @@
 
   <div class="card-background-page">
 
-    <ion-card (press)="showMedcines()">
+    <ion-card (click)="showMedcines()">
       <img src="assets/img/My-Medicines.jpg"/>
       <div class="card-title">My Medicines</div>
       <div class="card-subtitle">Check your medicines</div>
     </ion-card>
 
-    <ion-card (press)="showTips()">
+    <ion-card (click)="showTips()">
       <img src="assets/img/Health-Tips.jpg"/>
       <div class="card-title">Health Tips</div>
       <div class="card-subtitle">Health Tips from Doctor</div>
     </ion-card>
 
-    <ion-card (press)="showInfo()">
+    <ion-card (click)="showInfo()">
       <img src="assets/img/Information.jpg"/>
       <div class="card-title">Information</div>
       <div class="card-subtitle">User Manual</div>

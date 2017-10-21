@@ -189,7 +189,6 @@ export class ChartPage {
               ticks: {
                 suggestedMax: max+0.1,
                 suggestedMin: min-0.1,
-                stepSize: 0.1
               }
             }],
             xAxes: [{

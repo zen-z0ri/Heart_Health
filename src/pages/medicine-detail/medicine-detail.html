@@ -9,7 +9,7 @@
 </ion-header>
 
 
-<ion-content  padding>
+<ion-content  class="no-scroll" padding>
   <ion-list>
     <ion-item>
       Name:         {{medicine.medName}}
@@ -17,8 +17,8 @@
     <ion-item>
       BarCode:      {{medicine.barcode}}
     </ion-item>
-    <ion-item>
-      Discription:  {{medicine.medInfo}}
+    <ion-item class="item item-text-wrap" text-wrap>
+      {{medicine.medInfo}}
     </ion-item>
   </ion-list>
   <ion-list class="timeList">

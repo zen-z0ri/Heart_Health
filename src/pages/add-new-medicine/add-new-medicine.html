@@ -9,7 +9,7 @@
 </ion-header>
 
 
-<ion-content padding>
+<ion-content class="no-scroll" padding>
   <h1 class="header"> Do you want to add this medicine to your medkit?</h1>
   <ion-label>Name:</ion-label>
   <ion-item>
@@ -19,8 +19,7 @@
   <ion-item>
     {{medicine.barcode}}
   </ion-item>
-  <ion-label>Discription:</ion-label>
-  <ion-item>
+  <ion-item class="item item-text-wrap" text-wrap>
     {{medicine.medInfo}}
   </ion-item>
   <button ion-button class="btn" [color]="red_light" outline (click)="addMed()">
