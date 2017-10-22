@@ -2,3 +2,8 @@ mongoimport --jsonArray --db heart --collection information --file sampleData.js
 
 mongoimport --jsonArray --db heart --collection medicine --file sampleData1.json
 
+pass: tungreeboo
+
+sudo service mongod restart
+
+sudo source ~/.

@@ -752,7 +752,7 @@ var AuthServiceProvider = /** @class */ (function () {
         this.http = http;
         this.currentUserInfo = new __WEBPACK_IMPORTED_MODULE_4__Info__["b" /* Info */]();
         // API_URL: string = "http://localhost:8080/api/";
-        this.API_URL = "http://192.168.1.6:8080/api/";
+        this.API_URL = "http://10.19.202.128:8080/api/";
     }
     AuthServiceProvider.prototype.login = function (credentials) {
         var _this = this;

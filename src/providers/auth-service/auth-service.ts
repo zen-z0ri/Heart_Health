@@ -10,7 +10,7 @@ export class AuthServiceProvider {
   currentUserInfo: Info = new Info();
 
   // API_URL: string = "http://localhost:8080/api/";
-  API_URL: string = "http://192.168.1.6:8080/api/";
+  API_URL: string = "http://10.19.202.128:8080/api/";
   // API_URL: string = "http://10.0.2.2:8080/api/";
   constructor(private http: Http) {
   }
