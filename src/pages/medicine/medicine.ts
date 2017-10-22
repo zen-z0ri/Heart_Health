@@ -32,7 +32,6 @@ export class MedicinePage {
   thisAuth: any;
   constructor(public navCtrl: NavController,
               private barcodeScanner: BarcodeScanner,
-              private alertCtrl: AlertController,
               private auth: AuthServiceProvider,
               private http:Http) {
     this.thisAuth = auth;
@@ -60,9 +59,9 @@ export class MedicinePage {
    * 3. doctor scan the token and use it to generate data
    * @returns {Promise<void>}
    */
-  async qrcode(){
+  async qrCode() {
     let code;
-    await  this.http.get(this.auth.API_URL+'token?name='+this.auth.currentUserInfo.user.name)
+    await this.http.get(this.auth.API_URL+'token?name='+this.auth.currentUserInfo.user.name)
       .toPromise()
       .then(res => {code=res.json(); console.log(code)});
     await this.barcodeScanner

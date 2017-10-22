@@ -163,7 +163,6 @@ var MedicineDetailPage = /** @class */ (function () {
     MedicineDetailPage.prototype.save = function () {
         this.auth.currentUserInfo.medicineList[this.idx] = this.medicine;
         console.log(this.auth.currentUserInfo);
-        // this.events.publish("shareObject", this.medicine);
     };
     MedicineDetailPage.prototype.delete = function (idx) {
         this.Alarms.splice(idx, 1);
@@ -243,7 +242,7 @@ var MedicineListPage = /** @class */ (function () {
     MedicineListPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* IonicPage */])(),
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-            selector: 'page-medicine-list',template:/*ion-inline-start:"/home/tung/Documents/learnIonic/heart/src/pages/medicine-list/medicine-list.html"*/'<!--\n  Generated template for the MedicineListPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n  <!--<ion-navbar color="red_light">-->\n    <!--<ion-title>Medicine List</ion-title>-->\n  <!--</ion-navbar>-->\n</ion-header>\n\n\n<ion-content class="no-scroll" padding>\n  <ion-card>\n    <ion-card-header align-items-center>\n      Medicine List\n    </ion-card-header>\n\n    <ion-list>\n      <ion-item-sliding *ngFor="let medicine of medicines; let idx=index" (press)="openNavDetailsPage(medicine, idx)">\n        <button ion-item>\n          <ion-icon name="medkit" color="red_light" item-start></ion-icon>\n          {{medicine.medName}}\n          <ion-icon name="arrow-dropright-circle" class="custom-icon" item-end></ion-icon>\n        </button>\n\n        <ion-item-options side="right">\n          <button ion-button danger (click)="deleteMed(idx)" ><ion-icon name="trash"></ion-icon></button>\n        </ion-item-options>\n      </ion-item-sliding>\n\n\n    </ion-list>\n  </ion-card>\n  <button ion-button class="btn" [color]="red_light" full (click)="getOut()">\n    Back\n  </button>\n</ion-content>\n'/*ion-inline-end:"/home/tung/Documents/learnIonic/heart/src/pages/medicine-list/medicine-list.html"*/,
+            selector: 'page-medicine-list',template:/*ion-inline-start:"/home/tung/Documents/learnIonic/heart/src/pages/medicine-list/medicine-list.html"*/'<!--\n  Generated template for the MedicineListPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n  <!--<ion-navbar color="red_light">-->\n    <!--<ion-title>Medicine List</ion-title>-->\n  <!--</ion-navbar>-->\n</ion-header>\n\n\n<ion-content class="no-scroll" padding>\n  <ion-card>\n    <ion-card-header align-items-center>\n      Medicine List\n    </ion-card-header>\n\n    <ion-list>\n      <ion-item-sliding *ngFor="let medicine of medicines; let idx=index" (click)="openNavDetailsPage(medicine, idx)">\n        <button ion-item>\n          <ion-icon name="medkit" color="red_light" item-start></ion-icon>\n          {{medicine.medName}}\n          <ion-icon name="arrow-dropright-circle" class="custom-icon" item-end></ion-icon>\n        </button>\n\n        <ion-item-options side="right">\n          <button ion-button danger (click)="deleteMed(idx)" ><ion-icon name="trash"></ion-icon></button>\n        </ion-item-options>\n      </ion-item-sliding>\n\n\n    </ion-list>\n  </ion-card>\n  <button ion-button class="btn" [color]="red_light" full (click)="getOut()">\n    Back\n  </button>\n</ion-content>\n'/*ion-inline-end:"/home/tung/Documents/learnIonic/heart/src/pages/medicine-list/medicine-list.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavController */], __WEBPACK_IMPORTED_MODULE_3__providers_auth_service_auth_service__["a" /* AuthServiceProvider */], __WEBPACK_IMPORTED_MODULE_4__ionic_native_local_notifications__["a" /* LocalNotifications */]])
     ], MedicineListPage);
@@ -767,12 +766,12 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 var AuthServiceProvider = /** @class */ (function () {
+    // API_URL: string = "http://10.19.202.128:8080/api/";
+    // API_URL: string = "http://10.0.2.2:8080/api/";
     function AuthServiceProvider(http) {
         this.http = http;
         this.currentUserInfo = new __WEBPACK_IMPORTED_MODULE_4__Info__["b" /* Info */]();
-        // API_URL: string = "http://localhost:8080/api/";
-        // API_URL: string = "http://10.19.202.128:8080/api/";
-        this.API_URL = "http://10.0.2.2:8080/api/";
+        this.API_URL = "http://localhost:8080/api/";
     }
     AuthServiceProvider.prototype.login = function (credentials) {
         var _this = this;
@@ -828,6 +827,7 @@ var AuthServiceProvider = /** @class */ (function () {
     };
     AuthServiceProvider.prototype.update = function () {
         this.http.post(this.API_URL + 'save', this.userInfo).subscribe();
+        console.info(this.userInfo);
         return;
     };
     AuthServiceProvider = __decorate([
@@ -1009,10 +1009,9 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
  * on Ionic pages and navigation.
  */
 var MedicinePage = /** @class */ (function () {
-    function MedicinePage(navCtrl, barcodeScanner, alertCtrl, auth, http) {
+    function MedicinePage(navCtrl, barcodeScanner, auth, http) {
         this.navCtrl = navCtrl;
         this.barcodeScanner = barcodeScanner;
-        this.alertCtrl = alertCtrl;
         this.auth = auth;
         this.http = http;
         this.thisAuth = auth;
@@ -1055,7 +1054,7 @@ var MedicinePage = /** @class */ (function () {
      * 3. doctor scan the token and use it to generate data
      * @returns {Promise<void>}
      */
-    MedicinePage.prototype.qrcode = function () {
+    MedicinePage.prototype.qrCode = function () {
         return __awaiter(this, void 0, void 0, function () {
             var _this = this;
             var code;
@@ -1089,11 +1088,10 @@ var MedicinePage = /** @class */ (function () {
     MedicinePage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* IonicPage */])(),
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-            selector: 'page-medicine',template:/*ion-inline-start:"/home/tung/Documents/learnIonic/heart/src/pages/medicine/medicine.html"*/'<!--\n  Generated template for the MedicinePage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n</ion-header>\n\n\n\n<ion-content class="no-scroll" id="quick_acc">\n  <div id="content">\n    <ion-fab center middle>\n\n      <button ion-fab color="primary"><ion-icon name="heart"></ion-icon></button>\n      <ion-fab-list side="top">\n        <button ion-fab color="red_dark"><ion-icon name="add" (click)="scanBarcode()"></ion-icon></button>\n      </ion-fab-list>\n      <ion-fab-list side="left">\n        <button ion-fab color="light"><ion-icon name="card" (click)="qrcode()" ></ion-icon></button>\n      </ion-fab-list>\n      <ion-fab-list side="right">\n        <button ion-fab color="dark"><ion-icon name="analytics" (click)="showChart()"></ion-icon></button>\n      </ion-fab-list>\n    </ion-fab>\n  </div>\n\n  <div class="card-background-page">\n\n    <ion-card (click)="showMedcines()">\n      <img src="assets/img/My-Medicines.jpg"/>\n      <div class="card-title">My Medicines</div>\n      <div class="card-subtitle">Check your medicines</div>\n    </ion-card>\n\n    <ion-card (click)="showTips()">\n      <img src="assets/img/Health-Tips.jpg"/>\n      <div class="card-title">Health Tips</div>\n      <div class="card-subtitle">Health Tips from Doctor</div>\n    </ion-card>\n\n    <ion-card (click)="showInfo()">\n      <img src="assets/img/Information.jpg"/>\n      <div class="card-title">Information</div>\n      <div class="card-subtitle">User Manual</div>\n    </ion-card>\n  </div>\n</ion-content>\n\n'/*ion-inline-end:"/home/tung/Documents/learnIonic/heart/src/pages/medicine/medicine.html"*/,
+            selector: 'page-medicine',template:/*ion-inline-start:"/home/tung/Documents/learnIonic/heart/src/pages/medicine/medicine.html"*/'<!--\n  Generated template for the MedicinePage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n</ion-header>\n\n\n\n<ion-content class="no-scroll" id="quick_acc">\n  <div id="content">\n    <ion-fab center middle>\n\n      <button ion-fab color="primary"><ion-icon name="heart"></ion-icon></button>\n      <ion-fab-list side="top">\n        <button ion-fab color="red_dark"><ion-icon name="add" (click)="scanBarcode()"></ion-icon></button>\n      </ion-fab-list>\n      <ion-fab-list side="left">\n        <button ion-fab color="light"><ion-icon name="card" (click)="qrCode()" ></ion-icon></button>\n      </ion-fab-list>\n      <ion-fab-list side="right">\n        <button ion-fab color="dark"><ion-icon name="analytics" (click)="showChart()"></ion-icon></button>\n      </ion-fab-list>\n    </ion-fab>\n  </div>\n\n  <div class="card-background-page">\n\n    <ion-card (click)="showMedcines()">\n      <img src="assets/img/My-Medicines.jpg"/>\n      <div class="card-title">My Medicines</div>\n      <div class="card-subtitle">Check your medicines</div>\n    </ion-card>\n\n    <ion-card (click)="showTips()">\n      <img src="assets/img/Health-Tips.jpg"/>\n      <div class="card-title">Health Tips</div>\n      <div class="card-subtitle">Health Tips from Doctor</div>\n    </ion-card>\n\n    <ion-card (click)="showInfo()">\n      <img src="assets/img/Information.jpg"/>\n      <div class="card-title">Information</div>\n      <div class="card-subtitle">User Manual</div>\n    </ion-card>\n  </div>\n</ion-content>\n\n'/*ion-inline-end:"/home/tung/Documents/learnIonic/heart/src/pages/medicine/medicine.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavController */],
             __WEBPACK_IMPORTED_MODULE_2__ionic_native_barcode_scanner__["a" /* BarcodeScanner */],
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */],
             __WEBPACK_IMPORTED_MODULE_3__providers_auth_service_auth_service__["a" /* AuthServiceProvider */],
             __WEBPACK_IMPORTED_MODULE_5__angular_http__["a" /* Http */]])
     ], MedicinePage);
