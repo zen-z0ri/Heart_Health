@@ -1,9 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, Events} from 'ionic-angular';
-import { MedicineListPage } from "../medicine-list/medicine-list";
 import { AuthServiceProvider} from "../../providers/auth-service/auth-service";
 import { MedicineInfo} from "../../providers/auth-service/Info";
-import { Location }                 from '@angular/common';
 import { LocalNotifications} from "@ionic-native/local-notifications";
 /**
  * Generated class for the MedicineDetailPage page.
@@ -46,6 +44,7 @@ export class MedicineDetailPage {
 
   private save(): void{
     this.auth.currentUserInfo.medicineList[this.idx] = this.medicine;
+
   }
   private delete(idx): void{
     this.Alarms.splice(idx,1);
@@ -55,4 +54,6 @@ export class MedicineDetailPage {
     this.save();
     this.navCtrl.pop();
   }
+
+
 }

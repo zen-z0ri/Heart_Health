@@ -26,7 +26,7 @@
       Alarm time
     </ion-label>
 
-    <ion-item *ngFor="let a of Alarms; let i=index" (press)="delete(i)">
+    <ion-item *ngFor="let a of Alarms; let i=index" (press)="delete(i)" >
       <ion-label>Alarm {{i+1}}</ion-label>
       <ion-datetime displayFormat="h:mm A" pickerFormat="h mm A" [(ngModel)]="Alarms[i]"></ion-datetime>
     </ion-item>

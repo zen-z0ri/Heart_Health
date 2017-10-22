@@ -162,7 +162,6 @@ var MedicineDetailPage = /** @class */ (function () {
     };
     MedicineDetailPage.prototype.save = function () {
         this.auth.currentUserInfo.medicineList[this.idx] = this.medicine;
-        console.log(this.auth.currentUserInfo);
     };
     MedicineDetailPage.prototype.delete = function (idx) {
         this.Alarms.splice(idx, 1);
@@ -175,7 +174,7 @@ var MedicineDetailPage = /** @class */ (function () {
     MedicineDetailPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* IonicPage */])(),
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-            selector: 'page-medicine-detail',template:/*ion-inline-start:"/home/tung/Documents/learnIonic/heart/src/pages/medicine-detail/medicine-detail.html"*/'<!--\n  Generated template for the MedicineDetailPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n</ion-header>\n\n\n<ion-content  class="no-scroll" padding>\n  <ion-list>\n    <ion-item>\n      Name:         {{medicine.medName}}\n    </ion-item>\n    <ion-item>\n      BarCode:      {{medicine.barcode}}\n    </ion-item>\n    <ion-item class="item" text-wrap>\n      {{medicine.medInfo}}\n    </ion-item>\n  </ion-list>\n  <ion-list class="timeList">\n    <ion-label class="header">\n      Alarm time\n    </ion-label>\n\n    <ion-item *ngFor="let a of Alarms; let i=index" (press)="delete(i)">\n      <ion-label>Alarm {{i+1}}</ion-label>\n      <ion-datetime displayFormat="h:mm A" pickerFormat="h mm A" [(ngModel)]="Alarms[i]"></ion-datetime>\n    </ion-item>\n\n    <button ion-button class="btn" round clear (click)="addAlarm()">\n      <ion-icon name="add-circle" class="add-alarm" itemid></ion-icon>\n      Add Alarm\n    </button>\n    <button ion-button class="btn" [color]="red_light" full (click)="getOut()">\n      Back\n    </button>\n  </ion-list>\n\n</ion-content>\n'/*ion-inline-end:"/home/tung/Documents/learnIonic/heart/src/pages/medicine-detail/medicine-detail.html"*/,
+            selector: 'page-medicine-detail',template:/*ion-inline-start:"/home/tung/Documents/learnIonic/heart/src/pages/medicine-detail/medicine-detail.html"*/'<!--\n  Generated template for the MedicineDetailPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n</ion-header>\n\n\n<ion-content  class="no-scroll" padding>\n  <ion-list>\n    <ion-item>\n      Name:         {{medicine.medName}}\n    </ion-item>\n    <ion-item>\n      BarCode:      {{medicine.barcode}}\n    </ion-item>\n    <ion-item class="item" text-wrap>\n      {{medicine.medInfo}}\n    </ion-item>\n  </ion-list>\n  <ion-list class="timeList">\n    <ion-label class="header">\n      Alarm time\n    </ion-label>\n\n    <ion-item *ngFor="let a of Alarms; let i=index" (press)="delete(i)" >\n      <ion-label>Alarm {{i+1}}</ion-label>\n      <ion-datetime displayFormat="h:mm A" pickerFormat="h mm A" [(ngModel)]="Alarms[i]"></ion-datetime>\n    </ion-item>\n\n    <button ion-button class="btn" round clear (click)="addAlarm()">\n      <ion-icon name="add-circle" class="add-alarm" itemid></ion-icon>\n      Add Alarm\n    </button>\n    <button ion-button class="btn" [color]="red_light" full (click)="getOut()">\n      Back\n    </button>\n  </ion-list>\n\n</ion-content>\n'/*ion-inline-end:"/home/tung/Documents/learnIonic/heart/src/pages/medicine-detail/medicine-detail.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavController */],
             __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* NavParams */],
@@ -226,18 +225,40 @@ var MedicineListPage = /** @class */ (function () {
         this.auth = auth;
         this.localNotifications = localNotifications;
         this.medicines = auth.currentUserInfo.medicineList;
-        // this.setAlarm();
     }
     MedicineListPage.prototype.openNavDetailsPage = function (medicine, idx) {
         this.nav.push(__WEBPACK_IMPORTED_MODULE_2__medicine_detail_medicine_detail__["a" /* MedicineDetailPage */], { medicine: medicine, idx: idx });
-        // this.setAlarm();
     };
     MedicineListPage.prototype.deleteMed = function (idx) {
         this.auth.currentUserInfo.medicineList.splice(idx, 1);
         this.auth.update();
     };
     MedicineListPage.prototype.getOut = function () {
+        this.refreshAlarm();
         this.nav.pop();
+    };
+    MedicineListPage.prototype.refreshAlarm = function () {
+        this.localNotifications.cancelAll();
+        var date = new Date();
+        var schedule_option = { id: 0,
+            text: "",
+            at: date,
+            sound: 'file://assets/audio/alarm.wav' };
+        var schedules = new Array();
+        var today = new Date().toISOString();
+        var id = 1;
+        this.auth.currentUserInfo.medicineList.forEach(function (med) {
+            if (med.timeList != undefined)
+                med.timeList.forEach(function (time) {
+                    schedule_option.id = id;
+                    id++;
+                    var atStr = today.replace(/T.{5}/, "T" + time);
+                    schedule_option.text = med.medName + atStr;
+                    schedule_option.at = new Date(atStr);
+                    schedules.push(schedule_option);
+                });
+        });
+        this.localNotifications.schedule(schedules);
     };
     MedicineListPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* IonicPage */])(),
