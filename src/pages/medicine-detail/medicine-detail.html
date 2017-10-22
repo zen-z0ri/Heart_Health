@@ -17,7 +17,7 @@
     <ion-item>
       BarCode:      {{medicine.barcode}}
     </ion-item>
-    <ion-item class="item item-text-wrap" text-wrap>
+    <ion-item class="item" text-wrap>
       {{medicine.medInfo}}
     </ion-item>
   </ion-list>
@@ -32,7 +32,8 @@
     </ion-item>
 
     <button ion-button class="btn" round clear (click)="addAlarm()">
-      <ion-icon name="add-circle" class="add-alarm" itemid></ion-icon> Add Alarm
+      <ion-icon name="add-circle" class="add-alarm" itemid></ion-icon>
+      Add Alarm
     </button>
     <button ion-button class="btn" [color]="red_light" full (click)="getOut()">
       Back

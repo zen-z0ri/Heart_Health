@@ -21,6 +21,7 @@ export class AddNewMedicinePage {
               public navParams: NavParams,
               private auth: AuthServiceProvider,
               private alertCtrl: AlertController) {
+
     this.medicine = this.navParams.data.medicine;
     this.medicine.timeList = new Array();
     console.log(this.auth.userInfo);
@@ -30,24 +31,41 @@ export class AddNewMedicinePage {
     console.log('ionViewDidLoad AddNewMedicinePage');
   }
   addMed(){
-    let allow:boolean = true;
-    this.auth.currentUserInfo.medicineList.forEach(
-      x => { if (x.barcode === this.medicine.barcode) allow = false;});
-    if (allow&&this.checkConflict()) {
+    if (this.checkRepeat()&&this.checkConflict()) {
       this.auth.currentUserInfo.medicineList.push(this.medicine);
+      this.auth.update();
       this.navCtrl.pop();
-    } else{
+    } else if(!this.checkRepeat()){
       let alert = this.alertCtrl.create({
         title: 'Fail',
-        message: "Conflict or you have added it",
+        message: "You have added it",
+        buttons: ['OK']
+      });
+      alert.present();
+    } else if(!this.checkConflict()){
+      let alert = this.alertCtrl.create({
+        title: 'Fail',
+        message: "Conflict with your current medicines",
         buttons: ['OK']
       });
       alert.present();
     }
+
   }
   cancelAdd() {
     this.navCtrl.pop();
   }
+  checkRepeat(): boolean{
+    let allow: boolean = true;
+    this.auth.currentUserInfo.medicineList.forEach(
+      x => { if (x.barcode === this.medicine.barcode) allow = false;});
+    return allow;
+  }
+
+  /**
+   * check if the medicine conflict
+   * @returns {boolean}
+   */
   checkConflict(): boolean {
     let allow: boolean = true;
     this.medicine.conflictList.forEach(
@@ -57,7 +75,6 @@ export class AddNewMedicinePage {
             if(listCode===medicine.barcode) allow = false;
           });
     });
-
     return allow;
   }
 }

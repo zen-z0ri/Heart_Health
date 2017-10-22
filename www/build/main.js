@@ -163,7 +163,7 @@ var MedicineDetailPage = /** @class */ (function () {
     MedicineDetailPage.prototype.save = function () {
         this.auth.currentUserInfo.medicineList[this.idx] = this.medicine;
         console.log(this.auth.currentUserInfo);
-        this.events.publish("shareObject", this.medicine);
+        // this.events.publish("shareObject", this.medicine);
     };
     MedicineDetailPage.prototype.delete = function (idx) {
         this.Alarms.splice(idx, 1);
@@ -176,7 +176,7 @@ var MedicineDetailPage = /** @class */ (function () {
     MedicineDetailPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* IonicPage */])(),
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-            selector: 'page-medicine-detail',template:/*ion-inline-start:"/home/tung/Documents/learnIonic/heart/src/pages/medicine-detail/medicine-detail.html"*/'<!--\n  Generated template for the MedicineDetailPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n</ion-header>\n\n\n<ion-content  class="no-scroll" padding>\n  <ion-list>\n    <ion-item>\n      Name:         {{medicine.medName}}\n    </ion-item>\n    <ion-item>\n      BarCode:      {{medicine.barcode}}\n    </ion-item>\n    <ion-item class="item item-text-wrap" text-wrap>\n      {{medicine.medInfo}}\n    </ion-item>\n  </ion-list>\n  <ion-list class="timeList">\n    <ion-label class="header">\n      Alarm time\n    </ion-label>\n\n    <ion-item *ngFor="let a of Alarms; let i=index" (press)="delete(i)">\n      <ion-label>Alarm {{i+1}}</ion-label>\n      <ion-datetime displayFormat="h:mm A" pickerFormat="h mm A" [(ngModel)]="Alarms[i]"></ion-datetime>\n    </ion-item>\n\n    <button ion-button class="btn" round clear (click)="addAlarm()">\n      <ion-icon name="add-circle" class="add-alarm" itemid></ion-icon> Add Alarm\n    </button>\n    <button ion-button class="btn" [color]="red_light" full (click)="getOut()">\n      Back\n    </button>\n  </ion-list>\n\n</ion-content>\n'/*ion-inline-end:"/home/tung/Documents/learnIonic/heart/src/pages/medicine-detail/medicine-detail.html"*/,
+            selector: 'page-medicine-detail',template:/*ion-inline-start:"/home/tung/Documents/learnIonic/heart/src/pages/medicine-detail/medicine-detail.html"*/'<!--\n  Generated template for the MedicineDetailPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n</ion-header>\n\n\n<ion-content  class="no-scroll" padding>\n  <ion-list>\n    <ion-item>\n      Name:         {{medicine.medName}}\n    </ion-item>\n    <ion-item>\n      BarCode:      {{medicine.barcode}}\n    </ion-item>\n    <ion-item class="item" text-wrap>\n      {{medicine.medInfo}}\n    </ion-item>\n  </ion-list>\n  <ion-list class="timeList">\n    <ion-label class="header">\n      Alarm time\n    </ion-label>\n\n    <ion-item *ngFor="let a of Alarms; let i=index" (press)="delete(i)">\n      <ion-label>Alarm {{i+1}}</ion-label>\n      <ion-datetime displayFormat="h:mm A" pickerFormat="h mm A" [(ngModel)]="Alarms[i]"></ion-datetime>\n    </ion-item>\n\n    <button ion-button class="btn" round clear (click)="addAlarm()">\n      <ion-icon name="add-circle" class="add-alarm" itemid></ion-icon>\n      Add Alarm\n    </button>\n    <button ion-button class="btn" [color]="red_light" full (click)="getOut()">\n      Back\n    </button>\n  </ion-list>\n\n</ion-content>\n'/*ion-inline-end:"/home/tung/Documents/learnIonic/heart/src/pages/medicine-detail/medicine-detail.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavController */],
             __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* NavParams */],
@@ -235,6 +235,7 @@ var MedicineListPage = /** @class */ (function () {
     };
     MedicineListPage.prototype.deleteMed = function (idx) {
         this.auth.currentUserInfo.medicineList.splice(idx, 1);
+        this.auth.update();
     };
     MedicineListPage.prototype.getOut = function () {
         this.nav.pop();
@@ -242,7 +243,7 @@ var MedicineListPage = /** @class */ (function () {
     MedicineListPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* IonicPage */])(),
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-            selector: 'page-medicine-list',template:/*ion-inline-start:"/home/tung/Documents/learnIonic/heart/src/pages/medicine-list/medicine-list.html"*/'<!--\n  Generated template for the MedicineListPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n  <!--<ion-navbar color="red_light">-->\n    <!--<ion-title>Medicine List</ion-title>-->\n  <!--</ion-navbar>-->\n</ion-header>\n\n\n<ion-content class="no-scroll" padding>\n  <ion-card>\n    <ion-card-header align-items-center>\n      Medicien List\n    </ion-card-header>\n\n    <ion-list>\n      <ion-item-sliding *ngFor="let medicine of medicines; let idx=index" (press)="openNavDetailsPage(medicine, idx)">\n        <button ion-item>\n          <ion-icon name="medkit" color="red_light" item-start></ion-icon>\n          {{medicine.medName}}\n          <ion-icon name="arrow-dropright-circle" class="custom-icon" item-end></ion-icon>\n        </button>\n\n        <ion-item-options side="right">\n          <button ion-button danger (click)="deleteMed(idx)" ><ion-icon name="trash"></ion-icon></button>\n        </ion-item-options>\n      </ion-item-sliding>\n\n\n    </ion-list>\n  </ion-card>\n  <button ion-button class="btn" [color]="red_light" full (click)="getOut()">\n    Back\n  </button>\n</ion-content>\n'/*ion-inline-end:"/home/tung/Documents/learnIonic/heart/src/pages/medicine-list/medicine-list.html"*/,
+            selector: 'page-medicine-list',template:/*ion-inline-start:"/home/tung/Documents/learnIonic/heart/src/pages/medicine-list/medicine-list.html"*/'<!--\n  Generated template for the MedicineListPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n  <!--<ion-navbar color="red_light">-->\n    <!--<ion-title>Medicine List</ion-title>-->\n  <!--</ion-navbar>-->\n</ion-header>\n\n\n<ion-content class="no-scroll" padding>\n  <ion-card>\n    <ion-card-header align-items-center>\n      Medicine List\n    </ion-card-header>\n\n    <ion-list>\n      <ion-item-sliding *ngFor="let medicine of medicines; let idx=index" (press)="openNavDetailsPage(medicine, idx)">\n        <button ion-item>\n          <ion-icon name="medkit" color="red_light" item-start></ion-icon>\n          {{medicine.medName}}\n          <ion-icon name="arrow-dropright-circle" class="custom-icon" item-end></ion-icon>\n        </button>\n\n        <ion-item-options side="right">\n          <button ion-button danger (click)="deleteMed(idx)" ><ion-icon name="trash"></ion-icon></button>\n        </ion-item-options>\n      </ion-item-sliding>\n\n\n    </ion-list>\n  </ion-card>\n  <button ion-button class="btn" [color]="red_light" full (click)="getOut()">\n    Back\n  </button>\n</ion-content>\n'/*ion-inline-end:"/home/tung/Documents/learnIonic/heart/src/pages/medicine-list/medicine-list.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavController */], __WEBPACK_IMPORTED_MODULE_3__providers_auth_service_auth_service__["a" /* AuthServiceProvider */], __WEBPACK_IMPORTED_MODULE_4__ionic_native_local_notifications__["a" /* LocalNotifications */]])
     ], MedicineListPage);
@@ -293,26 +294,42 @@ var AddNewMedicinePage = /** @class */ (function () {
         console.log('ionViewDidLoad AddNewMedicinePage');
     };
     AddNewMedicinePage.prototype.addMed = function () {
-        var _this = this;
-        var allow = true;
-        this.auth.currentUserInfo.medicineList.forEach(function (x) { if (x.barcode === _this.medicine.barcode)
-            allow = false; });
-        if (allow && this.checkConflict()) {
+        if (this.checkRepeat() && this.checkConflict()) {
             this.auth.currentUserInfo.medicineList.push(this.medicine);
+            this.auth.update();
             this.navCtrl.pop();
         }
-        else {
+        else if (!this.checkRepeat()) {
             var alert_1 = this.alertCtrl.create({
                 title: 'Fail',
-                message: "Conflict or you have added it",
+                message: "You have added it",
                 buttons: ['OK']
             });
             alert_1.present();
+        }
+        else if (!this.checkConflict()) {
+            var alert_2 = this.alertCtrl.create({
+                title: 'Fail',
+                message: "Conflict with your current medicines",
+                buttons: ['OK']
+            });
+            alert_2.present();
         }
     };
     AddNewMedicinePage.prototype.cancelAdd = function () {
         this.navCtrl.pop();
     };
+    AddNewMedicinePage.prototype.checkRepeat = function () {
+        var _this = this;
+        var allow = true;
+        this.auth.currentUserInfo.medicineList.forEach(function (x) { if (x.barcode === _this.medicine.barcode)
+            allow = false; });
+        return allow;
+    };
+    /**
+     * check if the medicine conflict
+     * @returns {boolean}
+     */
     AddNewMedicinePage.prototype.checkConflict = function () {
         var _this = this;
         var allow = true;
@@ -473,6 +490,7 @@ var HeartRatePage = /** @class */ (function () {
     HeartRatePage.prototype.saveinfo = function () {
         this.auth.currentUserInfo[this.item.name].shift();
         this.auth.currentUserInfo[this.item.name].push(this.value);
+        this.auth.update();
         this.navCtrl.pop();
     };
     HeartRatePage.prototype.cancelAdd = function () {
@@ -535,6 +553,7 @@ var BloodPreasurePage = /** @class */ (function () {
     BloodPreasurePage.prototype.saveinfo = function () {
         this.auth.currentUserInfo[this.item.name].shift();
         this.auth.currentUserInfo[this.item.name].push(this.bp);
+        this.auth.update();
         this.navCtrl.pop();
     };
     BloodPreasurePage.prototype.cancelAdd = function () {
@@ -593,6 +612,7 @@ var ChangeDoctorPage = /** @class */ (function () {
     };
     ChangeDoctorPage.prototype.update = function () {
         this.auth.currentUserInfo.doctor = this.Doctor;
+        this.auth.update();
         this.navCtrl.pop();
     };
     ChangeDoctorPage.prototype.cancelAdd = function () {
@@ -647,8 +667,6 @@ var DoctorGetPage = /** @class */ (function () {
         this.navParams = navParams;
         this.info = navParams.data.info;
         console.log(this.info);
-        // this.getScore();
-        // this.showHealth();
     }
     DoctorGetPage.prototype.getScore = function () {
         this.score = [10, 10, 10, 10, 10];
@@ -661,6 +679,8 @@ var DoctorGetPage = /** @class */ (function () {
                 labels: ["Heart Rate", "Blood Pressure", "Emotion", "BMI", "Medicine Take"],
                 datasets: [{
                         backgroundColor: "#E63135",
+                        fill: true,
+                        fillColor: "rgba(220,220,220,0.5)",
                         data: [7, 6, 6, 9, 10]
                     }]
             },
@@ -671,7 +691,7 @@ var DoctorGetPage = /** @class */ (function () {
                 responsive: true,
                 title: {
                     display: false,
-                    text: 'Patient '
+                    text: 'Patient Healt'
                 },
                 scale: {
                     ticks: {
@@ -747,12 +767,12 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 var AuthServiceProvider = /** @class */ (function () {
-    // API_URL: string = "http://10.0.2.2:8080/api/";
     function AuthServiceProvider(http) {
         this.http = http;
         this.currentUserInfo = new __WEBPACK_IMPORTED_MODULE_4__Info__["b" /* Info */]();
         // API_URL: string = "http://localhost:8080/api/";
-        this.API_URL = "http://10.19.202.128:8080/api/";
+        // API_URL: string = "http://10.19.202.128:8080/api/";
+        this.API_URL = "http://10.0.2.2:8080/api/";
     }
     AuthServiceProvider.prototype.login = function (credentials) {
         var _this = this;
@@ -807,6 +827,8 @@ var AuthServiceProvider = /** @class */ (function () {
         });
     };
     AuthServiceProvider.prototype.update = function () {
+        this.http.post(this.API_URL + 'save', this.userInfo).subscribe();
+        return;
     };
     AuthServiceProvider = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* Injectable */])(),
@@ -1044,7 +1066,6 @@ var MedicinePage = /** @class */ (function () {
                             .then(function (res) { code = res.json(); console.log(code); })];
                     case 1:
                         _a.sent();
-                        // const result = await this.barcode.encode(this.barcode.Encode.TEXT_TYPE, this.auth.currentUserInfo._id );
                         return [4 /*yield*/, this.barcodeScanner
                                 .encode(this.barcodeScanner.Encode.TEXT_TYPE, code).then(function (encodedData) {
                                 console.log(encodedData);
@@ -1053,7 +1074,6 @@ var MedicinePage = /** @class */ (function () {
                                 console.log("Error occured : " + err);
                             })];
                     case 2:
-                        // const result = await this.barcode.encode(this.barcode.Encode.TEXT_TYPE, this.auth.currentUserInfo._id );
                         _a.sent();
                         return [2 /*return*/];
                 }
@@ -1289,13 +1309,10 @@ var SettingPage = /** @class */ (function () {
             });
         });
     };
-    SettingPage.prototype.saveBack = function () {
-        this.http.post(this.Auth.API_URL + 'save', this.Auth.userInfo).subscribe();
-    };
     SettingPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* IonicPage */])(),
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-            selector: 'page-setting',template:/*ion-inline-start:"/home/tung/Documents/learnIonic/heart/src/pages/setting/setting.html"*/'<!--\n  Generated template for the SettingPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n</ion-header>\n\n\n<ion-content class="no-scroll" padding>\n\n\n  <button ion-button color="primary" block class="btn" (click)="scanBarcode()" >I\'m Doctor</button>\n\n  <button ion-button color="primary" block class="btn" (click)="saveBack()">Update</button>\n\n</ion-content>\n'/*ion-inline-end:"/home/tung/Documents/learnIonic/heart/src/pages/setting/setting.html"*/,
+            selector: 'page-setting',template:/*ion-inline-start:"/home/tung/Documents/learnIonic/heart/src/pages/setting/setting.html"*/'<!--\n  Generated template for the SettingPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n</ion-header>\n\n\n<ion-content class="no-scroll" padding>\n\n\n  <button ion-button color="primary" block class="btn" (click)="scanBarcode()" >I\'m Doctor</button>\n\n  <!--<button ion-button color="primary" block class="btn" (click)="saveBack()">Update</button>-->\n\n</ion-content>\n'/*ion-inline-end:"/home/tung/Documents/learnIonic/heart/src/pages/setting/setting.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavController */],
             __WEBPACK_IMPORTED_MODULE_3__ionic_native_barcode_scanner__["a" /* BarcodeScanner */],

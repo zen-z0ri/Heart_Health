@@ -16,19 +16,18 @@ import { Doctor} from "../../providers/auth-service/Info";
   templateUrl: 'change-doctor.html',
 })
 export class ChangeDoctorPage {
-
   Doctor: Doctor;
   constructor(public navCtrl: NavController,
               public navParams: NavParams,
               private auth: AuthServiceProvider) {
     this.Doctor = auth.currentUserInfo.doctor;
   }
-
   ionViewDidLoad() {
     console.log('ionViewDidLoad ChangeDoctorPage');
   }
   update(){
     this.auth.currentUserInfo.doctor = this.Doctor;
+    this.auth.update();
     this.navCtrl.pop();
   }
   cancelAdd() {

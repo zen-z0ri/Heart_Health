@@ -47,7 +47,7 @@ export class MedicineDetailPage {
   private save(): void{
     this.auth.currentUserInfo.medicineList[this.idx] = this.medicine;
     console.log(this.auth.currentUserInfo);
-    this.events.publish("shareObject", this.medicine);
+    // this.events.publish("shareObject", this.medicine);
 
   }
   private delete(idx): void{

@@ -38,8 +38,8 @@ export class SettingPage {
       });
     await this.navCtrl.push(DoctorGetPage, { info: this.info[0] });
   }
-  saveBack(){
-    this.http.post(this.Auth.API_URL+'save',this.Auth.userInfo).subscribe();
-  }
+  // saveBack(){
+  //   this.http.post(this.Auth.API_URL+'save',this.Auth.userInfo).subscribe();
+  // }
 
 }

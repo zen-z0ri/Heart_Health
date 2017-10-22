@@ -32,6 +32,7 @@ export class BloodPreasurePage {
   saveinfo(){
     this.auth.currentUserInfo[this.item.name].shift();
     this.auth.currentUserInfo[this.item.name].push(this.bp);
+    this.auth.update();
     this.navCtrl.pop();
   }
 

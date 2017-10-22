@@ -32,6 +32,7 @@ export class MedicineListPage {
   }
   deleteMed(idx){
     this.auth.currentUserInfo.medicineList.splice(idx,1);
+    this.auth.update();
   }
   private getOut(): void{
     this.nav.pop();

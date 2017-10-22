@@ -81,16 +81,20 @@
 
     ],
     "heart_rate" : [
-
+      0, 0, 0, 0, 0, 0, 0
     ],
     "bmi" : [
-
+      0, 0, 0, 0, 0, 0, 0
     ],
-    "BP" : [
-
-    ],
+    "BP" : [{"high_pressure": 0,"low_pressure": 0},
+      {"high_pressure": 0,"low_pressure": 0},
+      {"high_pressure": 0,"low_pressure": 0},
+      {"high_pressure": 0,"low_pressure": 0},
+      {"high_pressure": 0,"low_pressure": 0},
+      {"high_pressure": 0,"low_pressure": 0},
+      {"high_pressure": 0,"low_pressure": 0}],
     "Emotion" : [
-
+      0, 0, 0, 0, 0, 0, 0
     ],
     "doctor" : {
       "docName": "",

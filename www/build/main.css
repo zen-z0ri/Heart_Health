@@ -30400,153 +30400,153 @@ page-register .login-content .submit-btn {
 }
 
 .circles-preloader .circles:nth-child(1) .circles-in div:nth-child(1) {
-  width: 16px;
-  height: 16px;
+  width: 15px;
+  height: 15px;
   background-color: red;
   border-radius: 50%;
   position: absolute;
-  left: 80%;
-  top: 34%;
-  -webkit-animation: stripeRotateCircle 1.6s infinite linear;
-  animation: stripeRotateCircle 1.6s infinite linear;
+  left: 96%;
+  top: 23%;
+  -webkit-animation: stripeRotateCircle 1.2s infinite linear;
+  animation: stripeRotateCircle 1.2s infinite linear;
+  -webkit-transform: rotateX(0deg) translateZ(15px);
+  transform: rotateX(0deg) translateZ(15px);
+  background-color: #6DC1B3;
+}
+
+.circles-preloader .circles:nth-child(1) .circles-in div:nth-child(2) {
+  width: 19px;
+  height: 19px;
+  background-color: red;
+  border-radius: 50%;
+  position: absolute;
+  left: 55%;
+  top: 54%;
+  -webkit-animation: stripeRotateCircle 1.3s infinite linear;
+  animation: stripeRotateCircle 1.3s infinite linear;
   -webkit-transform: rotateX(0deg) translateZ(15px);
   transform: rotateX(0deg) translateZ(15px);
   background-color: #FF0850;
 }
 
-.circles-preloader .circles:nth-child(1) .circles-in div:nth-child(2) {
-  width: 16px;
-  height: 16px;
-  background-color: red;
-  border-radius: 50%;
-  position: absolute;
-  left: 92%;
-  top: 91%;
-  -webkit-animation: stripeRotateCircle 1.8s infinite linear;
-  animation: stripeRotateCircle 1.8s infinite linear;
-  -webkit-transform: rotateX(0deg) translateZ(15px);
-  transform: rotateX(0deg) translateZ(15px);
-  background-color: #6DC1B3;
-}
-
 .circles-preloader .circles:nth-child(1) .circles-in div:nth-child(3) {
-  width: 10px;
-  height: 10px;
+  width: 21px;
+  height: 21px;
   background-color: red;
   border-radius: 50%;
   position: absolute;
-  left: 74%;
-  top: 38%;
-  -webkit-animation: stripeRotateCircle 1.3s infinite linear;
-  animation: stripeRotateCircle 1.3s infinite linear;
-  -webkit-transform: rotateX(0deg) translateZ(15px);
-  transform: rotateX(0deg) translateZ(15px);
-  background-color: #FFA69C;
-}
-
-.circles-preloader .circles:nth-child(1) .circles-in div:nth-child(4) {
-  width: 13px;
-  height: 13px;
-  background-color: red;
-  border-radius: 50%;
-  position: absolute;
-  left: 37%;
-  top: 7%;
+  left: 9%;
+  top: 54%;
   -webkit-animation: stripeRotateCircle 1.7s infinite linear;
   animation: stripeRotateCircle 1.7s infinite linear;
-  -webkit-transform: rotateX(0deg) translateZ(15px);
-  transform: rotateX(0deg) translateZ(15px);
-  background-color: #6DC1B3;
-}
-
-.circles-preloader .circles:nth-child(1) .circles-in div:nth-child(5) {
-  width: 12px;
-  height: 12px;
-  background-color: red;
-  border-radius: 50%;
-  position: absolute;
-  left: 99%;
-  top: 51%;
-  -webkit-animation: stripeRotateCircle 1.9s infinite linear;
-  animation: stripeRotateCircle 1.9s infinite linear;
-  -webkit-transform: rotateX(0deg) translateZ(15px);
-  transform: rotateX(0deg) translateZ(15px);
-  background-color: #6DC1B3;
-}
-
-.circles-preloader .circles:nth-child(1) .circles-in div:nth-child(6) {
-  width: 8px;
-  height: 8px;
-  background-color: red;
-  border-radius: 50%;
-  position: absolute;
-  left: 7%;
-  top: 59%;
-  -webkit-animation: stripeRotateCircle 1.6s infinite linear;
-  animation: stripeRotateCircle 1.6s infinite linear;
   -webkit-transform: rotateX(0deg) translateZ(15px);
   transform: rotateX(0deg) translateZ(15px);
   background-color: #B1DCBE;
 }
 
-.circles-preloader .circles:nth-child(1) .circles-in div:nth-child(7) {
-  width: 4px;
-  height: 4px;
+.circles-preloader .circles:nth-child(1) .circles-in div:nth-child(4) {
+  width: 21px;
+  height: 21px;
   background-color: red;
   border-radius: 50%;
   position: absolute;
-  left: 50%;
-  top: 78%;
+  left: 12%;
+  top: 64%;
+  -webkit-animation: stripeRotateCircle 1.7s infinite linear;
+  animation: stripeRotateCircle 1.7s infinite linear;
+  -webkit-transform: rotateX(0deg) translateZ(15px);
+  transform: rotateX(0deg) translateZ(15px);
+  background-color: #FFFFFF;
+}
+
+.circles-preloader .circles:nth-child(1) .circles-in div:nth-child(5) {
+  width: 14px;
+  height: 14px;
+  background-color: red;
+  border-radius: 50%;
+  position: absolute;
+  left: 94%;
+  top: 19%;
+  -webkit-animation: stripeRotateCircle 1.7s infinite linear;
+  animation: stripeRotateCircle 1.7s infinite linear;
+  -webkit-transform: rotateX(0deg) translateZ(15px);
+  transform: rotateX(0deg) translateZ(15px);
+  background-color: #B1DCBE;
+}
+
+.circles-preloader .circles:nth-child(1) .circles-in div:nth-child(6) {
+  width: 12px;
+  height: 12px;
+  background-color: red;
+  border-radius: 50%;
+  position: absolute;
+  left: 70%;
+  top: 56%;
   -webkit-animation: stripeRotateCircle 1.9s infinite linear;
   animation: stripeRotateCircle 1.9s infinite linear;
   -webkit-transform: rotateX(0deg) translateZ(15px);
   transform: rotateX(0deg) translateZ(15px);
-  background-color: #6DC1B3;
+  background-color: #FFFFFF;
+}
+
+.circles-preloader .circles:nth-child(1) .circles-in div:nth-child(7) {
+  width: 6px;
+  height: 6px;
+  background-color: red;
+  border-radius: 50%;
+  position: absolute;
+  left: 36%;
+  top: 41%;
+  -webkit-animation: stripeRotateCircle 1.2s infinite linear;
+  animation: stripeRotateCircle 1.2s infinite linear;
+  -webkit-transform: rotateX(0deg) translateZ(15px);
+  transform: rotateX(0deg) translateZ(15px);
+  background-color: #A2FFD5;
 }
 
 .circles-preloader .circles:nth-child(1) .circles-in div:nth-child(8) {
-  width: 27px;
-  height: 27px;
+  width: 14px;
+  height: 14px;
   background-color: red;
   border-radius: 50%;
   position: absolute;
-  left: 64%;
-  top: 59%;
-  -webkit-animation: stripeRotateCircle 1.6s infinite linear;
-  animation: stripeRotateCircle 1.6s infinite linear;
+  left: 3%;
+  top: 60%;
+  -webkit-animation: stripeRotateCircle 2s infinite linear;
+  animation: stripeRotateCircle 2s infinite linear;
   -webkit-transform: rotateX(0deg) translateZ(15px);
   transform: rotateX(0deg) translateZ(15px);
-  background-color: #6DC1B3;
+  background-color: #FF0850;
 }
 
 .circles-preloader .circles:nth-child(1) .circles-in div:nth-child(9) {
-  width: 20px;
-  height: 20px;
+  width: 26px;
+  height: 26px;
   background-color: red;
   border-radius: 50%;
   position: absolute;
-  left: 43%;
-  top: 38%;
-  -webkit-animation: stripeRotateCircle 1.2s infinite linear;
-  animation: stripeRotateCircle 1.2s infinite linear;
+  left: 67%;
+  top: 64%;
+  -webkit-animation: stripeRotateCircle 2s infinite linear;
+  animation: stripeRotateCircle 2s infinite linear;
   -webkit-transform: rotateX(0deg) translateZ(15px);
   transform: rotateX(0deg) translateZ(15px);
-  background-color: #FF0850;
+  background-color: #F3FFBA;
 }
 
 .circles-preloader .circles:nth-child(1) .circles-in div:nth-child(10) {
-  width: 7px;
-  height: 7px;
+  width: 10px;
+  height: 10px;
   background-color: red;
   border-radius: 50%;
   position: absolute;
-  left: 39%;
-  top: 87%;
-  -webkit-animation: stripeRotateCircle 1.2s infinite linear;
-  animation: stripeRotateCircle 1.2s infinite linear;
+  left: 65%;
+  top: 79%;
+  -webkit-animation: stripeRotateCircle 2s infinite linear;
+  animation: stripeRotateCircle 2s infinite linear;
   -webkit-transform: rotateX(0deg) translateZ(15px);
   transform: rotateX(0deg) translateZ(15px);
-  background-color: #FF0850;
+  background-color: #F3FFBA;
 }
 
 .circles-preloader .circles:nth-child(2) {
@@ -30561,48 +30561,48 @@ page-register .login-content .submit-btn {
 }
 
 .circles-preloader .circles:nth-child(2) .circles-in div:nth-child(1) {
-  width: 11px;
-  height: 11px;
+  width: 6px;
+  height: 6px;
   background-color: red;
   border-radius: 50%;
   position: absolute;
-  left: 51%;
-  top: 69%;
-  -webkit-animation: stripeRotateCircle 1.9s infinite linear;
-  animation: stripeRotateCircle 1.9s infinite linear;
+  left: 89%;
+  top: 76%;
+  -webkit-animation: stripeRotateCircle 1.6s infinite linear;
+  animation: stripeRotateCircle 1.6s infinite linear;
   -webkit-transform: rotateX(0deg) translateZ(15px);
   transform: rotateX(0deg) translateZ(15px);
-  background-color: #F3FFBA;
+  background-color: #81DDC6;
 }
 
 .circles-preloader .circles:nth-child(2) .circles-in div:nth-child(2) {
-  width: 20px;
-  height: 20px;
+  width: 27px;
+  height: 27px;
   background-color: red;
   border-radius: 50%;
   position: absolute;
-  left: 53%;
-  top: 92%;
-  -webkit-animation: stripeRotateCircle 1.9s infinite linear;
-  animation: stripeRotateCircle 1.9s infinite linear;
+  left: 83%;
+  top: 32%;
+  -webkit-animation: stripeRotateCircle 1.7s infinite linear;
+  animation: stripeRotateCircle 1.7s infinite linear;
   -webkit-transform: rotateX(0deg) translateZ(15px);
   transform: rotateX(0deg) translateZ(15px);
-  background-color: #FF0850;
+  background-color: #81DDC6;
 }
 
 .circles-preloader .circles:nth-child(2) .circles-in div:nth-child(3) {
-  width: 12px;
-  height: 12px;
+  width: 10px;
+  height: 10px;
   background-color: red;
   border-radius: 50%;
   position: absolute;
-  left: 4%;
-  top: 22%;
-  -webkit-animation: stripeRotateCircle 1.3s infinite linear;
-  animation: stripeRotateCircle 1.3s infinite linear;
+  left: 93%;
+  top: 52%;
+  -webkit-animation: stripeRotateCircle 1.5s infinite linear;
+  animation: stripeRotateCircle 1.5s infinite linear;
   -webkit-transform: rotateX(0deg) translateZ(15px);
   transform: rotateX(0deg) translateZ(15px);
-  background-color: #B1DCBE;
+  background-color: #F3FFBA;
 }
 
 .circles-preloader .circles:nth-child(2) .circles-in div:nth-child(4) {
@@ -30611,83 +30611,53 @@ page-register .login-content .submit-btn {
   background-color: red;
   border-radius: 50%;
   position: absolute;
-  left: 90%;
-  top: 94%;
-  -webkit-animation: stripeRotateCircle 1.4s infinite linear;
-  animation: stripeRotateCircle 1.4s infinite linear;
+  left: 69%;
+  top: 6%;
+  -webkit-animation: stripeRotateCircle 2s infinite linear;
+  animation: stripeRotateCircle 2s infinite linear;
   -webkit-transform: rotateX(0deg) translateZ(15px);
   transform: rotateX(0deg) translateZ(15px);
-  background-color: #FF6768;
+  background-color: #FFFFFF;
 }
 
 .circles-preloader .circles:nth-child(2) .circles-in div:nth-child(5) {
-  width: 8px;
-  height: 8px;
+  width: 5px;
+  height: 5px;
   background-color: red;
   border-radius: 50%;
   position: absolute;
-  left: 71%;
-  top: 60%;
+  left: 45%;
+  top: 59%;
   -webkit-animation: stripeRotateCircle 1.9s infinite linear;
   animation: stripeRotateCircle 1.9s infinite linear;
-  -webkit-transform: rotateX(0deg) translateZ(15px);
-  transform: rotateX(0deg) translateZ(15px);
-  background-color: #FF6768;
-}
-
-.circles-preloader .circles:nth-child(2) .circles-in div:nth-child(6) {
-  width: 8px;
-  height: 8px;
-  background-color: red;
-  border-radius: 50%;
-  position: absolute;
-  left: 55%;
-  top: 21%;
-  -webkit-animation: stripeRotateCircle 1.7s infinite linear;
-  animation: stripeRotateCircle 1.7s infinite linear;
   -webkit-transform: rotateX(0deg) translateZ(15px);
   transform: rotateX(0deg) translateZ(15px);
   background-color: #6DC1B3;
 }
 
+.circles-preloader .circles:nth-child(2) .circles-in div:nth-child(6) {
+  width: 9px;
+  height: 9px;
+  background-color: red;
+  border-radius: 50%;
+  position: absolute;
+  left: 93%;
+  top: 59%;
+  -webkit-animation: stripeRotateCircle 1.3s infinite linear;
+  animation: stripeRotateCircle 1.3s infinite linear;
+  -webkit-transform: rotateX(0deg) translateZ(15px);
+  transform: rotateX(0deg) translateZ(15px);
+  background-color: #FFFFFF;
+}
+
 .circles-preloader .circles:nth-child(2) .circles-in div:nth-child(7) {
-  width: 32px;
-  height: 32px;
+  width: 18px;
+  height: 18px;
   background-color: red;
   border-radius: 50%;
   position: absolute;
-  left: 38%;
-  top: 97%;
-  -webkit-animation: stripeRotateCircle 1.1s infinite linear;
-  animation: stripeRotateCircle 1.1s infinite linear;
-  -webkit-transform: rotateX(0deg) translateZ(15px);
-  transform: rotateX(0deg) translateZ(15px);
-  background-color: #F3FFBA;
-}
-
-.circles-preloader .circles:nth-child(2) .circles-in div:nth-child(8) {
-  width: 17px;
-  height: 17px;
-  background-color: red;
-  border-radius: 50%;
-  position: absolute;
-  left: 27%;
-  top: 52%;
-  -webkit-animation: stripeRotateCircle 1.8s infinite linear;
-  animation: stripeRotateCircle 1.8s infinite linear;
-  -webkit-transform: rotateX(0deg) translateZ(15px);
-  transform: rotateX(0deg) translateZ(15px);
-  background-color: #FF6768;
-}
-
-.circles-preloader .circles:nth-child(2) .circles-in div:nth-child(9) {
-  width: 13px;
-  height: 13px;
-  background-color: red;
-  border-radius: 50%;
-  position: absolute;
-  left: 59%;
-  top: 76%;
+  left: 40%;
+  top: 65%;
   -webkit-animation: stripeRotateCircle 1.9s infinite linear;
   animation: stripeRotateCircle 1.9s infinite linear;
   -webkit-transform: rotateX(0deg) translateZ(15px);
@@ -30695,19 +30665,49 @@ page-register .login-content .submit-btn {
   background-color: #81DDC6;
 }
 
-.circles-preloader .circles:nth-child(2) .circles-in div:nth-child(10) {
-  width: 7px;
-  height: 7px;
+.circles-preloader .circles:nth-child(2) .circles-in div:nth-child(8) {
+  width: 12px;
+  height: 12px;
   background-color: red;
   border-radius: 50%;
   position: absolute;
-  left: 79%;
-  top: 18%;
-  -webkit-animation: stripeRotateCircle 1.9s infinite linear;
-  animation: stripeRotateCircle 1.9s infinite linear;
+  left: 88%;
+  top: 41%;
+  -webkit-animation: stripeRotateCircle 1.4s infinite linear;
+  animation: stripeRotateCircle 1.4s infinite linear;
   -webkit-transform: rotateX(0deg) translateZ(15px);
   transform: rotateX(0deg) translateZ(15px);
-  background-color: #FFFFFF;
+  background-color: #A2FFD5;
+}
+
+.circles-preloader .circles:nth-child(2) .circles-in div:nth-child(9) {
+  width: 15px;
+  height: 15px;
+  background-color: red;
+  border-radius: 50%;
+  position: absolute;
+  left: 80%;
+  top: 60%;
+  -webkit-animation: stripeRotateCircle 1.3s infinite linear;
+  animation: stripeRotateCircle 1.3s infinite linear;
+  -webkit-transform: rotateX(0deg) translateZ(15px);
+  transform: rotateX(0deg) translateZ(15px);
+  background-color: #FFA69C;
+}
+
+.circles-preloader .circles:nth-child(2) .circles-in div:nth-child(10) {
+  width: 17px;
+  height: 17px;
+  background-color: red;
+  border-radius: 50%;
+  position: absolute;
+  left: 83%;
+  top: 34%;
+  -webkit-animation: stripeRotateCircle 1.4s infinite linear;
+  animation: stripeRotateCircle 1.4s infinite linear;
+  -webkit-transform: rotateX(0deg) translateZ(15px);
+  transform: rotateX(0deg) translateZ(15px);
+  background-color: #FF6768;
 }
 
 .circles-preloader .circles:nth-child(3) {
@@ -30722,118 +30722,58 @@ page-register .login-content .submit-btn {
 }
 
 .circles-preloader .circles:nth-child(3) .circles-in div:nth-child(1) {
-  width: 11px;
-  height: 11px;
+  width: 4px;
+  height: 4px;
   background-color: red;
   border-radius: 50%;
   position: absolute;
-  left: 38%;
-  top: 57%;
-  -webkit-animation: stripeRotateCircle 1.4s infinite linear;
-  animation: stripeRotateCircle 1.4s infinite linear;
+  left: 9%;
+  top: 38%;
+  -webkit-animation: stripeRotateCircle 1.9s infinite linear;
+  animation: stripeRotateCircle 1.9s infinite linear;
   -webkit-transform: rotateX(0deg) translateZ(15px);
   transform: rotateX(0deg) translateZ(15px);
   background-color: #FFFFFF;
 }
 
 .circles-preloader .circles:nth-child(3) .circles-in div:nth-child(2) {
-  width: 23px;
-  height: 23px;
+  width: 20px;
+  height: 20px;
   background-color: red;
   border-radius: 50%;
   position: absolute;
-  left: 53%;
-  top: 100%;
-  -webkit-animation: stripeRotateCircle 1.4s infinite linear;
-  animation: stripeRotateCircle 1.4s infinite linear;
+  left: 46%;
+  top: 13%;
+  -webkit-animation: stripeRotateCircle 1.1s infinite linear;
+  animation: stripeRotateCircle 1.1s infinite linear;
   -webkit-transform: rotateX(0deg) translateZ(15px);
   transform: rotateX(0deg) translateZ(15px);
-  background-color: #FFA69C;
+  background-color: #81DDC6;
 }
 
 .circles-preloader .circles:nth-child(3) .circles-in div:nth-child(3) {
-  width: 22px;
-  height: 22px;
-  background-color: red;
-  border-radius: 50%;
-  position: absolute;
-  left: 92%;
-  top: 17%;
-  -webkit-animation: stripeRotateCircle 1.7s infinite linear;
-  animation: stripeRotateCircle 1.7s infinite linear;
-  -webkit-transform: rotateX(0deg) translateZ(15px);
-  transform: rotateX(0deg) translateZ(15px);
-  background-color: #6DC1B3;
-}
-
-.circles-preloader .circles:nth-child(3) .circles-in div:nth-child(4) {
-  width: 26px;
-  height: 26px;
-  background-color: red;
-  border-radius: 50%;
-  position: absolute;
-  left: 5%;
-  top: 77%;
-  -webkit-animation: stripeRotateCircle 1.4s infinite linear;
-  animation: stripeRotateCircle 1.4s infinite linear;
-  -webkit-transform: rotateX(0deg) translateZ(15px);
-  transform: rotateX(0deg) translateZ(15px);
-  background-color: #81DDC6;
-}
-
-.circles-preloader .circles:nth-child(3) .circles-in div:nth-child(5) {
-  width: 16px;
-  height: 16px;
-  background-color: red;
-  border-radius: 50%;
-  position: absolute;
-  left: 67%;
-  top: 18%;
-  -webkit-animation: stripeRotateCircle 1.4s infinite linear;
-  animation: stripeRotateCircle 1.4s infinite linear;
-  -webkit-transform: rotateX(0deg) translateZ(15px);
-  transform: rotateX(0deg) translateZ(15px);
-  background-color: #A2FFD5;
-}
-
-.circles-preloader .circles:nth-child(3) .circles-in div:nth-child(6) {
-  width: 24px;
-  height: 24px;
-  background-color: red;
-  border-radius: 50%;
-  position: absolute;
-  left: 89%;
-  top: 21%;
-  -webkit-animation: stripeRotateCircle 1.3s infinite linear;
-  animation: stripeRotateCircle 1.3s infinite linear;
-  -webkit-transform: rotateX(0deg) translateZ(15px);
-  transform: rotateX(0deg) translateZ(15px);
-  background-color: #81DDC6;
-}
-
-.circles-preloader .circles:nth-child(3) .circles-in div:nth-child(7) {
-  width: 22px;
-  height: 22px;
-  background-color: red;
-  border-radius: 50%;
-  position: absolute;
-  left: 75%;
-  top: 74%;
-  -webkit-animation: stripeRotateCircle 1.4s infinite linear;
-  animation: stripeRotateCircle 1.4s infinite linear;
-  -webkit-transform: rotateX(0deg) translateZ(15px);
-  transform: rotateX(0deg) translateZ(15px);
-  background-color: #B1DCBE;
-}
-
-.circles-preloader .circles:nth-child(3) .circles-in div:nth-child(8) {
   width: 8px;
   height: 8px;
   background-color: red;
   border-radius: 50%;
   position: absolute;
-  left: 47%;
-  top: 83%;
+  left: 5%;
+  top: 95%;
+  -webkit-animation: stripeRotateCircle 2s infinite linear;
+  animation: stripeRotateCircle 2s infinite linear;
+  -webkit-transform: rotateX(0deg) translateZ(15px);
+  transform: rotateX(0deg) translateZ(15px);
+  background-color: #FFA69C;
+}
+
+.circles-preloader .circles:nth-child(3) .circles-in div:nth-child(4) {
+  width: 25px;
+  height: 25px;
+  background-color: red;
+  border-radius: 50%;
+  position: absolute;
+  left: 14%;
+  top: 70%;
   -webkit-animation: stripeRotateCircle 1.8s infinite linear;
   animation: stripeRotateCircle 1.8s infinite linear;
   -webkit-transform: rotateX(0deg) translateZ(15px);
@@ -30841,14 +30781,29 @@ page-register .login-content .submit-btn {
   background-color: #B1DCBE;
 }
 
-.circles-preloader .circles:nth-child(3) .circles-in div:nth-child(9) {
-  width: 4px;
-  height: 4px;
+.circles-preloader .circles:nth-child(3) .circles-in div:nth-child(5) {
+  width: 24px;
+  height: 24px;
   background-color: red;
   border-radius: 50%;
   position: absolute;
-  left: 93%;
-  top: 88%;
+  left: 44%;
+  top: 38%;
+  -webkit-animation: stripeRotateCircle 1.8s infinite linear;
+  animation: stripeRotateCircle 1.8s infinite linear;
+  -webkit-transform: rotateX(0deg) translateZ(15px);
+  transform: rotateX(0deg) translateZ(15px);
+  background-color: #81DDC6;
+}
+
+.circles-preloader .circles:nth-child(3) .circles-in div:nth-child(6) {
+  width: 26px;
+  height: 26px;
+  background-color: red;
+  border-radius: 50%;
+  position: absolute;
+  left: 19%;
+  top: 55%;
   -webkit-animation: stripeRotateCircle 1.4s infinite linear;
   animation: stripeRotateCircle 1.4s infinite linear;
   -webkit-transform: rotateX(0deg) translateZ(15px);
@@ -30856,19 +30811,64 @@ page-register .login-content .submit-btn {
   background-color: #A2FFD5;
 }
 
-.circles-preloader .circles:nth-child(3) .circles-in div:nth-child(10) {
-  width: 16px;
-  height: 16px;
+.circles-preloader .circles:nth-child(3) .circles-in div:nth-child(7) {
+  width: 3px;
+  height: 3px;
   background-color: red;
   border-radius: 50%;
   position: absolute;
-  left: 1%;
-  top: 71%;
-  -webkit-animation: stripeRotateCircle 1.4s infinite linear;
-  animation: stripeRotateCircle 1.4s infinite linear;
+  left: 31%;
+  top: 65%;
+  -webkit-animation: stripeRotateCircle 1.7s infinite linear;
+  animation: stripeRotateCircle 1.7s infinite linear;
   -webkit-transform: rotateX(0deg) translateZ(15px);
   transform: rotateX(0deg) translateZ(15px);
-  background-color: #FF0850;
+  background-color: #F3FFBA;
+}
+
+.circles-preloader .circles:nth-child(3) .circles-in div:nth-child(8) {
+  width: 14px;
+  height: 14px;
+  background-color: red;
+  border-radius: 50%;
+  position: absolute;
+  left: 25%;
+  top: 54%;
+  -webkit-animation: stripeRotateCircle 1.7s infinite linear;
+  animation: stripeRotateCircle 1.7s infinite linear;
+  -webkit-transform: rotateX(0deg) translateZ(15px);
+  transform: rotateX(0deg) translateZ(15px);
+  background-color: #A2FFD5;
+}
+
+.circles-preloader .circles:nth-child(3) .circles-in div:nth-child(9) {
+  width: 32px;
+  height: 32px;
+  background-color: red;
+  border-radius: 50%;
+  position: absolute;
+  left: 81%;
+  top: 84%;
+  -webkit-animation: stripeRotateCircle 1.3s infinite linear;
+  animation: stripeRotateCircle 1.3s infinite linear;
+  -webkit-transform: rotateX(0deg) translateZ(15px);
+  transform: rotateX(0deg) translateZ(15px);
+  background-color: #B1DCBE;
+}
+
+.circles-preloader .circles:nth-child(3) .circles-in div:nth-child(10) {
+  width: 27px;
+  height: 27px;
+  background-color: red;
+  border-radius: 50%;
+  position: absolute;
+  left: 94%;
+  top: 37%;
+  -webkit-animation: stripeRotateCircle 1.3s infinite linear;
+  animation: stripeRotateCircle 1.3s infinite linear;
+  -webkit-transform: rotateX(0deg) translateZ(15px);
+  transform: rotateX(0deg) translateZ(15px);
+  background-color: #FFA69C;
 }
 
 .circles-preloader .circles:nth-child(4) {
@@ -30883,28 +30883,28 @@ page-register .login-content .submit-btn {
 }
 
 .circles-preloader .circles:nth-child(4) .circles-in div:nth-child(1) {
-  width: 21px;
-  height: 21px;
+  width: 17px;
+  height: 17px;
   background-color: red;
   border-radius: 50%;
   position: absolute;
-  left: 75%;
-  top: 62%;
-  -webkit-animation: stripeRotateCircle 1.3s infinite linear;
-  animation: stripeRotateCircle 1.3s infinite linear;
+  left: 43%;
+  top: 72%;
+  -webkit-animation: stripeRotateCircle 1.6s infinite linear;
+  animation: stripeRotateCircle 1.6s infinite linear;
   -webkit-transform: rotateX(0deg) translateZ(15px);
   transform: rotateX(0deg) translateZ(15px);
-  background-color: #6DC1B3;
+  background-color: #FFFFFF;
 }
 
 .circles-preloader .circles:nth-child(4) .circles-in div:nth-child(2) {
-  width: 29px;
-  height: 29px;
+  width: 6px;
+  height: 6px;
   background-color: red;
   border-radius: 50%;
   position: absolute;
-  left: 1%;
-  top: 63%;
+  left: 44%;
+  top: 70%;
   -webkit-animation: stripeRotateCircle 1.4s infinite linear;
   animation: stripeRotateCircle 1.4s infinite linear;
   -webkit-transform: rotateX(0deg) translateZ(15px);
@@ -30913,123 +30913,123 @@ page-register .login-content .submit-btn {
 }
 
 .circles-preloader .circles:nth-child(4) .circles-in div:nth-child(3) {
-  width: 12px;
-  height: 12px;
+  width: 7px;
+  height: 7px;
   background-color: red;
   border-radius: 50%;
   position: absolute;
-  left: 62%;
-  top: 7%;
-  -webkit-animation: stripeRotateCircle 1.1s infinite linear;
-  animation: stripeRotateCircle 1.1s infinite linear;
+  left: 80%;
+  top: 23%;
+  -webkit-animation: stripeRotateCircle 1.4s infinite linear;
+  animation: stripeRotateCircle 1.4s infinite linear;
   -webkit-transform: rotateX(0deg) translateZ(15px);
   transform: rotateX(0deg) translateZ(15px);
-  background-color: #FFFFFF;
+  background-color: #A2FFD5;
 }
 
 .circles-preloader .circles:nth-child(4) .circles-in div:nth-child(4) {
-  width: 19px;
-  height: 19px;
+  width: 28px;
+  height: 28px;
   background-color: red;
   border-radius: 50%;
   position: absolute;
-  left: 36%;
-  top: 11%;
-  -webkit-animation: stripeRotateCircle 1.6s infinite linear;
-  animation: stripeRotateCircle 1.6s infinite linear;
+  left: 73%;
+  top: 93%;
+  -webkit-animation: stripeRotateCircle 1.7s infinite linear;
+  animation: stripeRotateCircle 1.7s infinite linear;
+  -webkit-transform: rotateX(0deg) translateZ(15px);
+  transform: rotateX(0deg) translateZ(15px);
+  background-color: #FF6768;
+}
+
+.circles-preloader .circles:nth-child(4) .circles-in div:nth-child(5) {
+  width: 17px;
+  height: 17px;
+  background-color: red;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  top: 54%;
+  -webkit-animation: stripeRotateCircle 1.4s infinite linear;
+  animation: stripeRotateCircle 1.4s infinite linear;
   -webkit-transform: rotateX(0deg) translateZ(15px);
   transform: rotateX(0deg) translateZ(15px);
   background-color: #FFFFFF;
 }
 
-.circles-preloader .circles:nth-child(4) .circles-in div:nth-child(5) {
-  width: 9px;
-  height: 9px;
+.circles-preloader .circles:nth-child(4) .circles-in div:nth-child(6) {
+  width: 5px;
+  height: 5px;
   background-color: red;
   border-radius: 50%;
   position: absolute;
-  left: 88%;
-  top: 84%;
-  -webkit-animation: stripeRotateCircle 1.3s infinite linear;
-  animation: stripeRotateCircle 1.3s infinite linear;
+  left: 33%;
+  top: 21%;
+  -webkit-animation: stripeRotateCircle 1.9s infinite linear;
+  animation: stripeRotateCircle 1.9s infinite linear;
   -webkit-transform: rotateX(0deg) translateZ(15px);
   transform: rotateX(0deg) translateZ(15px);
   background-color: #81DDC6;
 }
 
-.circles-preloader .circles:nth-child(4) .circles-in div:nth-child(6) {
-  width: 32px;
-  height: 32px;
-  background-color: red;
-  border-radius: 50%;
-  position: absolute;
-  left: 5%;
-  top: 6%;
-  -webkit-animation: stripeRotateCircle 2s infinite linear;
-  animation: stripeRotateCircle 2s infinite linear;
-  -webkit-transform: rotateX(0deg) translateZ(15px);
-  transform: rotateX(0deg) translateZ(15px);
-  background-color: #FFFFFF;
-}
-
 .circles-preloader .circles:nth-child(4) .circles-in div:nth-child(7) {
-  width: 9px;
-  height: 9px;
-  background-color: red;
-  border-radius: 50%;
-  position: absolute;
-  left: 83%;
-  top: 63%;
-  -webkit-animation: stripeRotateCircle 1.5s infinite linear;
-  animation: stripeRotateCircle 1.5s infinite linear;
-  -webkit-transform: rotateX(0deg) translateZ(15px);
-  transform: rotateX(0deg) translateZ(15px);
-  background-color: #6DC1B3;
-}
-
-.circles-preloader .circles:nth-child(4) .circles-in div:nth-child(8) {
-  width: 24px;
-  height: 24px;
+  width: 3px;
+  height: 3px;
   background-color: red;
   border-radius: 50%;
   position: absolute;
   left: 89%;
-  top: 16%;
-  -webkit-animation: stripeRotateCircle 1.2s infinite linear;
-  animation: stripeRotateCircle 1.2s infinite linear;
+  top: 62%;
+  -webkit-animation: stripeRotateCircle 1.7s infinite linear;
+  animation: stripeRotateCircle 1.7s infinite linear;
   -webkit-transform: rotateX(0deg) translateZ(15px);
   transform: rotateX(0deg) translateZ(15px);
   background-color: #FFA69C;
 }
 
-.circles-preloader .circles:nth-child(4) .circles-in div:nth-child(9) {
-  width: 32px;
-  height: 32px;
+.circles-preloader .circles:nth-child(4) .circles-in div:nth-child(8) {
+  width: 22px;
+  height: 22px;
   background-color: red;
   border-radius: 50%;
   position: absolute;
-  left: 64%;
-  top: 97%;
-  -webkit-animation: stripeRotateCircle 1.2s infinite linear;
-  animation: stripeRotateCircle 1.2s infinite linear;
+  left: 20%;
+  top: 59%;
+  -webkit-animation: stripeRotateCircle 1.9s infinite linear;
+  animation: stripeRotateCircle 1.9s infinite linear;
   -webkit-transform: rotateX(0deg) translateZ(15px);
   transform: rotateX(0deg) translateZ(15px);
-  background-color: #B1DCBE;
+  background-color: #81DDC6;
+}
+
+.circles-preloader .circles:nth-child(4) .circles-in div:nth-child(9) {
+  width: 8px;
+  height: 8px;
+  background-color: red;
+  border-radius: 50%;
+  position: absolute;
+  left: 90%;
+  top: 64%;
+  -webkit-animation: stripeRotateCircle 1.6s infinite linear;
+  animation: stripeRotateCircle 1.6s infinite linear;
+  -webkit-transform: rotateX(0deg) translateZ(15px);
+  transform: rotateX(0deg) translateZ(15px);
+  background-color: #F3FFBA;
 }
 
 .circles-preloader .circles:nth-child(4) .circles-in div:nth-child(10) {
-  width: 30px;
-  height: 30px;
+  width: 26px;
+  height: 26px;
   background-color: red;
   border-radius: 50%;
   position: absolute;
-  left: 29%;
-  top: 52%;
-  -webkit-animation: stripeRotateCircle 1.3s infinite linear;
-  animation: stripeRotateCircle 1.3s infinite linear;
+  left: 50%;
+  top: 79%;
+  -webkit-animation: stripeRotateCircle 1.8s infinite linear;
+  animation: stripeRotateCircle 1.8s infinite linear;
   -webkit-transform: rotateX(0deg) translateZ(15px);
   transform: rotateX(0deg) translateZ(15px);
-  background-color: #B1DCBE;
+  background-color: #FFFFFF;
 }
 
 .circles-preloader .circles:nth-child(5) {
@@ -31044,28 +31044,13 @@ page-register .login-content .submit-btn {
 }
 
 .circles-preloader .circles:nth-child(5) .circles-in div:nth-child(1) {
-  width: 21px;
-  height: 21px;
+  width: 16px;
+  height: 16px;
   background-color: red;
   border-radius: 50%;
   position: absolute;
-  left: 51%;
-  top: 99%;
-  -webkit-animation: stripeRotateCircle 1.5s infinite linear;
-  animation: stripeRotateCircle 1.5s infinite linear;
-  -webkit-transform: rotateX(0deg) translateZ(15px);
-  transform: rotateX(0deg) translateZ(15px);
-  background-color: #81DDC6;
-}
-
-.circles-preloader .circles:nth-child(5) .circles-in div:nth-child(2) {
-  width: 25px;
-  height: 25px;
-  background-color: red;
-  border-radius: 50%;
-  position: absolute;
-  left: 77%;
-  top: 34%;
+  left: 64%;
+  top: 22%;
   -webkit-animation: stripeRotateCircle 1.9s infinite linear;
   animation: stripeRotateCircle 1.9s infinite linear;
   -webkit-transform: rotateX(0deg) translateZ(15px);
@@ -31073,34 +31058,49 @@ page-register .login-content .submit-btn {
   background-color: #A2FFD5;
 }
 
-.circles-preloader .circles:nth-child(5) .circles-in div:nth-child(3) {
-  width: 14px;
-  height: 14px;
+.circles-preloader .circles:nth-child(5) .circles-in div:nth-child(2) {
+  width: 7px;
+  height: 7px;
   background-color: red;
   border-radius: 50%;
   position: absolute;
-  left: 71%;
-  top: 43%;
-  -webkit-animation: stripeRotateCircle 1.3s infinite linear;
-  animation: stripeRotateCircle 1.3s infinite linear;
+  left: 75%;
+  top: 23%;
+  -webkit-animation: stripeRotateCircle 1.6s infinite linear;
+  animation: stripeRotateCircle 1.6s infinite linear;
   -webkit-transform: rotateX(0deg) translateZ(15px);
   transform: rotateX(0deg) translateZ(15px);
-  background-color: #81DDC6;
+  background-color: #B1DCBE;
 }
 
-.circles-preloader .circles:nth-child(5) .circles-in div:nth-child(4) {
-  width: 12px;
-  height: 12px;
+.circles-preloader .circles:nth-child(5) .circles-in div:nth-child(3) {
+  width: 26px;
+  height: 26px;
   background-color: red;
   border-radius: 50%;
   position: absolute;
-  left: 61%;
-  top: 36%;
+  left: 65%;
+  top: 52%;
   -webkit-animation: stripeRotateCircle 1.4s infinite linear;
   animation: stripeRotateCircle 1.4s infinite linear;
   -webkit-transform: rotateX(0deg) translateZ(15px);
   transform: rotateX(0deg) translateZ(15px);
   background-color: #A2FFD5;
+}
+
+.circles-preloader .circles:nth-child(5) .circles-in div:nth-child(4) {
+  width: 29px;
+  height: 29px;
+  background-color: red;
+  border-radius: 50%;
+  position: absolute;
+  left: 88%;
+  top: 65%;
+  -webkit-animation: stripeRotateCircle 1.2s infinite linear;
+  animation: stripeRotateCircle 1.2s infinite linear;
+  -webkit-transform: rotateX(0deg) translateZ(15px);
+  transform: rotateX(0deg) translateZ(15px);
+  background-color: #6DC1B3;
 }
 
 .circles-preloader .circles:nth-child(5) .circles-in div:nth-child(5) {
@@ -31109,85 +31109,85 @@ page-register .login-content .submit-btn {
   background-color: red;
   border-radius: 50%;
   position: absolute;
-  left: 43%;
-  top: 17%;
-  -webkit-animation: stripeRotateCircle 1.4s infinite linear;
-  animation: stripeRotateCircle 1.4s infinite linear;
-  -webkit-transform: rotateX(0deg) translateZ(15px);
-  transform: rotateX(0deg) translateZ(15px);
-  background-color: #FF6768;
-}
-
-.circles-preloader .circles:nth-child(5) .circles-in div:nth-child(6) {
-  width: 21px;
-  height: 21px;
-  background-color: red;
-  border-radius: 50%;
-  position: absolute;
-  left: 97%;
-  top: 80%;
-  -webkit-animation: stripeRotateCircle 1.4s infinite linear;
-  animation: stripeRotateCircle 1.4s infinite linear;
-  -webkit-transform: rotateX(0deg) translateZ(15px);
-  transform: rotateX(0deg) translateZ(15px);
-  background-color: #A2FFD5;
-}
-
-.circles-preloader .circles:nth-child(5) .circles-in div:nth-child(7) {
-  width: 12px;
-  height: 12px;
-  background-color: red;
-  border-radius: 50%;
-  position: absolute;
-  left: 33%;
-  top: 96%;
-  -webkit-animation: stripeRotateCircle 1.5s infinite linear;
-  animation: stripeRotateCircle 1.5s infinite linear;
-  -webkit-transform: rotateX(0deg) translateZ(15px);
-  transform: rotateX(0deg) translateZ(15px);
-  background-color: #A2FFD5;
-}
-
-.circles-preloader .circles:nth-child(5) .circles-in div:nth-child(8) {
-  width: 27px;
-  height: 27px;
-  background-color: red;
-  border-radius: 50%;
-  position: absolute;
-  left: 76%;
-  top: 85%;
+  left: 57%;
+  top: 33%;
   -webkit-animation: stripeRotateCircle 2s infinite linear;
   animation: stripeRotateCircle 2s infinite linear;
   -webkit-transform: rotateX(0deg) translateZ(15px);
   transform: rotateX(0deg) translateZ(15px);
-  background-color: #FF6768;
+  background-color: #FF0850;
 }
 
-.circles-preloader .circles:nth-child(5) .circles-in div:nth-child(9) {
-  width: 23px;
-  height: 23px;
+.circles-preloader .circles:nth-child(5) .circles-in div:nth-child(6) {
+  width: 18px;
+  height: 18px;
   background-color: red;
   border-radius: 50%;
   position: absolute;
-  left: 38%;
+  left: 25%;
   top: 5%;
-  -webkit-animation: stripeRotateCircle 1.3s infinite linear;
-  animation: stripeRotateCircle 1.3s infinite linear;
+  -webkit-animation: stripeRotateCircle 1.9s infinite linear;
+  animation: stripeRotateCircle 1.9s infinite linear;
   -webkit-transform: rotateX(0deg) translateZ(15px);
   transform: rotateX(0deg) translateZ(15px);
   background-color: #FFA69C;
 }
 
-.circles-preloader .circles:nth-child(5) .circles-in div:nth-child(10) {
-  width: 6px;
-  height: 6px;
+.circles-preloader .circles:nth-child(5) .circles-in div:nth-child(7) {
+  width: 9px;
+  height: 9px;
   background-color: red;
   border-radius: 50%;
   position: absolute;
-  left: 47%;
-  top: 69%;
+  left: 52%;
+  top: 28%;
   -webkit-animation: stripeRotateCircle 1.5s infinite linear;
   animation: stripeRotateCircle 1.5s infinite linear;
+  -webkit-transform: rotateX(0deg) translateZ(15px);
+  transform: rotateX(0deg) translateZ(15px);
+  background-color: #FF0850;
+}
+
+.circles-preloader .circles:nth-child(5) .circles-in div:nth-child(8) {
+  width: 22px;
+  height: 22px;
+  background-color: red;
+  border-radius: 50%;
+  position: absolute;
+  left: 8%;
+  top: 24%;
+  -webkit-animation: stripeRotateCircle 1.8s infinite linear;
+  animation: stripeRotateCircle 1.8s infinite linear;
+  -webkit-transform: rotateX(0deg) translateZ(15px);
+  transform: rotateX(0deg) translateZ(15px);
+  background-color: #81DDC6;
+}
+
+.circles-preloader .circles:nth-child(5) .circles-in div:nth-child(9) {
+  width: 10px;
+  height: 10px;
+  background-color: red;
+  border-radius: 50%;
+  position: absolute;
+  left: 80%;
+  top: 96%;
+  -webkit-animation: stripeRotateCircle 1.9s infinite linear;
+  animation: stripeRotateCircle 1.9s infinite linear;
+  -webkit-transform: rotateX(0deg) translateZ(15px);
+  transform: rotateX(0deg) translateZ(15px);
+  background-color: #FF0850;
+}
+
+.circles-preloader .circles:nth-child(5) .circles-in div:nth-child(10) {
+  width: 13px;
+  height: 13px;
+  background-color: red;
+  border-radius: 50%;
+  position: absolute;
+  left: 37%;
+  top: 42%;
+  -webkit-animation: stripeRotateCircle 1.4s infinite linear;
+  animation: stripeRotateCircle 1.4s infinite linear;
   -webkit-transform: rotateX(0deg) translateZ(15px);
   transform: rotateX(0deg) translateZ(15px);
   background-color: #F3FFBA;
@@ -31205,153 +31205,153 @@ page-register .login-content .submit-btn {
 }
 
 .circles-preloader .circles:nth-child(6) .circles-in div:nth-child(1) {
-  width: 8px;
-  height: 8px;
+  width: 24px;
+  height: 24px;
   background-color: red;
   border-radius: 50%;
   position: absolute;
-  left: 18%;
-  top: 88%;
-  -webkit-animation: stripeRotateCircle 1.5s infinite linear;
-  animation: stripeRotateCircle 1.5s infinite linear;
+  left: 51%;
+  top: 64%;
+  -webkit-animation: stripeRotateCircle 1.7s infinite linear;
+  animation: stripeRotateCircle 1.7s infinite linear;
   -webkit-transform: rotateX(0deg) translateZ(15px);
   transform: rotateX(0deg) translateZ(15px);
   background-color: #FF0850;
 }
 
 .circles-preloader .circles:nth-child(6) .circles-in div:nth-child(2) {
-  width: 26px;
-  height: 26px;
+  width: 30px;
+  height: 30px;
   background-color: red;
   border-radius: 50%;
   position: absolute;
-  left: 12%;
-  top: 14%;
+  left: 52%;
+  top: 44%;
   -webkit-animation: stripeRotateCircle 1.6s infinite linear;
   animation: stripeRotateCircle 1.6s infinite linear;
-  -webkit-transform: rotateX(0deg) translateZ(15px);
-  transform: rotateX(0deg) translateZ(15px);
-  background-color: #FFFFFF;
-}
-
-.circles-preloader .circles:nth-child(6) .circles-in div:nth-child(3) {
-  width: 31px;
-  height: 31px;
-  background-color: red;
-  border-radius: 50%;
-  position: absolute;
-  left: 69%;
-  top: 47%;
-  -webkit-animation: stripeRotateCircle 1.3s infinite linear;
-  animation: stripeRotateCircle 1.3s infinite linear;
-  -webkit-transform: rotateX(0deg) translateZ(15px);
-  transform: rotateX(0deg) translateZ(15px);
-  background-color: #FF0850;
-}
-
-.circles-preloader .circles:nth-child(6) .circles-in div:nth-child(4) {
-  width: 6px;
-  height: 6px;
-  background-color: red;
-  border-radius: 50%;
-  position: absolute;
-  left: 83%;
-  top: 62%;
-  -webkit-animation: stripeRotateCircle 1.2s infinite linear;
-  animation: stripeRotateCircle 1.2s infinite linear;
-  -webkit-transform: rotateX(0deg) translateZ(15px);
-  transform: rotateX(0deg) translateZ(15px);
-  background-color: #A2FFD5;
-}
-
-.circles-preloader .circles:nth-child(6) .circles-in div:nth-child(5) {
-  width: 6px;
-  height: 6px;
-  background-color: red;
-  border-radius: 50%;
-  position: absolute;
-  left: 71%;
-  top: 44%;
-  -webkit-animation: stripeRotateCircle 1.5s infinite linear;
-  animation: stripeRotateCircle 1.5s infinite linear;
-  -webkit-transform: rotateX(0deg) translateZ(15px);
-  transform: rotateX(0deg) translateZ(15px);
-  background-color: #81DDC6;
-}
-
-.circles-preloader .circles:nth-child(6) .circles-in div:nth-child(6) {
-  width: 32px;
-  height: 32px;
-  background-color: red;
-  border-radius: 50%;
-  position: absolute;
-  left: 83%;
-  top: 87%;
-  -webkit-animation: stripeRotateCircle 1.7s infinite linear;
-  animation: stripeRotateCircle 1.7s infinite linear;
-  -webkit-transform: rotateX(0deg) translateZ(15px);
-  transform: rotateX(0deg) translateZ(15px);
-  background-color: #FF0850;
-}
-
-.circles-preloader .circles:nth-child(6) .circles-in div:nth-child(7) {
-  width: 8px;
-  height: 8px;
-  background-color: red;
-  border-radius: 50%;
-  position: absolute;
-  left: 7%;
-  top: 30%;
-  -webkit-animation: stripeRotateCircle 1.4s infinite linear;
-  animation: stripeRotateCircle 1.4s infinite linear;
-  -webkit-transform: rotateX(0deg) translateZ(15px);
-  transform: rotateX(0deg) translateZ(15px);
-  background-color: #FFFFFF;
-}
-
-.circles-preloader .circles:nth-child(6) .circles-in div:nth-child(8) {
-  width: 4px;
-  height: 4px;
-  background-color: red;
-  border-radius: 50%;
-  position: absolute;
-  left: 72%;
-  top: 61%;
-  -webkit-animation: stripeRotateCircle 2s infinite linear;
-  animation: stripeRotateCircle 2s infinite linear;
-  -webkit-transform: rotateX(0deg) translateZ(15px);
-  transform: rotateX(0deg) translateZ(15px);
-  background-color: #FF6768;
-}
-
-.circles-preloader .circles:nth-child(6) .circles-in div:nth-child(9) {
-  width: 3px;
-  height: 3px;
-  background-color: red;
-  border-radius: 50%;
-  position: absolute;
-  left: 10%;
-  top: 99%;
-  -webkit-animation: stripeRotateCircle 1.2s infinite linear;
-  animation: stripeRotateCircle 1.2s infinite linear;
   -webkit-transform: rotateX(0deg) translateZ(15px);
   transform: rotateX(0deg) translateZ(15px);
   background-color: #FFA69C;
 }
 
-.circles-preloader .circles:nth-child(6) .circles-in div:nth-child(10) {
-  width: 13px;
-  height: 13px;
+.circles-preloader .circles:nth-child(6) .circles-in div:nth-child(3) {
+  width: 25px;
+  height: 25px;
   background-color: red;
   border-radius: 50%;
   position: absolute;
-  left: 41%;
-  top: 84%;
+  left: 90%;
+  top: 1%;
+  -webkit-animation: stripeRotateCircle 1.1s infinite linear;
+  animation: stripeRotateCircle 1.1s infinite linear;
+  -webkit-transform: rotateX(0deg) translateZ(15px);
+  transform: rotateX(0deg) translateZ(15px);
+  background-color: #81DDC6;
+}
+
+.circles-preloader .circles:nth-child(6) .circles-in div:nth-child(4) {
+  width: 22px;
+  height: 22px;
+  background-color: red;
+  border-radius: 50%;
+  position: absolute;
+  left: 100%;
+  top: 56%;
+  -webkit-animation: stripeRotateCircle 1.4s infinite linear;
+  animation: stripeRotateCircle 1.4s infinite linear;
+  -webkit-transform: rotateX(0deg) translateZ(15px);
+  transform: rotateX(0deg) translateZ(15px);
+  background-color: #FF0850;
+}
+
+.circles-preloader .circles:nth-child(6) .circles-in div:nth-child(5) {
+  width: 11px;
+  height: 11px;
+  background-color: red;
+  border-radius: 50%;
+  position: absolute;
+  left: 37%;
+  top: 55%;
   -webkit-animation: stripeRotateCircle 1.7s infinite linear;
   animation: stripeRotateCircle 1.7s infinite linear;
   -webkit-transform: rotateX(0deg) translateZ(15px);
   transform: rotateX(0deg) translateZ(15px);
+  background-color: #6DC1B3;
+}
+
+.circles-preloader .circles:nth-child(6) .circles-in div:nth-child(6) {
+  width: 23px;
+  height: 23px;
+  background-color: red;
+  border-radius: 50%;
+  position: absolute;
+  left: 73%;
+  top: 44%;
+  -webkit-animation: stripeRotateCircle 1.6s infinite linear;
+  animation: stripeRotateCircle 1.6s infinite linear;
+  -webkit-transform: rotateX(0deg) translateZ(15px);
+  transform: rotateX(0deg) translateZ(15px);
+  background-color: #FF6768;
+}
+
+.circles-preloader .circles:nth-child(6) .circles-in div:nth-child(7) {
+  width: 7px;
+  height: 7px;
+  background-color: red;
+  border-radius: 50%;
+  position: absolute;
+  left: 93%;
+  top: 16%;
+  -webkit-animation: stripeRotateCircle 1.5s infinite linear;
+  animation: stripeRotateCircle 1.5s infinite linear;
+  -webkit-transform: rotateX(0deg) translateZ(15px);
+  transform: rotateX(0deg) translateZ(15px);
   background-color: #F3FFBA;
+}
+
+.circles-preloader .circles:nth-child(6) .circles-in div:nth-child(8) {
+  width: 7px;
+  height: 7px;
+  background-color: red;
+  border-radius: 50%;
+  position: absolute;
+  left: 73%;
+  top: 18%;
+  -webkit-animation: stripeRotateCircle 1.3s infinite linear;
+  animation: stripeRotateCircle 1.3s infinite linear;
+  -webkit-transform: rotateX(0deg) translateZ(15px);
+  transform: rotateX(0deg) translateZ(15px);
+  background-color: #6DC1B3;
+}
+
+.circles-preloader .circles:nth-child(6) .circles-in div:nth-child(9) {
+  width: 30px;
+  height: 30px;
+  background-color: red;
+  border-radius: 50%;
+  position: absolute;
+  left: 3%;
+  top: 88%;
+  -webkit-animation: stripeRotateCircle 2s infinite linear;
+  animation: stripeRotateCircle 2s infinite linear;
+  -webkit-transform: rotateX(0deg) translateZ(15px);
+  transform: rotateX(0deg) translateZ(15px);
+  background-color: #FFFFFF;
+}
+
+.circles-preloader .circles:nth-child(6) .circles-in div:nth-child(10) {
+  width: 15px;
+  height: 15px;
+  background-color: red;
+  border-radius: 50%;
+  position: absolute;
+  left: 97%;
+  top: 10%;
+  -webkit-animation: stripeRotateCircle 1.1s infinite linear;
+  animation: stripeRotateCircle 1.1s infinite linear;
+  -webkit-transform: rotateX(0deg) translateZ(15px);
+  transform: rotateX(0deg) translateZ(15px);
+  background-color: #FF6768;
 }
 
 .circles-preloader .circles:nth-child(7) {
@@ -31366,43 +31366,43 @@ page-register .login-content .submit-btn {
 }
 
 .circles-preloader .circles:nth-child(7) .circles-in div:nth-child(1) {
-  width: 15px;
-  height: 15px;
+  width: 14px;
+  height: 14px;
   background-color: red;
   border-radius: 50%;
   position: absolute;
-  left: 39%;
-  top: 25%;
-  -webkit-animation: stripeRotateCircle 1.9s infinite linear;
-  animation: stripeRotateCircle 1.9s infinite linear;
+  left: 7%;
+  top: 57%;
+  -webkit-animation: stripeRotateCircle 1.1s infinite linear;
+  animation: stripeRotateCircle 1.1s infinite linear;
   -webkit-transform: rotateX(0deg) translateZ(15px);
   transform: rotateX(0deg) translateZ(15px);
-  background-color: #B1DCBE;
+  background-color: #6DC1B3;
 }
 
 .circles-preloader .circles:nth-child(7) .circles-in div:nth-child(2) {
-  width: 23px;
-  height: 23px;
+  width: 29px;
+  height: 29px;
   background-color: red;
   border-radius: 50%;
   position: absolute;
-  left: 2%;
-  top: 12%;
-  -webkit-animation: stripeRotateCircle 1.9s infinite linear;
-  animation: stripeRotateCircle 1.9s infinite linear;
+  left: 83%;
+  top: 62%;
+  -webkit-animation: stripeRotateCircle 1.7s infinite linear;
+  animation: stripeRotateCircle 1.7s infinite linear;
   -webkit-transform: rotateX(0deg) translateZ(15px);
   transform: rotateX(0deg) translateZ(15px);
-  background-color: #FFA69C;
+  background-color: #6DC1B3;
 }
 
 .circles-preloader .circles:nth-child(7) .circles-in div:nth-child(3) {
-  width: 21px;
-  height: 21px;
+  width: 8px;
+  height: 8px;
   background-color: red;
   border-radius: 50%;
   position: absolute;
-  left: 63%;
-  top: 3%;
+  left: 95%;
+  top: 1%;
   -webkit-animation: stripeRotateCircle 1.5s infinite linear;
   animation: stripeRotateCircle 1.5s infinite linear;
   -webkit-transform: rotateX(0deg) translateZ(15px);
@@ -31411,78 +31411,78 @@ page-register .login-content .submit-btn {
 }
 
 .circles-preloader .circles:nth-child(7) .circles-in div:nth-child(4) {
+  width: 19px;
+  height: 19px;
+  background-color: red;
+  border-radius: 50%;
+  position: absolute;
+  left: 83%;
+  top: 88%;
+  -webkit-animation: stripeRotateCircle 2s infinite linear;
+  animation: stripeRotateCircle 2s infinite linear;
+  -webkit-transform: rotateX(0deg) translateZ(15px);
+  transform: rotateX(0deg) translateZ(15px);
+  background-color: #F3FFBA;
+}
+
+.circles-preloader .circles:nth-child(7) .circles-in div:nth-child(5) {
   width: 11px;
   height: 11px;
   background-color: red;
   border-radius: 50%;
   position: absolute;
-  left: 100%;
-  top: 27%;
-  -webkit-animation: stripeRotateCircle 2s infinite linear;
-  animation: stripeRotateCircle 2s infinite linear;
+  left: 68%;
+  top: 28%;
+  -webkit-animation: stripeRotateCircle 1.7s infinite linear;
+  animation: stripeRotateCircle 1.7s infinite linear;
   -webkit-transform: rotateX(0deg) translateZ(15px);
   transform: rotateX(0deg) translateZ(15px);
-  background-color: #FF0850;
-}
-
-.circles-preloader .circles:nth-child(7) .circles-in div:nth-child(5) {
-  width: 9px;
-  height: 9px;
-  background-color: red;
-  border-radius: 50%;
-  position: absolute;
-  left: 11%;
-  top: 75%;
-  -webkit-animation: stripeRotateCircle 1.9s infinite linear;
-  animation: stripeRotateCircle 1.9s infinite linear;
-  -webkit-transform: rotateX(0deg) translateZ(15px);
-  transform: rotateX(0deg) translateZ(15px);
-  background-color: #FF6768;
+  background-color: #F3FFBA;
 }
 
 .circles-preloader .circles:nth-child(7) .circles-in div:nth-child(6) {
-  width: 9px;
-  height: 9px;
+  width: 23px;
+  height: 23px;
   background-color: red;
   border-radius: 50%;
   position: absolute;
-  left: 74%;
-  top: 2%;
-  -webkit-animation: stripeRotateCircle 1.6s infinite linear;
-  animation: stripeRotateCircle 1.6s infinite linear;
+  left: 67%;
+  top: 84%;
+  -webkit-animation: stripeRotateCircle 1.2s infinite linear;
+  animation: stripeRotateCircle 1.2s infinite linear;
   -webkit-transform: rotateX(0deg) translateZ(15px);
   transform: rotateX(0deg) translateZ(15px);
-  background-color: #FFFFFF;
+  background-color: #F3FFBA;
 }
 
 .circles-preloader .circles:nth-child(7) .circles-in div:nth-child(7) {
-  width: 9px;
-  height: 9px;
+  width: 6px;
+  height: 6px;
   background-color: red;
   border-radius: 50%;
   position: absolute;
-  left: 20%;
-  top: 35%;
-  -webkit-animation: stripeRotateCircle 1.5s infinite linear;
-  animation: stripeRotateCircle 1.5s infinite linear;
+  left: 56%;
+  top: 14%;
+  -webkit-animation: stripeRotateCircle 1.2s infinite linear;
+  animation: stripeRotateCircle 1.2s infinite linear;
   -webkit-transform: rotateX(0deg) translateZ(15px);
   transform: rotateX(0deg) translateZ(15px);
   background-color: #B1DCBE;
 }
 
 .circles-preloader .circles:nth-child(7) .circles-in div:nth-child(8) {
-  width: 6px;
-  height: 6px;
+  width: 26px;
+  height: 26px;
   background-color: red;
   border-radius: 50%;
   position: absolute;
-  left: 7%;
-  top: 84%;
+  left: 84%;
+  top: 69%;
   -webkit-animation: stripeRotateCircle 1.2s infinite linear;
   animation: stripeRotateCircle 1.2s infinite linear;
   -webkit-transform: rotateX(0deg) translateZ(15px);
   transform: rotateX(0deg) translateZ(15px);
-  background-color: #FFFFFF;
+  background-color: #B1DCBE;
 }
 
 .circles-preloader .circles:nth-child(7) .circles-in div:nth-child(9) {
@@ -31491,28 +31491,28 @@ page-register .login-content .submit-btn {
   background-color: red;
   border-radius: 50%;
   position: absolute;
-  left: 34%;
-  top: 60%;
-  -webkit-animation: stripeRotateCircle 1.7s infinite linear;
-  animation: stripeRotateCircle 1.7s infinite linear;
+  left: 26%;
+  top: 44%;
+  -webkit-animation: stripeRotateCircle 1.2s infinite linear;
+  animation: stripeRotateCircle 1.2s infinite linear;
   -webkit-transform: rotateX(0deg) translateZ(15px);
   transform: rotateX(0deg) translateZ(15px);
-  background-color: #6DC1B3;
+  background-color: #81DDC6;
 }
 
 .circles-preloader .circles:nth-child(7) .circles-in div:nth-child(10) {
-  width: 16px;
-  height: 16px;
+  width: 9px;
+  height: 9px;
   background-color: red;
   border-radius: 50%;
   position: absolute;
-  left: 77%;
+  left: 73%;
   top: 18%;
-  -webkit-animation: stripeRotateCircle 1.3s infinite linear;
-  animation: stripeRotateCircle 1.3s infinite linear;
+  -webkit-animation: stripeRotateCircle 2s infinite linear;
+  animation: stripeRotateCircle 2s infinite linear;
   -webkit-transform: rotateX(0deg) translateZ(15px);
   transform: rotateX(0deg) translateZ(15px);
-  background-color: #B1DCBE;
+  background-color: #FFFFFF;
 }
 
 .circles-preloader .circles:nth-child(8) {
@@ -31527,58 +31527,13 @@ page-register .login-content .submit-btn {
 }
 
 .circles-preloader .circles:nth-child(8) .circles-in div:nth-child(1) {
-  width: 14px;
-  height: 14px;
+  width: 32px;
+  height: 32px;
   background-color: red;
   border-radius: 50%;
   position: absolute;
-  left: 63%;
-  top: 23%;
-  -webkit-animation: stripeRotateCircle 1.2s infinite linear;
-  animation: stripeRotateCircle 1.2s infinite linear;
-  -webkit-transform: rotateX(0deg) translateZ(15px);
-  transform: rotateX(0deg) translateZ(15px);
-  background-color: #B1DCBE;
-}
-
-.circles-preloader .circles:nth-child(8) .circles-in div:nth-child(2) {
-  width: 23px;
-  height: 23px;
-  background-color: red;
-  border-radius: 50%;
-  position: absolute;
-  left: 14%;
-  top: 88%;
-  -webkit-animation: stripeRotateCircle 1.3s infinite linear;
-  animation: stripeRotateCircle 1.3s infinite linear;
-  -webkit-transform: rotateX(0deg) translateZ(15px);
-  transform: rotateX(0deg) translateZ(15px);
-  background-color: #F3FFBA;
-}
-
-.circles-preloader .circles:nth-child(8) .circles-in div:nth-child(3) {
-  width: 6px;
-  height: 6px;
-  background-color: red;
-  border-radius: 50%;
-  position: absolute;
-  left: 14%;
-  top: 51%;
-  -webkit-animation: stripeRotateCircle 1.1s infinite linear;
-  animation: stripeRotateCircle 1.1s infinite linear;
-  -webkit-transform: rotateX(0deg) translateZ(15px);
-  transform: rotateX(0deg) translateZ(15px);
-  background-color: #FF6768;
-}
-
-.circles-preloader .circles:nth-child(8) .circles-in div:nth-child(4) {
-  width: 10px;
-  height: 10px;
-  background-color: red;
-  border-radius: 50%;
-  position: absolute;
-  left: 58%;
-  top: 74%;
+  left: 52%;
+  top: 55%;
   -webkit-animation: stripeRotateCircle 1.3s infinite linear;
   animation: stripeRotateCircle 1.3s infinite linear;
   -webkit-transform: rotateX(0deg) translateZ(15px);
@@ -31586,59 +31541,104 @@ page-register .login-content .submit-btn {
   background-color: #FF0850;
 }
 
-.circles-preloader .circles:nth-child(8) .circles-in div:nth-child(5) {
-  width: 9px;
-  height: 9px;
+.circles-preloader .circles:nth-child(8) .circles-in div:nth-child(2) {
+  width: 31px;
+  height: 31px;
   background-color: red;
   border-radius: 50%;
   position: absolute;
-  left: 22%;
-  top: 67%;
-  -webkit-animation: stripeRotateCircle 1.7s infinite linear;
-  animation: stripeRotateCircle 1.7s infinite linear;
-  -webkit-transform: rotateX(0deg) translateZ(15px);
-  transform: rotateX(0deg) translateZ(15px);
-  background-color: #FFA69C;
-}
-
-.circles-preloader .circles:nth-child(8) .circles-in div:nth-child(6) {
-  width: 10px;
-  height: 10px;
-  background-color: red;
-  border-radius: 50%;
-  position: absolute;
-  left: 87%;
-  top: 43%;
-  -webkit-animation: stripeRotateCircle 1.4s infinite linear;
-  animation: stripeRotateCircle 1.4s infinite linear;
-  -webkit-transform: rotateX(0deg) translateZ(15px);
-  transform: rotateX(0deg) translateZ(15px);
-  background-color: #FF6768;
-}
-
-.circles-preloader .circles:nth-child(8) .circles-in div:nth-child(7) {
-  width: 15px;
-  height: 15px;
-  background-color: red;
-  border-radius: 50%;
-  position: absolute;
-  left: 74%;
-  top: 49%;
-  -webkit-animation: stripeRotateCircle 1.2s infinite linear;
-  animation: stripeRotateCircle 1.2s infinite linear;
+  left: 2%;
+  top: 29%;
+  -webkit-animation: stripeRotateCircle 1.5s infinite linear;
+  animation: stripeRotateCircle 1.5s infinite linear;
   -webkit-transform: rotateX(0deg) translateZ(15px);
   transform: rotateX(0deg) translateZ(15px);
   background-color: #6DC1B3;
 }
 
-.circles-preloader .circles:nth-child(8) .circles-in div:nth-child(8) {
-  width: 25px;
-  height: 25px;
+.circles-preloader .circles:nth-child(8) .circles-in div:nth-child(3) {
+  width: 9px;
+  height: 9px;
   background-color: red;
   border-radius: 50%;
   position: absolute;
-  left: 29%;
-  top: 95%;
+  left: 5%;
+  top: 7%;
+  -webkit-animation: stripeRotateCircle 2s infinite linear;
+  animation: stripeRotateCircle 2s infinite linear;
+  -webkit-transform: rotateX(0deg) translateZ(15px);
+  transform: rotateX(0deg) translateZ(15px);
+  background-color: #6DC1B3;
+}
+
+.circles-preloader .circles:nth-child(8) .circles-in div:nth-child(4) {
+  width: 6px;
+  height: 6px;
+  background-color: red;
+  border-radius: 50%;
+  position: absolute;
+  left: 51%;
+  top: 52%;
+  -webkit-animation: stripeRotateCircle 1.5s infinite linear;
+  animation: stripeRotateCircle 1.5s infinite linear;
+  -webkit-transform: rotateX(0deg) translateZ(15px);
+  transform: rotateX(0deg) translateZ(15px);
+  background-color: #FF0850;
+}
+
+.circles-preloader .circles:nth-child(8) .circles-in div:nth-child(5) {
+  width: 30px;
+  height: 30px;
+  background-color: red;
+  border-radius: 50%;
+  position: absolute;
+  left: 6%;
+  top: 41%;
+  -webkit-animation: stripeRotateCircle 1.3s infinite linear;
+  animation: stripeRotateCircle 1.3s infinite linear;
+  -webkit-transform: rotateX(0deg) translateZ(15px);
+  transform: rotateX(0deg) translateZ(15px);
+  background-color: #FFFFFF;
+}
+
+.circles-preloader .circles:nth-child(8) .circles-in div:nth-child(6) {
+  width: 30px;
+  height: 30px;
+  background-color: red;
+  border-radius: 50%;
+  position: absolute;
+  left: 81%;
+  top: 20%;
+  -webkit-animation: stripeRotateCircle 1.9s infinite linear;
+  animation: stripeRotateCircle 1.9s infinite linear;
+  -webkit-transform: rotateX(0deg) translateZ(15px);
+  transform: rotateX(0deg) translateZ(15px);
+  background-color: #B1DCBE;
+}
+
+.circles-preloader .circles:nth-child(8) .circles-in div:nth-child(7) {
+  width: 31px;
+  height: 31px;
+  background-color: red;
+  border-radius: 50%;
+  position: absolute;
+  left: 64%;
+  top: 76%;
+  -webkit-animation: stripeRotateCircle 1.4s infinite linear;
+  animation: stripeRotateCircle 1.4s infinite linear;
+  -webkit-transform: rotateX(0deg) translateZ(15px);
+  transform: rotateX(0deg) translateZ(15px);
+  background-color: #B1DCBE;
+}
+
+.circles-preloader .circles:nth-child(8) .circles-in div:nth-child(8) {
+  width: 32px;
+  height: 32px;
+  background-color: red;
+  border-radius: 50%;
+  position: absolute;
+  left: 14%;
+  top: 84%;
   -webkit-animation: stripeRotateCircle 1.8s infinite linear;
   animation: stripeRotateCircle 1.8s infinite linear;
   -webkit-transform: rotateX(0deg) translateZ(15px);
@@ -31647,33 +31647,33 @@ page-register .login-content .submit-btn {
 }
 
 .circles-preloader .circles:nth-child(8) .circles-in div:nth-child(9) {
-  width: 16px;
-  height: 16px;
+  width: 21px;
+  height: 21px;
   background-color: red;
   border-radius: 50%;
   position: absolute;
-  left: 21%;
-  top: 97%;
-  -webkit-animation: stripeRotateCircle 1.1s infinite linear;
-  animation: stripeRotateCircle 1.1s infinite linear;
-  -webkit-transform: rotateX(0deg) translateZ(15px);
-  transform: rotateX(0deg) translateZ(15px);
-  background-color: #FFFFFF;
-}
-
-.circles-preloader .circles:nth-child(8) .circles-in div:nth-child(10) {
-  width: 28px;
-  height: 28px;
-  background-color: red;
-  border-radius: 50%;
-  position: absolute;
-  left: 9%;
-  top: 26%;
+  left: 88%;
+  top: 35%;
   -webkit-animation: stripeRotateCircle 2s infinite linear;
   animation: stripeRotateCircle 2s infinite linear;
   -webkit-transform: rotateX(0deg) translateZ(15px);
   transform: rotateX(0deg) translateZ(15px);
   background-color: #FF6768;
+}
+
+.circles-preloader .circles:nth-child(8) .circles-in div:nth-child(10) {
+  width: 15px;
+  height: 15px;
+  background-color: red;
+  border-radius: 50%;
+  position: absolute;
+  left: 76%;
+  top: 30%;
+  -webkit-animation: stripeRotateCircle 1.5s infinite linear;
+  animation: stripeRotateCircle 1.5s infinite linear;
+  -webkit-transform: rotateX(0deg) translateZ(15px);
+  transform: rotateX(0deg) translateZ(15px);
+  background-color: #6DC1B3;
 }
 
 .circles-preloader .circles:nth-child(9) {
@@ -31688,153 +31688,153 @@ page-register .login-content .submit-btn {
 }
 
 .circles-preloader .circles:nth-child(9) .circles-in div:nth-child(1) {
-  width: 19px;
-  height: 19px;
-  background-color: red;
-  border-radius: 50%;
-  position: absolute;
-  left: 73%;
-  top: 82%;
-  -webkit-animation: stripeRotateCircle 1.4s infinite linear;
-  animation: stripeRotateCircle 1.4s infinite linear;
-  -webkit-transform: rotateX(0deg) translateZ(15px);
-  transform: rotateX(0deg) translateZ(15px);
-  background-color: #6DC1B3;
-}
-
-.circles-preloader .circles:nth-child(9) .circles-in div:nth-child(2) {
-  width: 12px;
-  height: 12px;
+  width: 23px;
+  height: 23px;
   background-color: red;
   border-radius: 50%;
   position: absolute;
   left: 34%;
-  top: 51%;
-  -webkit-animation: stripeRotateCircle 1.1s infinite linear;
-  animation: stripeRotateCircle 1.1s infinite linear;
-  -webkit-transform: rotateX(0deg) translateZ(15px);
-  transform: rotateX(0deg) translateZ(15px);
-  background-color: #F3FFBA;
-}
-
-.circles-preloader .circles:nth-child(9) .circles-in div:nth-child(3) {
-  width: 32px;
-  height: 32px;
-  background-color: red;
-  border-radius: 50%;
-  position: absolute;
-  left: 3%;
-  top: 98%;
+  top: 72%;
   -webkit-animation: stripeRotateCircle 1.9s infinite linear;
   animation: stripeRotateCircle 1.9s infinite linear;
   -webkit-transform: rotateX(0deg) translateZ(15px);
   transform: rotateX(0deg) translateZ(15px);
-  background-color: #A2FFD5;
+  background-color: #FF0850;
 }
 
-.circles-preloader .circles:nth-child(9) .circles-in div:nth-child(4) {
-  width: 10px;
-  height: 10px;
+.circles-preloader .circles:nth-child(9) .circles-in div:nth-child(2) {
+  width: 20px;
+  height: 20px;
   background-color: red;
   border-radius: 50%;
   position: absolute;
-  left: 73%;
-  top: 42%;
-  -webkit-animation: stripeRotateCircle 2s infinite linear;
-  animation: stripeRotateCircle 2s infinite linear;
+  left: 10%;
+  top: 49%;
+  -webkit-animation: stripeRotateCircle 1.7s infinite linear;
+  animation: stripeRotateCircle 1.7s infinite linear;
+  -webkit-transform: rotateX(0deg) translateZ(15px);
+  transform: rotateX(0deg) translateZ(15px);
+  background-color: #FFA69C;
+}
+
+.circles-preloader .circles:nth-child(9) .circles-in div:nth-child(3) {
+  width: 29px;
+  height: 29px;
+  background-color: red;
+  border-radius: 50%;
+  position: absolute;
+  left: 57%;
+  top: 55%;
+  -webkit-animation: stripeRotateCircle 1.2s infinite linear;
+  animation: stripeRotateCircle 1.2s infinite linear;
+  -webkit-transform: rotateX(0deg) translateZ(15px);
+  transform: rotateX(0deg) translateZ(15px);
+  background-color: #FF6768;
+}
+
+.circles-preloader .circles:nth-child(9) .circles-in div:nth-child(4) {
+  width: 16px;
+  height: 16px;
+  background-color: red;
+  border-radius: 50%;
+  position: absolute;
+  left: 97%;
+  top: 29%;
+  -webkit-animation: stripeRotateCircle 1.2s infinite linear;
+  animation: stripeRotateCircle 1.2s infinite linear;
   -webkit-transform: rotateX(0deg) translateZ(15px);
   transform: rotateX(0deg) translateZ(15px);
   background-color: #FFFFFF;
 }
 
 .circles-preloader .circles:nth-child(9) .circles-in div:nth-child(5) {
-  width: 18px;
-  height: 18px;
+  width: 15px;
+  height: 15px;
   background-color: red;
   border-radius: 50%;
   position: absolute;
-  left: 51%;
-  top: 49%;
+  left: 28%;
+  top: 43%;
+  -webkit-animation: stripeRotateCircle 2s infinite linear;
+  animation: stripeRotateCircle 2s infinite linear;
+  -webkit-transform: rotateX(0deg) translateZ(15px);
+  transform: rotateX(0deg) translateZ(15px);
+  background-color: #6DC1B3;
+}
+
+.circles-preloader .circles:nth-child(9) .circles-in div:nth-child(6) {
+  width: 22px;
+  height: 22px;
+  background-color: red;
+  border-radius: 50%;
+  position: absolute;
+  left: 3%;
+  top: 58%;
   -webkit-animation: stripeRotateCircle 1.8s infinite linear;
   animation: stripeRotateCircle 1.8s infinite linear;
   -webkit-transform: rotateX(0deg) translateZ(15px);
   transform: rotateX(0deg) translateZ(15px);
-  background-color: #FF6768;
+  background-color: #6DC1B3;
 }
 
-.circles-preloader .circles:nth-child(9) .circles-in div:nth-child(6) {
-  width: 5px;
-  height: 5px;
+.circles-preloader .circles:nth-child(9) .circles-in div:nth-child(7) {
+  width: 31px;
+  height: 31px;
   background-color: red;
   border-radius: 50%;
   position: absolute;
-  left: 96%;
-  top: 77%;
+  left: 10%;
+  top: 17%;
   -webkit-animation: stripeRotateCircle 1.6s infinite linear;
   animation: stripeRotateCircle 1.6s infinite linear;
   -webkit-transform: rotateX(0deg) translateZ(15px);
   transform: rotateX(0deg) translateZ(15px);
-  background-color: #81DDC6;
+  background-color: #FF0850;
 }
 
-.circles-preloader .circles:nth-child(9) .circles-in div:nth-child(7) {
+.circles-preloader .circles:nth-child(9) .circles-in div:nth-child(8) {
+  width: 17px;
+  height: 17px;
+  background-color: red;
+  border-radius: 50%;
+  position: absolute;
+  left: 89%;
+  top: 1%;
+  -webkit-animation: stripeRotateCircle 1.1s infinite linear;
+  animation: stripeRotateCircle 1.1s infinite linear;
+  -webkit-transform: rotateX(0deg) translateZ(15px);
+  transform: rotateX(0deg) translateZ(15px);
+  background-color: #A2FFD5;
+}
+
+.circles-preloader .circles:nth-child(9) .circles-in div:nth-child(9) {
   width: 24px;
   height: 24px;
   background-color: red;
   border-radius: 50%;
   position: absolute;
-  left: 43%;
-  top: 24%;
-  -webkit-animation: stripeRotateCircle 1.6s infinite linear;
-  animation: stripeRotateCircle 1.6s infinite linear;
-  -webkit-transform: rotateX(0deg) translateZ(15px);
-  transform: rotateX(0deg) translateZ(15px);
-  background-color: #FFFFFF;
-}
-
-.circles-preloader .circles:nth-child(9) .circles-in div:nth-child(8) {
-  width: 6px;
-  height: 6px;
-  background-color: red;
-  border-radius: 50%;
-  position: absolute;
-  left: 62%;
-  top: 85%;
-  -webkit-animation: stripeRotateCircle 1.4s infinite linear;
-  animation: stripeRotateCircle 1.4s infinite linear;
-  -webkit-transform: rotateX(0deg) translateZ(15px);
-  transform: rotateX(0deg) translateZ(15px);
-  background-color: #B1DCBE;
-}
-
-.circles-preloader .circles:nth-child(9) .circles-in div:nth-child(9) {
-  width: 20px;
-  height: 20px;
-  background-color: red;
-  border-radius: 50%;
-  position: absolute;
-  left: 71%;
-  top: 98%;
-  -webkit-animation: stripeRotateCircle 1.3s infinite linear;
-  animation: stripeRotateCircle 1.3s infinite linear;
+  left: 26%;
+  top: 97%;
+  -webkit-animation: stripeRotateCircle 1.8s infinite linear;
+  animation: stripeRotateCircle 1.8s infinite linear;
   -webkit-transform: rotateX(0deg) translateZ(15px);
   transform: rotateX(0deg) translateZ(15px);
   background-color: #FF0850;
 }
 
 .circles-preloader .circles:nth-child(9) .circles-in div:nth-child(10) {
-  width: 25px;
-  height: 25px;
+  width: 12px;
+  height: 12px;
   background-color: red;
   border-radius: 50%;
   position: absolute;
-  left: 68%;
-  top: 22%;
+  left: 49%;
+  top: 21%;
   -webkit-animation: stripeRotateCircle 1.2s infinite linear;
   animation: stripeRotateCircle 1.2s infinite linear;
   -webkit-transform: rotateX(0deg) translateZ(15px);
   transform: rotateX(0deg) translateZ(15px);
-  background-color: #FF0850;
+  background-color: #6DC1B3;
 }
 
 .circles-preloader .circles:nth-child(10) {
@@ -31849,28 +31849,43 @@ page-register .login-content .submit-btn {
 }
 
 .circles-preloader .circles:nth-child(10) .circles-in div:nth-child(1) {
-  width: 12px;
-  height: 12px;
+  width: 29px;
+  height: 29px;
   background-color: red;
   border-radius: 50%;
   position: absolute;
-  left: 52%;
-  top: 83%;
+  left: 30%;
+  top: 86%;
   -webkit-animation: stripeRotateCircle 1.9s infinite linear;
   animation: stripeRotateCircle 1.9s infinite linear;
   -webkit-transform: rotateX(0deg) translateZ(15px);
   transform: rotateX(0deg) translateZ(15px);
-  background-color: #81DDC6;
+  background-color: #6DC1B3;
 }
 
 .circles-preloader .circles:nth-child(10) .circles-in div:nth-child(2) {
-  width: 13px;
-  height: 13px;
+  width: 22px;
+  height: 22px;
   background-color: red;
   border-radius: 50%;
   position: absolute;
-  left: 83%;
-  top: 28%;
+  left: 96%;
+  top: 18%;
+  -webkit-animation: stripeRotateCircle 1.5s infinite linear;
+  animation: stripeRotateCircle 1.5s infinite linear;
+  -webkit-transform: rotateX(0deg) translateZ(15px);
+  transform: rotateX(0deg) translateZ(15px);
+  background-color: #FFFFFF;
+}
+
+.circles-preloader .circles:nth-child(10) .circles-in div:nth-child(3) {
+  width: 25px;
+  height: 25px;
+  background-color: red;
+  border-radius: 50%;
+  position: absolute;
+  left: 66%;
+  top: 50%;
   -webkit-animation: stripeRotateCircle 1.5s infinite linear;
   animation: stripeRotateCircle 1.5s infinite linear;
   -webkit-transform: rotateX(0deg) translateZ(15px);
@@ -31878,29 +31893,89 @@ page-register .login-content .submit-btn {
   background-color: #F3FFBA;
 }
 
-.circles-preloader .circles:nth-child(10) .circles-in div:nth-child(3) {
-  width: 9px;
-  height: 9px;
+.circles-preloader .circles:nth-child(10) .circles-in div:nth-child(4) {
+  width: 25px;
+  height: 25px;
   background-color: red;
   border-radius: 50%;
   position: absolute;
-  left: 17%;
-  top: 99%;
+  left: 78%;
+  top: 32%;
+  -webkit-animation: stripeRotateCircle 1.4s infinite linear;
+  animation: stripeRotateCircle 1.4s infinite linear;
+  -webkit-transform: rotateX(0deg) translateZ(15px);
+  transform: rotateX(0deg) translateZ(15px);
+  background-color: #FFA69C;
+}
+
+.circles-preloader .circles:nth-child(10) .circles-in div:nth-child(5) {
+  width: 16px;
+  height: 16px;
+  background-color: red;
+  border-radius: 50%;
+  position: absolute;
+  left: 11%;
+  top: 21%;
   -webkit-animation: stripeRotateCircle 1.9s infinite linear;
   animation: stripeRotateCircle 1.9s infinite linear;
+  -webkit-transform: rotateX(0deg) translateZ(15px);
+  transform: rotateX(0deg) translateZ(15px);
+  background-color: #FF0850;
+}
+
+.circles-preloader .circles:nth-child(10) .circles-in div:nth-child(6) {
+  width: 12px;
+  height: 12px;
+  background-color: red;
+  border-radius: 50%;
+  position: absolute;
+  left: 71%;
+  top: 27%;
+  -webkit-animation: stripeRotateCircle 1.1s infinite linear;
+  animation: stripeRotateCircle 1.1s infinite linear;
+  -webkit-transform: rotateX(0deg) translateZ(15px);
+  transform: rotateX(0deg) translateZ(15px);
+  background-color: #81DDC6;
+}
+
+.circles-preloader .circles:nth-child(10) .circles-in div:nth-child(7) {
+  width: 19px;
+  height: 19px;
+  background-color: red;
+  border-radius: 50%;
+  position: absolute;
+  left: 44%;
+  top: 98%;
+  -webkit-animation: stripeRotateCircle 1.3s infinite linear;
+  animation: stripeRotateCircle 1.3s infinite linear;
   -webkit-transform: rotateX(0deg) translateZ(15px);
   transform: rotateX(0deg) translateZ(15px);
   background-color: #F3FFBA;
 }
 
-.circles-preloader .circles:nth-child(10) .circles-in div:nth-child(4) {
-  width: 31px;
-  height: 31px;
+.circles-preloader .circles:nth-child(10) .circles-in div:nth-child(8) {
+  width: 25px;
+  height: 25px;
   background-color: red;
   border-radius: 50%;
   position: absolute;
-  left: 23%;
-  top: 4%;
+  left: 20%;
+  top: 55%;
+  -webkit-animation: stripeRotateCircle 1.4s infinite linear;
+  animation: stripeRotateCircle 1.4s infinite linear;
+  -webkit-transform: rotateX(0deg) translateZ(15px);
+  transform: rotateX(0deg) translateZ(15px);
+  background-color: #FFA69C;
+}
+
+.circles-preloader .circles:nth-child(10) .circles-in div:nth-child(9) {
+  width: 30px;
+  height: 30px;
+  background-color: red;
+  border-radius: 50%;
+  position: absolute;
+  left: 41%;
+  top: 71%;
   -webkit-animation: stripeRotateCircle 2s infinite linear;
   animation: stripeRotateCircle 2s infinite linear;
   -webkit-transform: rotateX(0deg) translateZ(15px);
@@ -31908,94 +31983,19 @@ page-register .login-content .submit-btn {
   background-color: #FFA69C;
 }
 
-.circles-preloader .circles:nth-child(10) .circles-in div:nth-child(5) {
-  width: 9px;
-  height: 9px;
-  background-color: red;
-  border-radius: 50%;
-  position: absolute;
-  left: 58%;
-  top: 32%;
-  -webkit-animation: stripeRotateCircle 1.2s infinite linear;
-  animation: stripeRotateCircle 1.2s infinite linear;
-  -webkit-transform: rotateX(0deg) translateZ(15px);
-  transform: rotateX(0deg) translateZ(15px);
-  background-color: #FF0850;
-}
-
-.circles-preloader .circles:nth-child(10) .circles-in div:nth-child(6) {
-  width: 22px;
-  height: 22px;
-  background-color: red;
-  border-radius: 50%;
-  position: absolute;
-  left: 51%;
-  top: 62%;
-  -webkit-animation: stripeRotateCircle 1.1s infinite linear;
-  animation: stripeRotateCircle 1.1s infinite linear;
-  -webkit-transform: rotateX(0deg) translateZ(15px);
-  transform: rotateX(0deg) translateZ(15px);
-  background-color: #F3FFBA;
-}
-
-.circles-preloader .circles:nth-child(10) .circles-in div:nth-child(7) {
+.circles-preloader .circles:nth-child(10) .circles-in div:nth-child(10) {
   width: 6px;
   height: 6px;
   background-color: red;
   border-radius: 50%;
   position: absolute;
-  left: 33%;
-  top: 22%;
-  -webkit-animation: stripeRotateCircle 1.5s infinite linear;
-  animation: stripeRotateCircle 1.5s infinite linear;
-  -webkit-transform: rotateX(0deg) translateZ(15px);
-  transform: rotateX(0deg) translateZ(15px);
-  background-color: #FF0850;
-}
-
-.circles-preloader .circles:nth-child(10) .circles-in div:nth-child(8) {
-  width: 15px;
-  height: 15px;
-  background-color: red;
-  border-radius: 50%;
-  position: absolute;
-  left: 56%;
-  top: 66%;
-  -webkit-animation: stripeRotateCircle 1.9s infinite linear;
-  animation: stripeRotateCircle 1.9s infinite linear;
+  left: 91%;
+  top: 68%;
+  -webkit-animation: stripeRotateCircle 1.2s infinite linear;
+  animation: stripeRotateCircle 1.2s infinite linear;
   -webkit-transform: rotateX(0deg) translateZ(15px);
   transform: rotateX(0deg) translateZ(15px);
   background-color: #FFFFFF;
-}
-
-.circles-preloader .circles:nth-child(10) .circles-in div:nth-child(9) {
-  width: 3px;
-  height: 3px;
-  background-color: red;
-  border-radius: 50%;
-  position: absolute;
-  left: 76%;
-  top: 15%;
-  -webkit-animation: stripeRotateCircle 1.8s infinite linear;
-  animation: stripeRotateCircle 1.8s infinite linear;
-  -webkit-transform: rotateX(0deg) translateZ(15px);
-  transform: rotateX(0deg) translateZ(15px);
-  background-color: #F3FFBA;
-}
-
-.circles-preloader .circles:nth-child(10) .circles-in div:nth-child(10) {
-  width: 29px;
-  height: 29px;
-  background-color: red;
-  border-radius: 50%;
-  position: absolute;
-  left: 8%;
-  top: 19%;
-  -webkit-animation: stripeRotateCircle 1.8s infinite linear;
-  animation: stripeRotateCircle 1.8s infinite linear;
-  -webkit-transform: rotateX(0deg) translateZ(15px);
-  transform: rotateX(0deg) translateZ(15px);
-  background-color: #A2FFD5;
 }
 
 @-webkit-keyframes stripeRotateCircle {

@@ -30,6 +30,7 @@ export class HeartRatePage {
   saveinfo(){
     this.auth.currentUserInfo[this.item.name].shift();
     this.auth.currentUserInfo[this.item.name].push(this.value);
+    this.auth.update();
     this.navCtrl.pop();
   }
   cancelAdd() {

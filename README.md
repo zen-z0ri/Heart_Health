@@ -19,8 +19,9 @@
   ```javascript 
   API_URL: string = "http://10.19.202.128:8080/api/";
   ```
-  to your own ip of server. exp ```10.19.202.128``` to ```123.13.203.13```
+    to your own ip of server. exp ```10.19.202.128``` to ```123.13.203.13```
   <br/>3.7 Start ionic build at **Heart_healh** folder: see [GitHub](http://ionicframework.com/) and [Cordova](https://cordova.apache.org/)
+<br/>
 4. The issue you might have:
   * [Failed to connect to 127.0.0.1:27017, reason: errno:111 Connection refused](https://stackoverflow.com/questions/26211671/failed-to-connect-to-127-0-0-127017-reason-errno111-connection-refused)
   * [cordova run android executes fine. But Android doesn't start the app](https://stackoverflow.com/questions/29956031/cordova-run-android-executes-fine-but-android-4-1-2-doesnt-start-the-app)

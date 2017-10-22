@@ -59,6 +59,8 @@ let InfoSchema = mongoose.Schema({
   Emotion: { type: [Number],
                   default: [0, 0, 0, 0, 0, 0, 0]},
   token: { type: String, default: ""}
+}, {
+  versionKey: false // You should be aware of the outcome after set to false
 });
 let MedicineSchema = mongoose.Schema({
     medName: String,
@@ -132,20 +134,26 @@ app.post('/api/create', function(req, res) {
   });
 });
 //// save
+// app.post('/api/save', function(req, res) {
+//   console.log("save");
+//   Information.update({"_id": req.body._id}, {
+//     $set: info,
+//     // $currentDate: { lastModified: true }
+//   });
+// });
 app.post('/api/save', function(req, res) {
   console.log("save");
   // create a review, information comes from request from Ionic
   Information.findById(req.body._id, function (err, info) {
-    if (err) return handleError(err);
+    if (err) console.log(err);
     console.log(info);
     info.set(req.body);
     info.save(function (err, updatedTank) {
-      if (err) return handleError(err);
+      if (err) console.log(err);
       res.send(updatedTank);
     });
   });
 });
-
 
 // listen (start app with node server.js) ======================================
 app.listen(8080);

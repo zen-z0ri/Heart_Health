@@ -23,8 +23,7 @@ export class DoctorGetPage {
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.info = navParams.data.info;
     console.log(this.info);
-    // this.getScore();
-    // this.showHealth();
+
   }
 
   getScore(){
@@ -38,6 +37,8 @@ export class DoctorGetPage {
         labels: ["Heart Rate", "Blood Pressure", "Emotion", "BMI", "Medicine Take"],
         datasets: [{
           backgroundColor: "#E63135",
+          fill: true,
+          fillColor : "rgba(220,220,220,0.5)",
           data: [7, 6, 6, 9 ,10]
         }]
       },
@@ -48,7 +49,7 @@ export class DoctorGetPage {
         responsive: true,
         title: {
           display: false,
-          text: 'Patient '
+          text: 'Patient Healt'
         },
         scale: {
           ticks: {
