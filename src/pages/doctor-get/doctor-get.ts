@@ -23,12 +23,15 @@ export class DoctorGetPage {
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.info = navParams.data.info;
     console.log(this.info);
-
+    this.getScore()
   }
 
   getScore(){
-    this.score = [10, 10, 10, 10 ,10];
-    // this.info.BP.forEach( ele => {ele.isUndefined||ele===0})
+    this.score = [4, 4, 4, 4 ,4];
+    for (let i in this.score){
+      this.score[i] = this.score[i]+ Math.round(Math.random() * 6);
+    }
+
   }
   showHealth(){
     this.HealthEL = new Chart(this.Health.nativeElement,{
@@ -36,10 +39,9 @@ export class DoctorGetPage {
       data: {
         labels: ["Heart Rate", "Blood Pressure", "Emotion", "BMI", "Medicine Take"],
         datasets: [{
-          backgroundColor: "#E63135",
-          fill: true,
-          fillColor : "rgba(220,220,220,0.5)",
-          data: [7, 6, 6, 9 ,10]
+          borderColor:"#E63135",
+          backgroundColor: "rgba(220,220,220,0.5)",
+          data: this.score
         }]
       },
       options: {

@@ -687,10 +687,13 @@ var DoctorGetPage = /** @class */ (function () {
         this.navParams = navParams;
         this.info = navParams.data.info;
         console.log(this.info);
+        this.getScore();
     }
     DoctorGetPage.prototype.getScore = function () {
-        this.score = [10, 10, 10, 10, 10];
-        // this.info.BP.forEach( ele => {ele.isUndefined||ele===0})
+        this.score = [4, 4, 4, 4, 4];
+        for (var i in this.score) {
+            this.score[i] = this.score[i] + Math.round(Math.random() * 6);
+        }
     };
     DoctorGetPage.prototype.showHealth = function () {
         this.HealthEL = new __WEBPACK_IMPORTED_MODULE_2_chart_js__["Chart"](this.Health.nativeElement, {
@@ -698,10 +701,9 @@ var DoctorGetPage = /** @class */ (function () {
             data: {
                 labels: ["Heart Rate", "Blood Pressure", "Emotion", "BMI", "Medicine Take"],
                 datasets: [{
-                        backgroundColor: "#E63135",
-                        fill: true,
-                        fillColor: "rgba(220,220,220,0.5)",
-                        data: [7, 6, 6, 9, 10]
+                        borderColor: "#E63135",
+                        backgroundColor: "rgba(220,220,220,0.5)",
+                        data: this.score
                     }]
             },
             options: {
@@ -787,12 +789,12 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 var AuthServiceProvider = /** @class */ (function () {
-    // API_URL: string = "http://10.19.202.128:8080/api/";
-    // API_URL: string = "http://10.0.2.2:8080/api/";
     function AuthServiceProvider(http) {
         this.http = http;
         this.currentUserInfo = new __WEBPACK_IMPORTED_MODULE_4__Info__["b" /* Info */]();
-        this.API_URL = "http://localhost:8080/api/";
+        // API_URL: string = "http://localhost:8080/api/";
+        // API_URL: string = "http://10.19.202.128:8080/api/";
+        this.API_URL = "http://10.0.2.2:8080/api/";
     }
     AuthServiceProvider.prototype.login = function (credentials) {
         var _this = this;
