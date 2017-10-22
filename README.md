@@ -23,11 +23,13 @@
   * ['mx.ferreyra.callnumber' is not in the npm registry.](https://github.com/Rohfosho/CordovaCallNumberPlugin/issues/47)
 
 ## 1. Login
-Enter your password and user name to login:
-![alt](/readmeImg/login.png)
+Enter your password and user name to login:<br/>
+<img src="./readmeImg/login.png" height="180"  />
+
 
 If you don't have one, please Register.
-![Alt](/readmeImg/)
+<img src="./readmeImg/register.png" height="180"  />
+
 
 ## Overview
 There are three tabs in this app:
