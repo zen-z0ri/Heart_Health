@@ -3,39 +3,38 @@ import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angu
 import { AuthServiceProvider} from "../../providers/auth-service/auth-service";
 import {  MedicineInfo } from "../../providers/auth-service/Info";
 
-/**
- * Generated class for the AddNewMedicinePage page.
- *
- * See http://ionicframework.com/docs/components/#navigation for more info
- * on Ionic pages and navigation.
- */
-
 @IonicPage()
 @Component({
   selector: 'page-add-new-medicine',
   templateUrl: 'add-new-medicine.html',
 })
 export class AddNewMedicinePage {
-  medicine: MedicineInfo;
+  private medicine: MedicineInfo;
   constructor(public navCtrl: NavController,
               public navParams: NavParams,
               private auth: AuthServiceProvider,
               private alertCtrl: AlertController) {
-
     this.medicine = this.navParams.data.medicine;
     this.medicine.timeList = new Array();
-    console.log(this.auth.userInfo);
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad AddNewMedicinePage');
-  }
-  addMed(){
-    if (this.checkRepeat()&&this.checkConflict()) {
+  ionViewDidLoad() { console.log('ionViewDidLoad AddNewMedicinePage'); }
+
+  /**
+   * Button funtion to add the medicine to the medicine list
+   */
+  private addMedicine(): void{
+    /**
+     * check the medicine if have been in the medicine list,
+     * or conflict with the exist medicine
+     */
+    if (this.checkRepeat() && this.checkConflict()) {
+      //success updaate
       this.auth.currentUserInfo.medicineList.push(this.medicine);
       this.auth.update();
       this.navCtrl.pop();
     } else if(!this.checkRepeat()){
+      // Repeat
       let alert = this.alertCtrl.create({
         title: 'Fail',
         message: "You have added it",
@@ -43,6 +42,7 @@ export class AddNewMedicinePage {
       });
       alert.present();
     } else if(!this.checkConflict()){
+      // Conflict
       let alert = this.alertCtrl.create({
         title: 'Fail',
         message: "Conflict with your current medicines",
@@ -50,12 +50,20 @@ export class AddNewMedicinePage {
       });
       alert.present();
     }
-
   }
-  cancelAdd() {
+
+  /**
+   * Button function to cancel sure add
+   */
+  private cancelAdd(): void {
     this.navCtrl.pop();
   }
-  checkRepeat(): boolean{
+
+  /**
+   * check if the medicine repeat with exsit one
+   * @returns {boolean}
+   */
+  private checkRepeat(): boolean{
     let allow: boolean = true;
     this.auth.currentUserInfo.medicineList.forEach(
       x => { if (x.barcode === this.medicine.barcode) allow = false;});
@@ -66,7 +74,7 @@ export class AddNewMedicinePage {
    * check if the medicine conflict
    * @returns {boolean}
    */
-  checkConflict(): boolean {
+  private checkConflict(): boolean {
     let allow: boolean = true;
     this.medicine.conflictList.forEach(
       listCode => {
@@ -77,4 +85,5 @@ export class AddNewMedicinePage {
     });
     return allow;
   }
+
 }

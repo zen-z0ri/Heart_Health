@@ -1,6 +1,6 @@
 webpackJsonp([0],{
 
-/***/ 475:
+/***/ 480:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8,7 +8,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RegisterPageModule", function() { return RegisterPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(13);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__register__ = __webpack_require__(478);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__register__ = __webpack_require__(483);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -38,7 +38,7 @@ var RegisterPageModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 478:
+/***/ 483:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -60,12 +60,6 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-/**
- * Generated class for the RegisterPage page.
- *
- * See http://ionicframework.com/docs/components/#navigation for more info
- * on Ionic pages and navigation.
- */
 var RegisterPage = /** @class */ (function () {
     function RegisterPage(navCtrl, auth, alertCtrl) {
         this.navCtrl = navCtrl;
@@ -117,7 +111,7 @@ var RegisterPage = /** @class */ (function () {
     RegisterPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* IonicPage */])(),
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-            selector: 'page-register',template:/*ion-inline-start:"/home/tung/Documents/learnIonic/heart/src/pages/register/register.html"*/'<!--\n  Generated template for the RegisterPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n</ion-header>\n\n\n<ion-content class="no-scroll login-content" padding>\n  <div class="login-box">\n\n    <form (ngSubmit)="register()" #registerForm="ngForm">\n      <ion-row>\n        <ion-col>\n          <ion-list inset>\n\n            <ion-item>\n              <ion-input type="text" placeholder="User Name" name="name" [(ngModel)]="registerCredentials.name" required></ion-input>\n            </ion-item>\n\n            <ion-item>\n              <ion-input type="text" placeholder="Email" name="email" [(ngModel)]="registerCredentials.email" required></ion-input>\n            </ion-item>\n\n            <ion-item>\n              <ion-input type="password"\n                         placeholder="Password"\n                         name="password"\n                         [(ngModel)]="registerCredentials.password"\n                         required ng-pattern="/(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,16}/"></ion-input>\n            </ion-item>\n\n            <ion-item>\n              <ion-input type="password"\n                         placeholder="Repeat Password"\n                         name="passwordRP"\n                         [(ngModel)]="passwdRepeat"\n                         required ng-pattern="/(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,16}/"></ion-input>\n            </ion-item>\n\n          </ion-list>\n        </ion-col>\n      </ion-row>\n\n      <ion-row>\n        <ion-col class="signup-col">\n          <button ion-button class="submit-btn" full type="submit" [disabled]="!registerForm.form.valid" >Register</button>\n        </ion-col>\n      </ion-row>\n\n    </form>\n  </div>\n</ion-content>\n'/*ion-inline-end:"/home/tung/Documents/learnIonic/heart/src/pages/register/register.html"*/,
+            selector: 'page-register',template:/*ion-inline-start:"/home/tung/Documents/learnIonic/Heart_Health/src/pages/register/register.html"*/'<ion-header>\n\n</ion-header>\n\n\n<ion-content class="no-scroll login-content" padding>\n  <div class="login-box">\n\n    <form (ngSubmit)="register()" #registerForm="ngForm">\n      <ion-row>\n        <ion-col>\n          <ion-list inset>\n\n            <ion-item>\n              <ion-input type="text" placeholder="User Name" name="name"\n                         [(ngModel)]="registerCredentials.name" required>\n              </ion-input>\n            </ion-item>\n\n            <ion-item>\n              <ion-input type="text" placeholder="Email" name="email"\n                         [(ngModel)]="registerCredentials.email" required>\n              </ion-input>\n            </ion-item>\n\n            <ion-item>\n              <ion-input type="password"\n                         placeholder="Password"\n                         name="password"\n                         [(ngModel)]="registerCredentials.password"\n                         required\n                         ng-pattern="/(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,16}/">\n              </ion-input>\n            </ion-item>\n\n            <ion-item>\n              <ion-input type="password"\n                         placeholder="Repeat Password"\n                         name="passwordRP"\n                         [(ngModel)]="passwdRepeat"\n                         required\n                         ng-pattern="/(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,16}/">\n              </ion-input>\n            </ion-item>\n\n          </ion-list>\n        </ion-col>\n      </ion-row>\n\n      <ion-row>\n        <ion-col class="signup-col">\n          <button ion-button class="submit-btn" full type="submit"\n                  [disabled]="!registerForm.form.valid" >\n            Register\n          </button>\n        </ion-col>\n      </ion-row>\n\n    </form>\n  </div>\n</ion-content>\n'/*ion-inline-end:"/home/tung/Documents/learnIonic/Heart_Health/src/pages/register/register.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavController */],
             __WEBPACK_IMPORTED_MODULE_2__providers_auth_service_auth_service__["a" /* AuthServiceProvider */],

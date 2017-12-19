@@ -94,4 +94,5 @@
     <plugin name="cordova-plugin-x-toast" spec="^2.6.0" />
     <plugin name="cordova-plugin-app-event" spec="file:node_modules/cordova-plugin-app-event" />
     <plugin name="de.appplant.cordova.plugin.local-notification" spec="^0.8.5" />
+    <plugin name="cordova-plugin-local-notification" spec="~0.9.0-beta.1" />
 </widget>

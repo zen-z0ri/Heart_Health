@@ -1,9 +1,3 @@
-<!--
-  Generated template for the ProfilePage page.
-
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
 <ion-header>
 
 </ion-header>
@@ -19,13 +13,15 @@
 
     <ion-row>
       <ion-col>
-        <button class="small-btn" ion-button icon-left clear small (press)="makeCall()">
+        <button class="small-btn" ion-button
+                icon-left clear small (press)="makeCall()">
           <ion-icon name="call"></ion-icon>
           <div>Make Call</div>
         </button>
       </ion-col>
       <ion-col>
-        <button class="small-btn" ion-button icon-left clear small (click)="resetPhone()">
+        <button class="small-btn" ion-button
+                icon-left clear small (click)="resetPhone()">
           <ion-icon name="settings"></ion-icon>
           <div>Change Number </div>
         </button>
@@ -35,18 +31,27 @@
   </ion-card>
 
   <ion-list>
-    <button ion-item *ngFor="let item of items" (click)="openNavDetailsPage(item)" icon-start>
-      <ion-icon [name]="item.iconN" [ngStyle]="{'color': item.color}" item-start></ion-icon>
+    <button ion-item *ngFor="let item of items"
+            (click)="openNavDetailsPage(item)" icon-start>
+      <ion-icon [name]="item.iconN"
+                [ngStyle]="{'color': item.color}"
+                item-start>
+      </ion-icon>
       {{ item.title }}
-      <ion-icon name="arrow-dropright-circle" class="custom-icon" item-end></ion-icon>
+      <ion-icon name="arrow-dropright-circle" class="custom-icon" item-end>
+      </ion-icon>
     </button>
     <button ion-item (click)="openBPDetailsPage(bp)" icon-start>
-      <ion-icon [name]="bp.iconN" [ngStyle]="{'color': bp.color}" item-start></ion-icon>
+      <ion-icon [name]="bp.iconN" [ngStyle]="{'color': bp.color}" item-start>
+      </ion-icon>
       {{ bp.title }}
-      <ion-icon name="arrow-dropright-circle" class="custom-icon" item-end></ion-icon>
+      <ion-icon name="arrow-dropright-circle" class="custom-icon" item-end>
+      </ion-icon>
     </button>
     <button ion-button class="btn" round clear (click)="goChart()">
-       Show Health Log <ion-icon name="arrow-dropright-circle" class="fig" itemid></ion-icon>
+       Show Health Log
+      <ion-icon name="arrow-dropright-circle" class="fig" itemid>
+      </ion-icon>
     </button>
 
   </ion-list>

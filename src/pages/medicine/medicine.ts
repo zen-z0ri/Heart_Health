@@ -11,13 +11,6 @@ import { ChartPage } from "../chart/chart";
 import { ArticlePage} from "../article/article";
 import { UserManualPage} from "../user-manual/user-manual";
 
-/**
- * Generated class for the MedicinePage page.
- *
- * See http://ionicframework.com/docs/components/#navigation for more info
- * on Ionic pages and navigation.
- */
-
 @IonicPage()
 @Component({
   selector: 'page-medicine',
@@ -61,7 +54,8 @@ export class MedicinePage {
    */
   async qrCode() {
     let code;
-    await this.http.get(this.auth.API_URL+'token?name='+this.auth.currentUserInfo.user.name)
+    await this.http.get(this.auth.API_URL+'token?name='
+      +this.auth.currentUserInfo.user.name)
       .toPromise()
       .then(res => {code=res.json(); console.log(code)});
     await this.barcodeScanner

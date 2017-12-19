@@ -3,12 +3,6 @@ import { IonicPage, NavController, NavParams, Events} from 'ionic-angular';
 import { AuthServiceProvider} from "../../providers/auth-service/auth-service";
 import { MedicineInfo} from "../../providers/auth-service/Info";
 import { LocalNotifications} from "@ionic-native/local-notifications";
-/**
- * Generated class for the MedicineDetailPage page.
- *
- * See http://ionicframework.com/docs/components/#navigation for more info
- * on Ionic pages and navigation.
- */
 
 @IonicPage()
 @Component({
@@ -36,16 +30,24 @@ export class MedicineDetailPage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad MedicineDetailPage');
   }
-
+  /**
+   * add an alarm
+   */
   private addAlarm(): void{
     this.Alarms.push('07:30');
     this.save();
   }
-
+  /**
+   * save the schedule to the db
+   */
   private save(): void{
     this.auth.currentUserInfo.medicineList[this.idx] = this.medicine;
 
   }
+  /**
+   * delete an alarm
+   * @param idx alarm index
+   */
   private delete(idx): void{
     this.Alarms.splice(idx,1);
     this.save();
@@ -54,6 +56,4 @@ export class MedicineDetailPage {
     this.save();
     this.navCtrl.pop();
   }
-
-
 }

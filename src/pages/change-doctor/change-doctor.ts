@@ -3,20 +3,13 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { AuthServiceProvider} from "../../providers/auth-service/auth-service";
 import { Doctor} from "../../providers/auth-service/Info";
 
-/**
- * Generated class for the ChangeDoctorPage page.
- *
- * See http://ionicframework.com/docs/components/#navigation for more info
- * on Ionic pages and navigation.
- */
-
 @IonicPage()
 @Component({
   selector: 'page-change-doctor',
   templateUrl: 'change-doctor.html',
 })
 export class ChangeDoctorPage {
-  Doctor: Doctor;
+  private Doctor: Doctor;
   constructor(public navCtrl: NavController,
               public navParams: NavParams,
               private auth: AuthServiceProvider) {
@@ -25,12 +18,14 @@ export class ChangeDoctorPage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad ChangeDoctorPage');
   }
-  update(){
+  // Button function to update doctor change
+  private updateDr(): void{
     this.auth.currentUserInfo.doctor = this.Doctor;
     this.auth.update();
     this.navCtrl.pop();
   }
-  cancelAdd() {
+  //Button function to cancel
+  private cancelUpdateDr(): void {
     this.navCtrl.pop();
   }
 

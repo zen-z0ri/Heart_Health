@@ -1,14 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { AuthServiceProvider} from "../../providers/auth-service/auth-service";
-import { BloodPressure} from "../../providers/auth-service/Info";
-
-/**
- * Generated class for the BloodPreasurePage page.
- *
- * See http://ionicframework.com/docs/components/#navigation for more info
- * on Ionic pages and navigation.
- */
+import { AuthServiceProvider } from "../../providers/auth-service/auth-service";
+import { BloodPressure } from "../../providers/auth-service/Info";
 
 @IonicPage()
 @Component({
@@ -17,26 +10,27 @@ import { BloodPressure} from "../../providers/auth-service/Info";
 })
 export class BloodPreasurePage {
 
-  item;
-  bp: BloodPressure;
-  constructor(public navCtrl: NavController, public navParams: NavParams,
+  private item;
+  private bp: BloodPressure;
+  constructor(public navCtrl: NavController,
+              public navParams: NavParams,
               private auth: AuthServiceProvider) {
     this.bp = new BloodPressure(0,0);
     this.item = this.navParams.data.item;
   }
 
-  ionViewDidLoad() {
+  ionViewDidLoad() { console.log('ionViewDidLoad BloodPreasurePage');}
 
-  }
-
-  saveinfo(){
+  // Button funcion to save the input Info
+  private saveInfo(): void{
     this.auth.currentUserInfo[this.item.name].shift();
     this.auth.currentUserInfo[this.item.name].push(this.bp);
     this.auth.update();
     this.navCtrl.pop();
   }
 
-  cancelAdd() {
+  // Button function to cancel the info
+  private cancelInfo(): void {
     this.navCtrl.pop();
   }
 

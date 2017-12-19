@@ -5,13 +5,6 @@ import { BarcodeScanner, BarcodeScanResult} from "@ionic-native/barcode-scanner"
 import { Http} from "@angular/http";
 import { AuthServiceProvider} from "../../providers/auth-service/auth-service";
 
-/**
- * Generated class for the SettingPage page.
- *
- * See http://ionicframework.com/docs/components/#navigation for more info
- * on Ionic pages and navigation.
- */
-
 @IonicPage()
 @Component({
   selector: 'page-setting',
@@ -38,8 +31,4 @@ export class SettingPage {
       });
     await this.navCtrl.push(DoctorGetPage, { info: this.info[0] });
   }
-  // saveBack(){
-  //   this.http.post(this.Auth.API_URL+'save',this.Auth.userInfo).subscribe();
-  // }
-
 }

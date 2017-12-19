@@ -1,17 +1,9 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController } from 'ionic-angular';
-import { MedicineDetailPage} from "../medicine-detail/medicine-detail";
-import { AuthServiceProvider} from "../../providers/auth-service/auth-service";
-import { MedicineInfo} from "../../providers/auth-service/Info";
-
-import { LocalNotifications} from "@ionic-native/local-notifications";
-
-/**
- * Generated class for the MedicineListPage page.
- *
- * See http://ionicframework.com/docs/components/#navigation for more info
- * on Ionic pages and navigation.
- */
+import { MedicineDetailPage } from "../medicine-detail/medicine-detail";
+import { AuthServiceProvider } from "../../providers/auth-service/auth-service";
+import { MedicineInfo } from "../../providers/auth-service/Info";
+import { LocalNotifications } from "@ionic-native/local-notifications";
 
 @IonicPage()
 @Component({
@@ -21,7 +13,9 @@ import { LocalNotifications} from "@ionic-native/local-notifications";
 export class MedicineListPage {
 
   medicines:  Array<MedicineInfo>;
-  constructor(public nav: NavController, private auth: AuthServiceProvider, private localNotifications: LocalNotifications) {
+  constructor(public nav: NavController,
+              private auth: AuthServiceProvider,
+              private localNotifications: LocalNotifications) {
     this.medicines = auth.currentUserInfo.medicineList;
 
   }

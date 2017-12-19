@@ -8,10 +8,14 @@ import { Info} from "./Info";
 @Injectable()
 export class AuthServiceProvider {
   currentUserInfo: Info = new Info();
-
+  //******************************
+  // browser
   // API_URL: string = "http://localhost:8080/api/";
+  // test mechine local wifi ip
   // API_URL: string = "http://10.19.202.128:8080/api/";
+  // android studio emulator
   API_URL: string = "http://10.0.2.2:8080/api/";
+  //******************************
   constructor(private http: Http) {
   }
 

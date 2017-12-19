@@ -123,24 +123,17 @@ app.get("/api/patient", function(req, res){
     });
 });
 
-// create new
+// create new account
 app.post('/api/create', function(req, res) {
 	console.log("creating new account");
   newAcc = new Information();
   console.log(req.body);
   newAcc.user = req.body;
-  newAcc.save(function (err, fluffy) {
+  newAcc.save(function (err) {
     if (err) return console.error(err);
   });
 });
-//// save
-// app.post('/api/save', function(req, res) {
-//   console.log("save");
-//   Information.update({"_id": req.body._id}, {
-//     $set: info,
-//     // $currentDate: { lastModified: true }
-//   });
-// });
+//save
 app.post('/api/save', function(req, res) {
   console.log("save");
   // create a review, information comes from request from Ionic

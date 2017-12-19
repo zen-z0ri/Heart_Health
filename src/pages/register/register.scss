@@ -1,23 +1,15 @@
 page-register {
-
   .login-content {
     background: #b71c1c;
-    //background: #f05545;
-
     .login-box {
-      //background: #f05545;
-      //background: #424242;
-      //background: #b71c1c;
       border-radius: 5px !important;
       padding: 20px 20px 0px 20px;
       margin-top: 30px;
     }
-
     ion-row {
       align-items: center;
       text-align: center;
     }
-
     ion-item {
       border-radius: 5px !important;
       padding-left: 30px !important;
@@ -27,17 +19,14 @@ page-register {
       border-bottom: 0px !important;
       box-shadow: none !important;
     }
-
     .signup-col {
       margin: 0px 16px 0px 16px;
       padding-bottom: 20px;
     }
-
     .item-inner {
       border-bottom-color: #ffffff !important;
       box-shadow: none !important;
     }
-
     .submit-btn {
       background: #480000;
       border-radius: 6px !important;

@@ -3,29 +3,26 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { AuthServiceProvider} from "../../providers/auth-service/auth-service";
 import { Chart } from 'chart.js';
 
-/**
- * Generated class for the ChartPage page.
- *
- * See http://ionicframework.com/docs/components/#navigation for more info
- * on Ionic pages and navigation.
- */
-
 @IonicPage()
 @Component({
   selector: 'page-chart',
   templateUrl: 'chart.html',
 })
 export class ChartPage {
-  @ViewChild('Emotion') Emotion;
-  @ViewChild('BP') BP;
-  @ViewChild('heart_rate') heart_rate;
-  @ViewChild('bmi') bmi;
-  public heartRateChartEl:      any;
-  public emotionChartEl:        any;
-  public bmiChartEl:            any;
-  public BPChartEL:             any;
+  // set the view child and the declare the element see at
+  // https://github.com/chartjs/Chart.js
+  @ViewChild('Emotion')     Emotion;
+  @ViewChild('BP')          BP;
+  @ViewChild('heart_rate')  heart_rate;
+  @ViewChild('bmi')         bmi;
+  private heartRateChartEl:  any;
+  private emotionChartEl:    any;
+  private bmiChartEl:        any;
+  private BPChartEL:         any;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, private auth: AuthServiceProvider) {
+  constructor(public navCtrl: NavController,
+              public navParams: NavParams,
+              private auth: AuthServiceProvider) {
     console.log(auth.currentUserInfo);
   }
 
@@ -36,7 +33,8 @@ export class ChartPage {
     this.createBMI();
     this.createBP();
   }
-  createHaertRate() {
+
+  private createHaertRate(): void{
     let max = Math.max(...this.auth.currentUserInfo.heart_rate);
     let min = Math.min(...this.auth.currentUserInfo.heart_rate);
     this.heartRateChartEl = new Chart(this.heart_rate.nativeElement,
@@ -85,7 +83,8 @@ export class ChartPage {
         }
       });
   }
-  createBP(){
+
+  private createBP(): void{
     let highPressure: Array<number> = new Array();
     let lowPressure: Array<number> = new Array();
     let max = Math.max(...highPressure);
@@ -147,7 +146,8 @@ export class ChartPage {
         }
       });
   }
-  createBMI() {
+
+  private createBMI(): void{
     let max = Math.max(...this.auth.currentUserInfo.bmi);
     console.log(max);
 
@@ -201,7 +201,8 @@ export class ChartPage {
         }
       });
   }
-  createEmotion() {
+
+  private createEmotion(): void{
     let max = Math.max(...this.auth.currentUserInfo.Emotion);
     let min = Math.min(...this.auth.currentUserInfo.Emotion);
     this.emotionChartEl = new Chart(this.Emotion.nativeElement,
@@ -250,8 +251,4 @@ export class ChartPage {
         }
       });
   }
-  back(){
-    this.navCtrl.pop();
-  }
-
 }

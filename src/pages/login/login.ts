@@ -3,13 +3,6 @@ import { IonicPage, NavController, AlertController, LoadingController, Loading }
 import { AuthServiceProvider } from "../../providers/auth-service/auth-service";
 import { User} from "../../providers/auth-service/Info";
 
-/**
- * Generated class for the LoginPage page.
- *
- * See http://ionicframework.com/docs/components/#navigation for more info
- * on Ionic pages and navigation.
- */
-
 @IonicPage()
 @Component({
   selector: 'page-login',

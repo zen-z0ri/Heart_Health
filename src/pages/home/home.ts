@@ -5,13 +5,6 @@ import { ProfilePage} from "../profile/profile";
 import { MedicinePage} from "../medicine/medicine";
 import { SettingPage} from "../setting/setting";
 
-/**
- * Generated class for the HomePage page.
- *
- * See http://ionicframework.com/docs/components/#navigation for more info
- * on Ionic pages and navigation.
- */
-
 @IonicPage()
 @Component({
   selector: 'page-home',

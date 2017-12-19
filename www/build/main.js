@@ -76,12 +76,6 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-/**
- * Generated class for the SplashPage page.
- *
- * See http://ionicframework.com/docs/components/#navigation for more info
- * on Ionic pages and navigation.
- */
 var SplashPage = /** @class */ (function () {
     function SplashPage(navCtrl, navParams, viewCtrl, splashScreen) {
         this.navCtrl = navCtrl;
@@ -99,7 +93,7 @@ var SplashPage = /** @class */ (function () {
     SplashPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* IonicPage */])(),
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-            selector: 'page-splash',template:/*ion-inline-start:"/home/tung/Documents/learnIonic/heart/src/pages/splash/splash.html"*/'<!--\n  Generated template for the SplashPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n</ion-header>\n\n\n<ion-content class="no-scroll" padding>\n\n  <div class="holder">\n    <div class="circles-preloader">\n      <div class="circles"><div class="circles-in"><div></div><div></div><div></div><div></div><div></div></div></div>\n      <div class="circles"><div class="circles-in"><div></div><div></div><div></div><div></div><div></div></div></div>\n      <div class="circles"><div class="circles-in"><div></div><div></div><div></div><div></div><div></div></div></div>\n      <div class="circles"><div class="circles-in"><div></div><div></div><div></div><div></div><div></div></div></div>\n      <div class="circles"><div class="circles-in"><div></div><div></div><div></div><div></div><div></div></div></div>\n      <div class="circles"><div class="circles-in"><div></div><div></div><div></div><div></div><div></div></div></div>\n      <div class="circles"><div class="circles-in"><div></div><div></div><div></div><div></div><div></div></div></div>\n      <div class="circles"><div class="circles-in"><div></div><div></div><div></div><div></div><div></div></div></div>\n      <div class="circles"><div class="circles-in"><div></div><div></div><div></div><div></div><div></div></div></div>\n      <div class="circles"><div class="circles-in"><div></div><div></div><div></div><div></div><div></div></div></div>\n    </div>\n    <div class="p">Heart Link</div>\n  </div>\n\n</ion-content>\n'/*ion-inline-end:"/home/tung/Documents/learnIonic/heart/src/pages/splash/splash.html"*/,
+            selector: 'page-splash',template:/*ion-inline-start:"/home/tung/Documents/learnIonic/Heart_Health/src/pages/splash/splash.html"*/'<ion-header>\n\n</ion-header>\n\n\n<ion-content class="no-scroll" padding>\n\n  <div class="holder">\n    <div class="circles-preloader">\n      <div class="circles"><div class="circles-in"><div></div><div></div><div></div><div></div><div></div></div></div>\n      <div class="circles"><div class="circles-in"><div></div><div></div><div></div><div></div><div></div></div></div>\n      <div class="circles"><div class="circles-in"><div></div><div></div><div></div><div></div><div></div></div></div>\n      <div class="circles"><div class="circles-in"><div></div><div></div><div></div><div></div><div></div></div></div>\n      <div class="circles"><div class="circles-in"><div></div><div></div><div></div><div></div><div></div></div></div>\n      <div class="circles"><div class="circles-in"><div></div><div></div><div></div><div></div><div></div></div></div>\n      <div class="circles"><div class="circles-in"><div></div><div></div><div></div><div></div><div></div></div></div>\n      <div class="circles"><div class="circles-in"><div></div><div></div><div></div><div></div><div></div></div></div>\n      <div class="circles"><div class="circles-in"><div></div><div></div><div></div><div></div><div></div></div></div>\n      <div class="circles"><div class="circles-in"><div></div><div></div><div></div><div></div><div></div></div></div>\n    </div>\n    <div class="p">Heart Link</div>\n  </div>\n\n</ion-content>\n'/*ion-inline-end:"/home/tung/Documents/learnIonic/Heart_Health/src/pages/splash/splash.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* NavParams */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* ViewController */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_splash_screen__["a" /* SplashScreen */]])
     ], SplashPage);
@@ -132,12 +126,6 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-/**
- * Generated class for the MedicineDetailPage page.
- *
- * See http://ionicframework.com/docs/components/#navigation for more info
- * on Ionic pages and navigation.
- */
 var MedicineDetailPage = /** @class */ (function () {
     function MedicineDetailPage(navCtrl, navParams, auth, localNotifications, events) {
         this.navCtrl = navCtrl;
@@ -174,7 +162,7 @@ var MedicineDetailPage = /** @class */ (function () {
     MedicineDetailPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* IonicPage */])(),
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-            selector: 'page-medicine-detail',template:/*ion-inline-start:"/home/tung/Documents/learnIonic/heart/src/pages/medicine-detail/medicine-detail.html"*/'<!--\n  Generated template for the MedicineDetailPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n</ion-header>\n\n\n<ion-content  class="no-scroll" padding>\n  <ion-list>\n    <ion-item>\n      Name:         {{medicine.medName}}\n    </ion-item>\n    <ion-item>\n      BarCode:      {{medicine.barcode}}\n    </ion-item>\n    <ion-item class="item" text-wrap>\n      {{medicine.medInfo}}\n    </ion-item>\n  </ion-list>\n  <ion-list class="timeList">\n    <ion-label class="header">\n      Alarm time\n    </ion-label>\n\n    <ion-item *ngFor="let a of Alarms; let i=index" (press)="delete(i)" >\n      <ion-label>Alarm {{i+1}}</ion-label>\n      <ion-datetime displayFormat="h:mm A" pickerFormat="h mm A" [(ngModel)]="Alarms[i]"></ion-datetime>\n    </ion-item>\n\n    <button ion-button class="btn" round clear (click)="addAlarm()">\n      <ion-icon name="add-circle" class="add-alarm" itemid></ion-icon>\n      Add Alarm\n    </button>\n    <button ion-button class="btn" [color]="red_light" full (click)="getOut()">\n      Back\n    </button>\n  </ion-list>\n\n</ion-content>\n'/*ion-inline-end:"/home/tung/Documents/learnIonic/heart/src/pages/medicine-detail/medicine-detail.html"*/,
+            selector: 'page-medicine-detail',template:/*ion-inline-start:"/home/tung/Documents/learnIonic/Heart_Health/src/pages/medicine-detail/medicine-detail.html"*/'<ion-header>\n\n</ion-header>\n\n\n<ion-content  class="no-scroll" padding>\n  <ion-list>\n    <ion-item>\n      Name:         {{medicine.medName}}\n    </ion-item>\n    <ion-item>\n      BarCode:      {{medicine.barcode}}\n    </ion-item>\n    <ion-item class="item" text-wrap>\n      {{medicine.medInfo}}\n    </ion-item>\n  </ion-list>\n  <ion-list class="timeList">\n    <ion-label class="header">\n      Alarm time\n    </ion-label>\n\n    <ion-item *ngFor="let a of Alarms; let i=index" (press)="delete(i)" >\n      <ion-label>Alarm {{i+1}}</ion-label>\n      <ion-datetime displayFormat="h:mm A" pickerFormat="h mm A" [(ngModel)]="Alarms[i]"></ion-datetime>\n    </ion-item>\n\n    <button ion-button class="btn" round clear (click)="addAlarm()">\n      <ion-icon name="add-circle" class="add-alarm" itemid></ion-icon>\n      Add Alarm\n    </button>\n    <button ion-button class="btn" [color]="red_light" full (click)="getOut()">\n      Back\n    </button>\n  </ion-list>\n\n</ion-content>\n'/*ion-inline-end:"/home/tung/Documents/learnIonic/Heart_Health/src/pages/medicine-detail/medicine-detail.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavController */],
             __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* NavParams */],
@@ -213,12 +201,6 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-/**
- * Generated class for the MedicineListPage page.
- *
- * See http://ionicframework.com/docs/components/#navigation for more info
- * on Ionic pages and navigation.
- */
 var MedicineListPage = /** @class */ (function () {
     function MedicineListPage(nav, auth, localNotifications) {
         this.nav = nav;
@@ -263,7 +245,7 @@ var MedicineListPage = /** @class */ (function () {
     MedicineListPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* IonicPage */])(),
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-            selector: 'page-medicine-list',template:/*ion-inline-start:"/home/tung/Documents/learnIonic/heart/src/pages/medicine-list/medicine-list.html"*/'<!--\n  Generated template for the MedicineListPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n  <!--<ion-navbar color="red_light">-->\n    <!--<ion-title>Medicine List</ion-title>-->\n  <!--</ion-navbar>-->\n</ion-header>\n\n\n<ion-content class="no-scroll" padding>\n  <ion-card>\n    <ion-card-header align-items-center>\n      Medicine List\n    </ion-card-header>\n\n    <ion-list>\n      <ion-item-sliding *ngFor="let medicine of medicines; let idx=index" (click)="openNavDetailsPage(medicine, idx)">\n        <button ion-item>\n          <ion-icon name="medkit" color="red_light" item-start></ion-icon>\n          {{medicine.medName}}\n          <ion-icon name="arrow-dropright-circle" class="custom-icon" item-end></ion-icon>\n        </button>\n\n        <ion-item-options side="right">\n          <button ion-button danger (click)="deleteMed(idx)" ><ion-icon name="trash"></ion-icon></button>\n        </ion-item-options>\n      </ion-item-sliding>\n\n\n    </ion-list>\n  </ion-card>\n  <button ion-button class="btn" [color]="red_light" full (click)="getOut()">\n    Back\n  </button>\n</ion-content>\n'/*ion-inline-end:"/home/tung/Documents/learnIonic/heart/src/pages/medicine-list/medicine-list.html"*/,
+            selector: 'page-medicine-list',template:/*ion-inline-start:"/home/tung/Documents/learnIonic/Heart_Health/src/pages/medicine-list/medicine-list.html"*/'<ion-header>\n</ion-header>\n\n\n<ion-content class="no-scroll" padding>\n  <ion-card>\n    <ion-card-header align-items-center>\n      Medicine List\n    </ion-card-header>\n\n    <ion-list>\n      <ion-item-sliding *ngFor="let medicine of medicines; let idx=index"\n                        (click)="openNavDetailsPage(medicine, idx)">\n        <button ion-item>\n          <ion-icon name="medkit" color="red_light" item-start></ion-icon>\n          {{medicine.medName}}\n          <ion-icon name="arrow-dropright-circle" class="custom-icon" item-end>\n          </ion-icon>\n        </button>\n\n        <ion-item-options side="right">\n          <button ion-button danger (click)="deleteMed(idx)" >\n            <ion-icon name="trash">\n            </ion-icon>\n          </button>\n        </ion-item-options>\n      </ion-item-sliding>\n\n\n    </ion-list>\n  </ion-card>\n  <button ion-button class="btn" [color]="red_light" full (click)="getOut()">\n    Back\n  </button>\n</ion-content>\n'/*ion-inline-end:"/home/tung/Documents/learnIonic/Heart_Health/src/pages/medicine-list/medicine-list.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavController */], __WEBPACK_IMPORTED_MODULE_3__providers_auth_service_auth_service__["a" /* AuthServiceProvider */], __WEBPACK_IMPORTED_MODULE_4__ionic_native_local_notifications__["a" /* LocalNotifications */]])
     ], MedicineListPage);
@@ -294,12 +276,6 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-/**
- * Generated class for the AddNewMedicinePage page.
- *
- * See http://ionicframework.com/docs/components/#navigation for more info
- * on Ionic pages and navigation.
- */
 var AddNewMedicinePage = /** @class */ (function () {
     function AddNewMedicinePage(navCtrl, navParams, auth, alertCtrl) {
         this.navCtrl = navCtrl;
@@ -308,18 +284,24 @@ var AddNewMedicinePage = /** @class */ (function () {
         this.alertCtrl = alertCtrl;
         this.medicine = this.navParams.data.medicine;
         this.medicine.timeList = new Array();
-        console.log(this.auth.userInfo);
     }
-    AddNewMedicinePage.prototype.ionViewDidLoad = function () {
-        console.log('ionViewDidLoad AddNewMedicinePage');
-    };
-    AddNewMedicinePage.prototype.addMed = function () {
+    AddNewMedicinePage.prototype.ionViewDidLoad = function () { console.log('ionViewDidLoad AddNewMedicinePage'); };
+    /**
+     * Button funtion to add the medicine to the medicine list
+     */
+    AddNewMedicinePage.prototype.addMedicine = function () {
+        /**
+         * check the medicine if have been in the medicine list,
+         * or conflict with the exist medicine
+         */
         if (this.checkRepeat() && this.checkConflict()) {
+            //success updaate
             this.auth.currentUserInfo.medicineList.push(this.medicine);
             this.auth.update();
             this.navCtrl.pop();
         }
         else if (!this.checkRepeat()) {
+            // Repeat
             var alert_1 = this.alertCtrl.create({
                 title: 'Fail',
                 message: "You have added it",
@@ -328,6 +310,7 @@ var AddNewMedicinePage = /** @class */ (function () {
             alert_1.present();
         }
         else if (!this.checkConflict()) {
+            // Conflict
             var alert_2 = this.alertCtrl.create({
                 title: 'Fail',
                 message: "Conflict with your current medicines",
@@ -336,9 +319,16 @@ var AddNewMedicinePage = /** @class */ (function () {
             alert_2.present();
         }
     };
+    /**
+     * Button function to cancel sure add
+     */
     AddNewMedicinePage.prototype.cancelAdd = function () {
         this.navCtrl.pop();
     };
+    /**
+     * check if the medicine repeat with exsit one
+     * @returns {boolean}
+     */
     AddNewMedicinePage.prototype.checkRepeat = function () {
         var _this = this;
         var allow = true;
@@ -364,7 +354,7 @@ var AddNewMedicinePage = /** @class */ (function () {
     AddNewMedicinePage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* IonicPage */])(),
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-            selector: 'page-add-new-medicine',template:/*ion-inline-start:"/home/tung/Documents/learnIonic/heart/src/pages/add-new-medicine/add-new-medicine.html"*/'<!--\n  Generated template for the AddNewMedicinePage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n</ion-header>\n\n\n<ion-content class="no-scroll" padding>\n  <h1 class="header"> Do you want to add this medicine to your medkit?</h1>\n  <ion-label>Name:</ion-label>\n  <ion-item>\n    {{medicine.medName}}\n  </ion-item>\n  <ion-label>BarCode:</ion-label>\n  <ion-item>\n    {{medicine.barcode}}\n  </ion-item>\n  <ion-item class="item item-text-wrap" text-wrap>\n    {{medicine.medInfo}}\n  </ion-item>\n  <button ion-button class="btn" [color]="red_light" outline (click)="addMed()">\n    Add\n  </button>\n  <button ion-button class="btn" [color]="red_light" outline (click)="cancelAdd()">\n    Cancel\n  </button>\n</ion-content>\n'/*ion-inline-end:"/home/tung/Documents/learnIonic/heart/src/pages/add-new-medicine/add-new-medicine.html"*/,
+            selector: 'page-add-new-medicine',template:/*ion-inline-start:"/home/tung/Documents/learnIonic/Heart_Health/src/pages/add-new-medicine/add-new-medicine.html"*/'<ion-header>\n\n</ion-header>\n\n\n<ion-content class="no-scroll" padding>\n  <h1 class="header"> Do you want to add this medicine to your medkit?</h1>\n  <ion-label>Name:</ion-label>\n  <ion-item>\n    {{medicine.medName}}\n  </ion-item>\n  <ion-label>BarCode:</ion-label>\n  <ion-item>\n    {{medicine.barcode}}\n  </ion-item>\n  <ion-item class="item item-text-wrap" text-wrap>\n    {{medicine.medInfo}}\n  </ion-item>\n  <button ion-button class="btn" [color]="red_light"\n          outline (click)="addMedicine()">\n    Add\n  </button>\n  <button ion-button class="btn" [color]="red_light"\n          outline (click)="cancelAdd()">\n    Cancel\n  </button>\n</ion-content>\n'/*ion-inline-end:"/home/tung/Documents/learnIonic/Heart_Health/src/pages/add-new-medicine/add-new-medicine.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavController */],
             __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* NavParams */],
@@ -396,24 +386,16 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
-/**
- * Generated class for the ArticlePage page.
- *
- * See http://ionicframework.com/docs/components/#navigation for more info
- * on Ionic pages and navigation.
- */
 var ArticlePage = /** @class */ (function () {
     function ArticlePage(navCtrl, navParams) {
         this.navCtrl = navCtrl;
         this.navParams = navParams;
     }
-    ArticlePage.prototype.ionViewDidLoad = function () {
-        console.log('ionViewDidLoad ArticlePage');
-    };
+    ArticlePage.prototype.ionViewDidLoad = function () { console.log('ionViewDidLoad ArticlePage'); };
     ArticlePage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* IonicPage */])(),
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-            selector: 'page-article',template:/*ion-inline-start:"/home/tung/Documents/learnIonic/heart/src/pages/article/article.html"*/'<!--\n  Generated template for the ArticlePage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n</ion-header>\n\n<ion-content class="no-scroll cards-bg social-cards">\n\n  <ion-card>\n\n    <ion-item>\n      <ion-avatar item-start>\n        <img src="assets/img/doctor_yui.jpg">\n      </ion-avatar>\n      <h2>Aragaki Yui</h2>\n      <p>November 5, 2014</p>\n    </ion-item>\n\n\n    <ion-card-content>\n      <p>Cholesterol is a fatty substance carried in your blood. Your body needs cholesterol to be healthy, but an imbalance of cholesterol in your blood can lead to a heart attack or stroke. </p>\n    </ion-card-content>\n\n    <ion-row>\n      <ion-col>\n        <button ion-button color="primary" clear small icon-start>\n          <ion-icon name=\'thumbs-up\'></ion-icon>\n          12 Likes\n        </button>\n      </ion-col>\n      <ion-col>\n        <button ion-button color="primary" clear small icon-start>\n          <ion-icon name=\'text\'></ion-icon>\n          4 Comments\n        </button>\n      </ion-col>\n      <ion-col align-self-center text-center>\n        <ion-note>\n          11h ago\n        </ion-note>\n      </ion-col>\n    </ion-row>\n\n  </ion-card>\n\n\n  <ion-card>\n\n    <ion-item>\n      <ion-avatar item-start>\n        <img src="assets/img/doctor-img2.png">\n      </ion-avatar>\n      <h2>Dr. Akali</h2>\n      <p>May 12, 2017</p>\n    </ion-item>\n\n\n    <ion-card-content>\n      <p>Blood pressure isn’t usually something you can feel. If it’s too high, it needs to be treated. Read about blood pressure and what you can do to control high blood pressure</p>\n    </ion-card-content>\n\n    <ion-row>\n      <ion-col>\n        <button ion-button color="primary" clear small icon-start>\n          <ion-icon name=\'thumbs-up\'></ion-icon>\n          30 Likes\n        </button>\n      </ion-col>\n      <ion-col>\n        <button ion-button color="primary" clear small icon-start>\n          <ion-icon name=\'text\'></ion-icon>\n          64 Comments\n        </button>\n      </ion-col>\n      <ion-col align-self-center text-center>\n        <ion-note>\n          30h ago\n        </ion-note>\n      </ion-col>\n    </ion-row>\n\n  </ion-card>\n\n\n  <ion-card>\n\n    <ion-item>\n      <ion-avatar item-start>\n        <img src="assets/img/doctor-img3.png">\n      </ion-avatar>\n      <h2>Masami Nagasawa</h2>\n      <p>June 28, 2017</p>\n    </ion-item>\n\n\n    <ion-card-content>\n      <p>Regular, moderate physical activity is great for your heart health. It’s never too late to start and get the benefits. It’s also important to sit less during your day and break up your sitting time. Find out what you can do about getting active and sitting less </p>\n    </ion-card-content>\n\n    <ion-row>\n      <ion-col>\n        <button ion-button color="primary" clear small icon-start>\n          <ion-icon name=\'thumbs-up\'></ion-icon>\n          46 Likes\n        </button>\n      </ion-col>\n      <ion-col>\n        <button ion-button color="primary" clear small icon-start>\n          <ion-icon name=\'text\'></ion-icon>\n          66 Comments\n        </button>\n      </ion-col>\n      <ion-col align-self-center text-center>\n        <ion-note>\n          2d ago\n        </ion-note>\n      </ion-col>\n    </ion-row>\n\n  </ion-card>\n\n\n</ion-content>\n'/*ion-inline-end:"/home/tung/Documents/learnIonic/heart/src/pages/article/article.html"*/,
+            selector: 'page-article',template:/*ion-inline-start:"/home/tung/Documents/learnIonic/Heart_Health/src/pages/article/article.html"*/'<ion-header>\n</ion-header>\n\n<ion-content class="no-scroll cards-bg social-cards">\n\n  <!--Three sample article content-->\n  <!--Artilce-1-->\n  <ion-card>\n   <!--Author detail-1-->\n    <ion-item>\n      <ion-avatar item-start>\n        <img src="assets/img/doctor_yui.jpg">\n      </ion-avatar>\n      <h2>Aragaki Yui</h2>\n      <p>November 5, 2014</p>\n    </ion-item>\n    <ion-card-content>\n      <p>Cholesterol is a fatty substance carried in your blood. Your body needs\n        cholesterol to be healthy, but an imbalance of cholesterol in your blood\n        can lead to a heart attack or stroke.</p>\n    </ion-card-content>\n    <!--Function bar-1-->\n    <ion-row>\n      <ion-col>\n        <button ion-button color="primary" clear small icon-start>\n          <ion-icon name=\'thumbs-up\'></ion-icon>\n          12 Likes\n        </button>\n      </ion-col>\n      <ion-col>\n        <button ion-button color="primary" clear small icon-start>\n          <ion-icon name=\'text\'></ion-icon>\n          4 Comments\n        </button>\n      </ion-col>\n      <ion-col align-self-center text-center>\n        <ion-note>\n          11h ago\n        </ion-note>\n      </ion-col>\n    </ion-row>\n  </ion-card>\n\n  <!--Artilce-2-->\n  <ion-card>\n    <!--Author detail-2-->\n    <ion-item>\n      <ion-avatar item-start>\n        <img src="assets/img/doctor-img2.png">\n      </ion-avatar>\n      <h2>Dr. Akali</h2>\n      <p>May 12, 2017</p>\n    </ion-item>\n    <ion-card-content>\n      <p>Blood pressure isn’t usually something you can feel. If it’s too high,\n        it needs to be treated. Read about blood pressure and what you can do to\n        control high blood pressure.</p>\n    </ion-card-content>\n   <!--Function bar-2-->\n    <ion-row>\n      <ion-col>\n        <button ion-button color="primary" clear small icon-start>\n          <ion-icon name=\'thumbs-up\'></ion-icon>\n          30 Likes\n        </button>\n      </ion-col>\n      <ion-col>\n        <button ion-button color="primary" clear small icon-start>\n          <ion-icon name=\'text\'></ion-icon>\n          64 Comments\n        </button>\n      </ion-col>\n      <ion-col align-self-center text-center>\n        <ion-note>\n          30h ago\n        </ion-note>\n      </ion-col>\n    </ion-row>\n  </ion-card>\n\n  <!--Artilce-3-->\n  <ion-card>\n    <!--Author detail-3-->\n    <ion-item>\n      <ion-avatar item-start>\n        <img src="assets/img/doctor-img3.png">\n      </ion-avatar>\n      <h2>Masami Nagasawa</h2>\n      <p>June 28, 2017</p>\n    </ion-item>\n    <ion-card-content>\n      <p>Regular, moderate physical activity is great for your heart health.\n        It’s never too late to start and get the benefits. It’s also important\n        to sit less during your day and break up your sitting time. Find out\n        what you can do about getting active and sitting less.</p>\n    </ion-card-content>\n    <!--Function bar-3-->\n    <ion-row>\n      <ion-col>\n        <button ion-button color="primary" clear small icon-start>\n          <ion-icon name=\'thumbs-up\'></ion-icon>\n          46 Likes\n        </button>\n      </ion-col>\n      <ion-col>\n        <button ion-button color="primary" clear small icon-start>\n          <ion-icon name=\'text\'></ion-icon>\n          66 Comments\n        </button>\n      </ion-col>\n      <ion-col align-self-center text-center>\n        <ion-note>\n          2d ago\n        </ion-note>\n      </ion-col>\n    </ion-row>\n  </ion-card>\n\n</ion-content>\n'/*ion-inline-end:"/home/tung/Documents/learnIonic/Heart_Health/src/pages/article/article.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* NavParams */]])
     ], ArticlePage);
@@ -442,12 +424,6 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
-/**
- * Generated class for the UserManualPage page.
- *
- * See http://ionicframework.com/docs/components/#navigation for more info
- * on Ionic pages and navigation.
- */
 var UserManualPage = /** @class */ (function () {
     function UserManualPage(navCtrl, navParams) {
         this.navCtrl = navCtrl;
@@ -459,7 +435,7 @@ var UserManualPage = /** @class */ (function () {
     UserManualPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* IonicPage */])(),
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-            selector: 'page-user-manual',template:/*ion-inline-start:"/home/tung/Documents/learnIonic/heart/src/pages/user-manual/user-manual.html"*/'<!--\n  Generated template for the UserManualPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n</ion-header>\n\n\n<ion-content class="no-scroll" padding>\n\n</ion-content>\n'/*ion-inline-end:"/home/tung/Documents/learnIonic/heart/src/pages/user-manual/user-manual.html"*/,
+            selector: 'page-user-manual',template:/*ion-inline-start:"/home/tung/Documents/learnIonic/Heart_Health/src/pages/user-manual/user-manual.html"*/'<ion-header>\n\n</ion-header>\n\n\n<ion-content class="no-scroll" padding>\n\n</ion-content>\n'/*ion-inline-end:"/home/tung/Documents/learnIonic/Heart_Health/src/pages/user-manual/user-manual.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* NavParams */]])
     ], UserManualPage);
@@ -490,12 +466,6 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-/**
- * Generated class for the HeartRatePage page.
- *
- * See http://ionicframework.com/docs/components/#navigation for more info
- * on Ionic pages and navigation.
- */
 var HeartRatePage = /** @class */ (function () {
     function HeartRatePage(navCtrl, navParams, auth) {
         this.navCtrl = navCtrl;
@@ -507,6 +477,9 @@ var HeartRatePage = /** @class */ (function () {
     HeartRatePage.prototype.ionViewDidLoad = function () {
         console.log('ionViewDidLoad HeartRatePage');
     };
+    /**
+     * Save the info to the data base
+     */
     HeartRatePage.prototype.saveinfo = function () {
         this.auth.currentUserInfo[this.item.name].shift();
         this.auth.currentUserInfo[this.item.name].push(this.value);
@@ -519,7 +492,7 @@ var HeartRatePage = /** @class */ (function () {
     HeartRatePage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* IonicPage */])(),
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-            selector: 'page-heart-rate',template:/*ion-inline-start:"/home/tung/Documents/learnIonic/heart/src/pages/heart-rate/heart-rate.html"*/'<!--\n  Generated template for the HeartRatePage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n</ion-header>\n\n<ion-content class="no-scroll" padding>\n  <ion-list>\n    <ion-item>\n      <ion-label floating>{{item.title}} Value</ion-label>\n      <ion-input type="text" value="" required ng-pattern="/\d{2,3}/" [(ngModel)]="value"></ion-input>\n    </ion-item>\n  </ion-list>\n\n  <div padding>\n    <button class="btn" ion-button color="primary" block (click)="saveinfo()" >Update</button>\n    <button class="btn" ion-button color="primary" block (click)="cancelAdd()">Cancel</button>\n\n  </div>\n</ion-content>\n'/*ion-inline-end:"/home/tung/Documents/learnIonic/heart/src/pages/heart-rate/heart-rate.html"*/,
+            selector: 'page-heart-rate',template:/*ion-inline-start:"/home/tung/Documents/learnIonic/Heart_Health/src/pages/heart-rate/heart-rate.html"*/'<ion-header>\n</ion-header>\n\n<ion-content class="no-scroll" padding>\n  <ion-list>\n    <ion-item>\n      <ion-label floating>{{item.title}} Value</ion-label>\n      <ion-input type="text" value="" required ng-pattern="/\d{2,3}/"\n                 [(ngModel)]="value">\n      </ion-input>\n    </ion-item>\n  </ion-list>\n\n  <div padding>\n    <button class="btn" ion-button color="primary" block (click)="saveinfo()" >\n      Update\n    </button>\n    <button class="btn" ion-button color="primary" block (click)="cancelAdd()">\n      Cancel\n    </button>\n\n  </div>\n</ion-content>\n'/*ion-inline-end:"/home/tung/Documents/learnIonic/Heart_Health/src/pages/heart-rate/heart-rate.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavController */],
             __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* NavParams */],
@@ -554,12 +527,6 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-/**
- * Generated class for the BloodPreasurePage page.
- *
- * See http://ionicframework.com/docs/components/#navigation for more info
- * on Ionic pages and navigation.
- */
 var BloodPreasurePage = /** @class */ (function () {
     function BloodPreasurePage(navCtrl, navParams, auth) {
         this.navCtrl = navCtrl;
@@ -568,23 +535,25 @@ var BloodPreasurePage = /** @class */ (function () {
         this.bp = new __WEBPACK_IMPORTED_MODULE_3__providers_auth_service_Info__["a" /* BloodPressure */](0, 0);
         this.item = this.navParams.data.item;
     }
-    BloodPreasurePage.prototype.ionViewDidLoad = function () {
-    };
-    BloodPreasurePage.prototype.saveinfo = function () {
+    BloodPreasurePage.prototype.ionViewDidLoad = function () { console.log('ionViewDidLoad BloodPreasurePage'); };
+    // Button funcion to save the input Info
+    BloodPreasurePage.prototype.saveInfo = function () {
         this.auth.currentUserInfo[this.item.name].shift();
         this.auth.currentUserInfo[this.item.name].push(this.bp);
         this.auth.update();
         this.navCtrl.pop();
     };
-    BloodPreasurePage.prototype.cancelAdd = function () {
+    // Button function to cancel the info
+    BloodPreasurePage.prototype.cancelInfo = function () {
         this.navCtrl.pop();
     };
     BloodPreasurePage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* IonicPage */])(),
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-            selector: 'page-blood-preasure',template:/*ion-inline-start:"/home/tung/Documents/learnIonic/heart/src/pages/blood-preasure/blood-preasure.html"*/'<!--\n  Generated template for the BloodPreasurePage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n\n</ion-header>\n\n\n<ion-content class="no-scroll" padding>\n  <ion-list>\n    <ion-item>\n      <ion-label floating>Systolic Blood Pressure</ion-label>\n      <ion-input type="text" value="" required ng-pattern="/\d{2,3}/" [(ngModel)]="this.bp.high_pressure"></ion-input>\n    </ion-item>\n    <ion-item>\n      <ion-label floating>Diastolic Blood Pressure</ion-label>\n      <ion-input type="text" value="" required ng-pattern="/\d{2,3}/" [(ngModel)]="this.bp.low_pressure"></ion-input>\n    </ion-item>\n  </ion-list>\n\n  <div padding>\n    <button class="btn" ion-button color="primary" full  (click)="saveinfo()">Update</button>\n    <button class="btn" ion-button color="primary" full (click)="cancelAdd()">Cancel</button>\n  </div>\n</ion-content>\n'/*ion-inline-end:"/home/tung/Documents/learnIonic/heart/src/pages/blood-preasure/blood-preasure.html"*/,
+            selector: 'page-blood-preasure',template:/*ion-inline-start:"/home/tung/Documents/learnIonic/Heart_Health/src/pages/blood-preasure/blood-preasure.html"*/'<ion-header>\n\n</ion-header>\n\n<ion-content class="no-scroll" padding>\n  <ion-list name="info">\n    <ion-item>\n      <ion-label floating>Systolic Blood Pressure</ion-label>\n      <ion-input type="text" id="high_pressure" value="" required\n                 ng-pattern="/^\d{2,3}$/"\n                 [(ngModel)]="this.bp.high_pressure">\n      </ion-input>\n    </ion-item>\n    <ion-item>\n      <ion-label floating>Diastolic Blood Pressure</ion-label>\n      <ion-input type="text" id="low_pressure" value="" required\n                 ng-pattern="/^\d{2,3}$/"\n                 [(ngModel)]="this.bp.low_pressure">\n      </ion-input>\n    </ion-item>\n  </ion-list>\n\n  <div padding>\n    <button class="btn" ion-button color="primary" full  (click)="saveInfo()">Update</button>\n    <button class="btn" ion-button color="primary" full (click)="cancelInfo()">Cancel</button>\n  </div>\n</ion-content>\n'/*ion-inline-end:"/home/tung/Documents/learnIonic/Heart_Health/src/pages/blood-preasure/blood-preasure.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* NavParams */],
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavController */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* NavParams */],
             __WEBPACK_IMPORTED_MODULE_2__providers_auth_service_auth_service__["a" /* AuthServiceProvider */]])
     ], BloodPreasurePage);
     return BloodPreasurePage;
@@ -614,12 +583,6 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-/**
- * Generated class for the ChangeDoctorPage page.
- *
- * See http://ionicframework.com/docs/components/#navigation for more info
- * on Ionic pages and navigation.
- */
 var ChangeDoctorPage = /** @class */ (function () {
     function ChangeDoctorPage(navCtrl, navParams, auth) {
         this.navCtrl = navCtrl;
@@ -630,18 +593,20 @@ var ChangeDoctorPage = /** @class */ (function () {
     ChangeDoctorPage.prototype.ionViewDidLoad = function () {
         console.log('ionViewDidLoad ChangeDoctorPage');
     };
-    ChangeDoctorPage.prototype.update = function () {
+    // Button function to update doctor change
+    ChangeDoctorPage.prototype.updateDr = function () {
         this.auth.currentUserInfo.doctor = this.Doctor;
         this.auth.update();
         this.navCtrl.pop();
     };
-    ChangeDoctorPage.prototype.cancelAdd = function () {
+    //Button function to cancel
+    ChangeDoctorPage.prototype.cancelUpdateDr = function () {
         this.navCtrl.pop();
     };
     ChangeDoctorPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* IonicPage */])(),
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-            selector: 'page-change-doctor',template:/*ion-inline-start:"/home/tung/Documents/learnIonic/heart/src/pages/change-doctor/change-doctor.html"*/'<!--\n  Generated template for the ChangeDoctorPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n</ion-header>\n\n\n<ion-content class="no-scroll" padding>\n  <ion-list>\n    <ion-item>\n      <ion-label floating>Doctor Name</ion-label>\n      <ion-input type="text" value="" required [(ngModel)]="this.Doctor.docName"></ion-input>\n    </ion-item>\n    <ion-item>\n      <ion-label floating>Phone Number</ion-label>\n      <ion-input type="text" value="" required [(ngModel)]="this.Doctor.phoneNumber"></ion-input>\n    </ion-item>\n  </ion-list>\n\n  <div padding>\n    <button class="btn" ion-button color="primary" full  (click)="update()">Update</button>\n    <button class="btn" ion-button color="primary" full (click)="cancelAdd()">Cancel</button>\n  </div>\n</ion-content>\n'/*ion-inline-end:"/home/tung/Documents/learnIonic/heart/src/pages/change-doctor/change-doctor.html"*/,
+            selector: 'page-change-doctor',template:/*ion-inline-start:"/home/tung/Documents/learnIonic/Heart_Health/src/pages/change-doctor/change-doctor.html"*/'<ion-header>\n\n</ion-header>\n\n\n<ion-content class="no-scroll" padding>\n  <ion-list>\n    <ion-item>\n      <ion-label floating>Doctor Name</ion-label>\n      <ion-input type="text" value="" required\n                 [(ngModel)]="this.Doctor.docName">\n      </ion-input>\n    </ion-item>\n    <ion-item>\n      <ion-label floating>Phone Number</ion-label>\n      <ion-input type="text" value="" required\n                 [(ngModel)]="this.Doctor.phoneNumber">\n      </ion-input>\n    </ion-item>\n  </ion-list>\n\n  <div padding>\n    <button class="btn" ion-button color="primary" full  (click)="updateDr()">Update</button>\n    <button class="btn" ion-button color="primary" full (click)="cancelUpdateDr()">Cancel</button>\n  </div>\n</ion-content>\n'/*ion-inline-end:"/home/tung/Documents/learnIonic/Heart_Health/src/pages/change-doctor/change-doctor.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavController */],
             __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* NavParams */],
@@ -661,7 +626,7 @@ var ChangeDoctorPage = /** @class */ (function () {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DoctorGetPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(13);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_chart_js__ = __webpack_require__(176);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_chart_js__ = __webpack_require__(177);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_chart_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_chart_js__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -675,12 +640,6 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-/**
- * Generated class for the DoctorGetPage page.
- *
- * See http://ionicframework.com/docs/components/#navigation for more info
- * on Ionic pages and navigation.
- */
 var DoctorGetPage = /** @class */ (function () {
     function DoctorGetPage(navCtrl, navParams) {
         this.navCtrl = navCtrl;
@@ -689,13 +648,14 @@ var DoctorGetPage = /** @class */ (function () {
         console.log(this.info);
         this.getScore();
     }
+    // Add algorithm to score the health status of user
     DoctorGetPage.prototype.getScore = function () {
         this.score = [4, 4, 4, 4, 4];
         for (var i in this.score) {
             this.score[i] = this.score[i] + Math.round(Math.random() * 6);
         }
     };
-    DoctorGetPage.prototype.showHealth = function () {
+    DoctorGetPage.prototype.showHealthScore = function () {
         this.HealthEL = new __WEBPACK_IMPORTED_MODULE_2_chart_js__["Chart"](this.Health.nativeElement, {
             type: 'radar',
             data: {
@@ -724,17 +684,17 @@ var DoctorGetPage = /** @class */ (function () {
         });
     };
     DoctorGetPage.prototype.ionViewDidLoad = function () {
-        this.showHealth();
+        this.showHealthScore();
         console.log('ionViewDidLoad DoctorGetPage');
     };
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_14" /* ViewChild */])('Health'),
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_13" /* ViewChild */])('Health'),
         __metadata("design:type", Object)
     ], DoctorGetPage.prototype, "Health", void 0);
     DoctorGetPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* IonicPage */])(),
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-            selector: 'page-doctor-get',template:/*ion-inline-start:"/home/tung/Documents/learnIonic/heart/src/pages/doctor-get/doctor-get.html"*/'<!--\n  Generated template for the DoctorGetPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n</ion-header>\n\n\n<ion-content class="no-scroll" padding>\n  <ion-list>\n    <ion-item>\n      Name:         {{this.info.user.name}}\n    </ion-item>\n    <ion-item>\n      E-mail:      {{this.info.user.email}}\n    </ion-item>\n    <ion-label>Medicine List:</ion-label>\n    <ion-item *ngFor="let medicine of this.info.medicineList;">\n     {{medicine.medName}}\n    </ion-item>\n  </ion-list>\n  <ion-card>\n    <ion-card-header class="header">\n      Patient Health\n    </ion-card-header>\n    <ion-card-content>\n      <canvas #Health></canvas>\n    </ion-card-content>\n  </ion-card>\n</ion-content>\n'/*ion-inline-end:"/home/tung/Documents/learnIonic/heart/src/pages/doctor-get/doctor-get.html"*/,
+            selector: 'page-doctor-get',template:/*ion-inline-start:"/home/tung/Documents/learnIonic/Heart_Health/src/pages/doctor-get/doctor-get.html"*/'<ion-header>\n\n</ion-header>\n\n\n<ion-content class="no-scroll" padding>\n  <ion-list>\n    <ion-item>\n      Name:         {{this.info.user.name}}\n    </ion-item>\n    <ion-item>\n      E-mail:      {{this.info.user.email}}\n    </ion-item>\n    <ion-label>Medicine List:</ion-label>\n    <ion-item *ngFor="let medicine of this.info.medicineList;">\n     {{medicine.medName}}\n    </ion-item>\n  </ion-list>\n  <ion-card>\n    <ion-card-header class="header">\n      Patient Health Score\n    </ion-card-header>\n    <ion-card-content>\n      <canvas #Health></canvas>\n    </ion-card-content>\n  </ion-card>\n</ion-content>\n'/*ion-inline-end:"/home/tung/Documents/learnIonic/Heart_Health/src/pages/doctor-get/doctor-get.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* NavParams */]])
     ], DoctorGetPage);
@@ -745,7 +705,7 @@ var DoctorGetPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 132:
+/***/ 133:
 /***/ (function(module, exports) {
 
 function webpackEmptyAsyncContext(req) {
@@ -758,7 +718,7 @@ function webpackEmptyAsyncContext(req) {
 webpackEmptyAsyncContext.keys = function() { return []; };
 webpackEmptyAsyncContext.resolve = webpackEmptyAsyncContext;
 module.exports = webpackEmptyAsyncContext;
-webpackEmptyAsyncContext.id = 132;
+webpackEmptyAsyncContext.id = 133;
 
 /***/ }),
 
@@ -768,10 +728,10 @@ webpackEmptyAsyncContext.id = 132;
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AuthServiceProvider; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_Observable__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_Observable__ = __webpack_require__(11);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_Observable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_rxjs_Observable__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_http__ = __webpack_require__(54);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map__ = __webpack_require__(391);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map__ = __webpack_require__(396);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__Info__ = __webpack_require__(113);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -792,8 +752,11 @@ var AuthServiceProvider = /** @class */ (function () {
     function AuthServiceProvider(http) {
         this.http = http;
         this.currentUserInfo = new __WEBPACK_IMPORTED_MODULE_4__Info__["b" /* Info */]();
+        // browser
         // API_URL: string = "http://localhost:8080/api/";
+        // test mechine local wifi ip
         // API_URL: string = "http://10.19.202.128:8080/api/";
+        // android studio emulator
         this.API_URL = "http://10.0.2.2:8080/api/";
     }
     AuthServiceProvider.prototype.login = function (credentials) {
@@ -864,76 +827,76 @@ var AuthServiceProvider = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 174:
+/***/ 175:
 /***/ (function(module, exports, __webpack_require__) {
 
 var map = {
 	"../pages/add-new-medicine/add-new-medicine.module": [
-		462,
+		467,
 		16
 	],
 	"../pages/article/article.module": [
-		464,
+		469,
 		15
 	],
 	"../pages/blood-preasure/blood-preasure.module": [
-		468,
+		473,
 		14
 	],
 	"../pages/change-doctor/change-doctor.module": [
-		469,
+		474,
 		13
 	],
 	"../pages/chart/chart.module": [
-		463,
+		468,
 		12
 	],
 	"../pages/doctor-get/doctor-get.module": [
-		471,
+		476,
 		11
 	],
 	"../pages/heart-rate/heart-rate.module": [
-		467,
+		472,
 		10
 	],
 	"../pages/home/home.module": [
-		473,
+		478,
 		2
 	],
 	"../pages/login/login.module": [
-		474,
+		479,
 		1
 	],
 	"../pages/medicine-detail/medicine-detail.module": [
-		460,
+		465,
 		9
 	],
 	"../pages/medicine-list/medicine-list.module": [
-		461,
+		466,
 		8
 	],
 	"../pages/medicine/medicine.module": [
-		466,
+		471,
 		7
 	],
 	"../pages/profile/profile.module": [
-		470,
+		475,
 		6
 	],
 	"../pages/register/register.module": [
-		475,
+		480,
 		0
 	],
 	"../pages/setting/setting.module": [
-		472,
+		477,
 		5
 	],
 	"../pages/splash/splash.module": [
-		459,
+		464,
 		4
 	],
 	"../pages/user-manual/user-manual.module": [
-		465,
+		470,
 		3
 	]
 };
@@ -948,12 +911,12 @@ function webpackAsyncContext(req) {
 webpackAsyncContext.keys = function webpackAsyncContextKeys() {
 	return Object.keys(map);
 };
-webpackAsyncContext.id = 174;
+webpackAsyncContext.id = 175;
 module.exports = webpackAsyncContext;
 
 /***/ }),
 
-/***/ 338:
+/***/ 337:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -965,7 +928,7 @@ module.exports = webpackAsyncContext;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__medicine_list_medicine_list__ = __webpack_require__(116);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_http__ = __webpack_require__(54);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__add_new_medicine_add_new_medicine__ = __webpack_require__(117);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_rxjs_add_operator_toPromise__ = __webpack_require__(439);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_rxjs_add_operator_toPromise__ = __webpack_require__(445);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_rxjs_add_operator_toPromise___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7_rxjs_add_operator_toPromise__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__chart_chart__ = __webpack_require__(60);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__article_article__ = __webpack_require__(118);
@@ -1025,12 +988,6 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
 
 
 
-/**
- * Generated class for the MedicinePage page.
- *
- * See http://ionicframework.com/docs/components/#navigation for more info
- * on Ionic pages and navigation.
- */
 var MedicinePage = /** @class */ (function () {
     function MedicinePage(navCtrl, barcodeScanner, auth, http) {
         this.navCtrl = navCtrl;
@@ -1111,7 +1068,7 @@ var MedicinePage = /** @class */ (function () {
     MedicinePage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* IonicPage */])(),
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-            selector: 'page-medicine',template:/*ion-inline-start:"/home/tung/Documents/learnIonic/heart/src/pages/medicine/medicine.html"*/'<!--\n  Generated template for the MedicinePage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n</ion-header>\n\n\n\n<ion-content class="no-scroll" id="quick_acc">\n  <div id="content">\n    <ion-fab center middle>\n\n      <button ion-fab color="primary"><ion-icon name="heart"></ion-icon></button>\n      <ion-fab-list side="top">\n        <button ion-fab color="red_dark"><ion-icon name="add" (click)="scanBarcode()"></ion-icon></button>\n      </ion-fab-list>\n      <ion-fab-list side="left">\n        <button ion-fab color="light"><ion-icon name="card" (click)="qrCode()" ></ion-icon></button>\n      </ion-fab-list>\n      <ion-fab-list side="right">\n        <button ion-fab color="dark"><ion-icon name="analytics" (click)="showChart()"></ion-icon></button>\n      </ion-fab-list>\n    </ion-fab>\n  </div>\n\n  <div class="card-background-page">\n\n    <ion-card (click)="showMedcines()">\n      <img src="assets/img/My-Medicines.jpg"/>\n      <div class="card-title">My Medicines</div>\n      <div class="card-subtitle">Check your medicines</div>\n    </ion-card>\n\n    <ion-card (click)="showTips()">\n      <img src="assets/img/Health-Tips.jpg"/>\n      <div class="card-title">Health Tips</div>\n      <div class="card-subtitle">Health Tips from Doctor</div>\n    </ion-card>\n\n    <ion-card (click)="showInfo()">\n      <img src="assets/img/Information.jpg"/>\n      <div class="card-title">Information</div>\n      <div class="card-subtitle">User Manual</div>\n    </ion-card>\n  </div>\n</ion-content>\n\n'/*ion-inline-end:"/home/tung/Documents/learnIonic/heart/src/pages/medicine/medicine.html"*/,
+            selector: 'page-medicine',template:/*ion-inline-start:"/home/tung/Documents/learnIonic/Heart_Health/src/pages/medicine/medicine.html"*/'<ion-header>\n\n</ion-header>\n\n\n\n<ion-content class="no-scroll" id="quick_acc">\n  <div id="content">\n    <ion-fab center middle>\n\n      <button ion-fab color="primary"><ion-icon name="heart"></ion-icon></button>\n      <ion-fab-list side="top">\n        <button ion-fab color="red_dark"><ion-icon name="add" (click)="scanBarcode()"></ion-icon></button>\n      </ion-fab-list>\n      <ion-fab-list side="left">\n        <button ion-fab color="light"><ion-icon name="card" (click)="qrCode()" ></ion-icon></button>\n      </ion-fab-list>\n      <ion-fab-list side="right">\n        <button ion-fab color="dark"><ion-icon name="analytics" (click)="showChart()"></ion-icon></button>\n      </ion-fab-list>\n    </ion-fab>\n  </div>\n\n  <div class="card-background-page">\n\n    <ion-card (click)="showMedcines()">\n      <img src="assets/img/My-Medicines.jpg"/>\n      <div class="card-title">My Medicines</div>\n      <div class="card-subtitle">Check your medicines</div>\n    </ion-card>\n\n    <ion-card (click)="showTips()">\n      <img src="assets/img/Health-Tips.jpg"/>\n      <div class="card-title">Health Tips</div>\n      <div class="card-subtitle">Health Tips from Doctor</div>\n    </ion-card>\n\n    <ion-card (click)="showInfo()">\n      <img src="assets/img/Information.jpg"/>\n      <div class="card-title">Information</div>\n      <div class="card-subtitle">User Manual</div>\n    </ion-card>\n  </div>\n</ion-content>\n\n'/*ion-inline-end:"/home/tung/Documents/learnIonic/Heart_Health/src/pages/medicine/medicine.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavController */],
             __WEBPACK_IMPORTED_MODULE_2__ionic_native_barcode_scanner__["a" /* BarcodeScanner */],
@@ -1125,7 +1082,7 @@ var MedicinePage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 339:
+/***/ 338:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1135,7 +1092,7 @@ var MedicinePage = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__heart_rate_heart_rate__ = __webpack_require__(120);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_auth_service_auth_service__ = __webpack_require__(17);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__blood_preasure_blood_preasure__ = __webpack_require__(121);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__ionic_native_call_number__ = __webpack_require__(297);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__ionic_native_call_number__ = __webpack_require__(296);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__chart_chart__ = __webpack_require__(60);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__change_doctor_change_doctor__ = __webpack_require__(122);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -1155,12 +1112,6 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-/**
- * Generated class for the ProfilePage page.
- *
- * See http://ionicframework.com/docs/components/#navigation for more info
- * on Ionic pages and navigation.
- */
 var ProfilePage = /** @class */ (function () {
     function ProfilePage(nav, auth, callNumber) {
         this.nav = nav;
@@ -1214,7 +1165,7 @@ var ProfilePage = /** @class */ (function () {
     ProfilePage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* IonicPage */])(),
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-            selector: 'page-profile',template:/*ion-inline-start:"/home/tung/Documents/learnIonic/heart/src/pages/profile/profile.html"*/'<!--\n  Generated template for the ProfilePage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n</ion-header>\n\n\n<ion-content class="no-scroll" padding>\n  <ion-card>\n\n    <ion-item>\n      <h2>{{auth.currentUserInfo.doctor.docName}}</h2>\n    </ion-item>\n    <img src="assets/img/doctor_yui2.jpg">\n\n    <ion-row>\n      <ion-col>\n        <button class="small-btn" ion-button icon-left clear small (press)="makeCall()">\n          <ion-icon name="call"></ion-icon>\n          <div>Make Call</div>\n        </button>\n      </ion-col>\n      <ion-col>\n        <button class="small-btn" ion-button icon-left clear small (click)="resetPhone()">\n          <ion-icon name="settings"></ion-icon>\n          <div>Change Number </div>\n        </button>\n      </ion-col>\n    </ion-row>\n\n  </ion-card>\n\n  <ion-list>\n    <button ion-item *ngFor="let item of items" (click)="openNavDetailsPage(item)" icon-start>\n      <ion-icon [name]="item.iconN" [ngStyle]="{\'color\': item.color}" item-start></ion-icon>\n      {{ item.title }}\n      <ion-icon name="arrow-dropright-circle" class="custom-icon" item-end></ion-icon>\n    </button>\n    <button ion-item (click)="openBPDetailsPage(bp)" icon-start>\n      <ion-icon [name]="bp.iconN" [ngStyle]="{\'color\': bp.color}" item-start></ion-icon>\n      {{ bp.title }}\n      <ion-icon name="arrow-dropright-circle" class="custom-icon" item-end></ion-icon>\n    </button>\n    <button ion-button class="btn" round clear (click)="goChart()">\n       Show Health Log <ion-icon name="arrow-dropright-circle" class="fig" itemid></ion-icon>\n    </button>\n\n  </ion-list>\n</ion-content>\n'/*ion-inline-end:"/home/tung/Documents/learnIonic/heart/src/pages/profile/profile.html"*/,
+            selector: 'page-profile',template:/*ion-inline-start:"/home/tung/Documents/learnIonic/Heart_Health/src/pages/profile/profile.html"*/'<ion-header>\n\n</ion-header>\n\n\n<ion-content class="no-scroll" padding>\n  <ion-card>\n\n    <ion-item>\n      <h2>{{auth.currentUserInfo.doctor.docName}}</h2>\n    </ion-item>\n    <img src="assets/img/doctor_yui2.jpg">\n\n    <ion-row>\n      <ion-col>\n        <button class="small-btn" ion-button\n                icon-left clear small (press)="makeCall()">\n          <ion-icon name="call"></ion-icon>\n          <div>Make Call</div>\n        </button>\n      </ion-col>\n      <ion-col>\n        <button class="small-btn" ion-button\n                icon-left clear small (click)="resetPhone()">\n          <ion-icon name="settings"></ion-icon>\n          <div>Change Number </div>\n        </button>\n      </ion-col>\n    </ion-row>\n\n  </ion-card>\n\n  <ion-list>\n    <button ion-item *ngFor="let item of items"\n            (click)="openNavDetailsPage(item)" icon-start>\n      <ion-icon [name]="item.iconN"\n                [ngStyle]="{\'color\': item.color}"\n                item-start>\n      </ion-icon>\n      {{ item.title }}\n      <ion-icon name="arrow-dropright-circle" class="custom-icon" item-end>\n      </ion-icon>\n    </button>\n    <button ion-item (click)="openBPDetailsPage(bp)" icon-start>\n      <ion-icon [name]="bp.iconN" [ngStyle]="{\'color\': bp.color}" item-start>\n      </ion-icon>\n      {{ bp.title }}\n      <ion-icon name="arrow-dropright-circle" class="custom-icon" item-end>\n      </ion-icon>\n    </button>\n    <button ion-button class="btn" round clear (click)="goChart()">\n       Show Health Log <ion-icon name="arrow-dropright-circle" class="fig" itemid>\n    </ion-icon>\n    </button>\n\n  </ion-list>\n</ion-content>\n'/*ion-inline-end:"/home/tung/Documents/learnIonic/Heart_Health/src/pages/profile/profile.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavController */],
             __WEBPACK_IMPORTED_MODULE_3__providers_auth_service_auth_service__["a" /* AuthServiceProvider */],
@@ -1227,7 +1178,7 @@ var ProfilePage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 340:
+/***/ 339:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1288,12 +1239,6 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
 
 
 
-/**
- * Generated class for the SettingPage page.
- *
- * See http://ionicframework.com/docs/components/#navigation for more info
- * on Ionic pages and navigation.
- */
 var SettingPage = /** @class */ (function () {
     function SettingPage(navCtrl, barcodeScanner, http, Auth) {
         this.navCtrl = navCtrl;
@@ -1333,7 +1278,7 @@ var SettingPage = /** @class */ (function () {
     SettingPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* IonicPage */])(),
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-            selector: 'page-setting',template:/*ion-inline-start:"/home/tung/Documents/learnIonic/heart/src/pages/setting/setting.html"*/'<!--\n  Generated template for the SettingPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n</ion-header>\n\n\n<ion-content class="no-scroll" padding>\n\n\n  <button ion-button color="primary" block class="btn" (click)="scanBarcode()" >I\'m Doctor</button>\n\n  <!--<button ion-button color="primary" block class="btn" (click)="saveBack()">Update</button>-->\n\n</ion-content>\n'/*ion-inline-end:"/home/tung/Documents/learnIonic/heart/src/pages/setting/setting.html"*/,
+            selector: 'page-setting',template:/*ion-inline-start:"/home/tung/Documents/learnIonic/Heart_Health/src/pages/setting/setting.html"*/'<ion-header>\n\n</ion-header>\n\n\n<ion-content class="no-scroll" padding>\n\n  <button ion-button color="primary" block class="btn" (click)="scanBarcode()">\n    I\'m Doctor\n  </button>\n\n</ion-content>\n'/*ion-inline-end:"/home/tung/Documents/learnIonic/Heart_Health/src/pages/setting/setting.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavController */],
             __WEBPACK_IMPORTED_MODULE_3__ionic_native_barcode_scanner__["a" /* BarcodeScanner */],
@@ -1347,13 +1292,13 @@ var SettingPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 341:
+/***/ 340:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(342);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(360);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(341);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(363);
 
 
 Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_1__app_module__["a" /* AppModule */]);
@@ -1361,7 +1306,7 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 
 /***/ }),
 
-/***/ 360:
+/***/ 363:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1370,16 +1315,16 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(13);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(88);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_status_bar__ = __webpack_require__(337);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_status_bar__ = __webpack_require__(336);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__ionic_native_barcode_scanner__ = __webpack_require__(91);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__angular_http__ = __webpack_require__(54);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__ionic_native_call_number__ = __webpack_require__(297);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__ionic_native_call_number__ = __webpack_require__(296);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__ionic_native_local_notifications__ = __webpack_require__(90);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__app_component__ = __webpack_require__(458);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__app_component__ = __webpack_require__(463);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__providers_auth_service_auth_service__ = __webpack_require__(17);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__pages_medicine_medicine__ = __webpack_require__(338);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__pages_profile_profile__ = __webpack_require__(339);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__pages_setting_setting__ = __webpack_require__(340);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__pages_medicine_medicine__ = __webpack_require__(337);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__pages_profile_profile__ = __webpack_require__(338);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__pages_setting_setting__ = __webpack_require__(339);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__pages_splash_splash__ = __webpack_require__(114);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__pages_heart_rate_heart_rate__ = __webpack_require__(120);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__pages_medicine_list_medicine_list__ = __webpack_require__(116);
@@ -1505,240 +1450,240 @@ var AppModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 421:
+/***/ 427:
 /***/ (function(module, exports, __webpack_require__) {
 
 var map = {
-	"./af": 182,
-	"./af.js": 182,
-	"./ar": 183,
-	"./ar-dz": 184,
-	"./ar-dz.js": 184,
-	"./ar-kw": 185,
-	"./ar-kw.js": 185,
-	"./ar-ly": 186,
-	"./ar-ly.js": 186,
-	"./ar-ma": 187,
-	"./ar-ma.js": 187,
-	"./ar-sa": 188,
-	"./ar-sa.js": 188,
-	"./ar-tn": 189,
-	"./ar-tn.js": 189,
-	"./ar.js": 183,
-	"./az": 190,
-	"./az.js": 190,
-	"./be": 191,
-	"./be.js": 191,
-	"./bg": 192,
-	"./bg.js": 192,
-	"./bn": 193,
-	"./bn.js": 193,
-	"./bo": 194,
-	"./bo.js": 194,
-	"./br": 195,
-	"./br.js": 195,
-	"./bs": 196,
-	"./bs.js": 196,
-	"./ca": 197,
-	"./ca.js": 197,
-	"./cs": 198,
-	"./cs.js": 198,
-	"./cv": 199,
-	"./cv.js": 199,
-	"./cy": 200,
-	"./cy.js": 200,
-	"./da": 201,
-	"./da.js": 201,
-	"./de": 202,
-	"./de-at": 203,
-	"./de-at.js": 203,
-	"./de-ch": 204,
-	"./de-ch.js": 204,
-	"./de.js": 202,
-	"./dv": 205,
-	"./dv.js": 205,
-	"./el": 206,
-	"./el.js": 206,
-	"./en-au": 207,
-	"./en-au.js": 207,
-	"./en-ca": 208,
-	"./en-ca.js": 208,
-	"./en-gb": 209,
-	"./en-gb.js": 209,
-	"./en-ie": 210,
-	"./en-ie.js": 210,
-	"./en-nz": 211,
-	"./en-nz.js": 211,
-	"./eo": 212,
-	"./eo.js": 212,
-	"./es": 213,
-	"./es-do": 214,
-	"./es-do.js": 214,
-	"./es.js": 213,
-	"./et": 215,
-	"./et.js": 215,
-	"./eu": 216,
-	"./eu.js": 216,
-	"./fa": 217,
-	"./fa.js": 217,
-	"./fi": 218,
-	"./fi.js": 218,
-	"./fo": 219,
-	"./fo.js": 219,
-	"./fr": 220,
-	"./fr-ca": 221,
-	"./fr-ca.js": 221,
-	"./fr-ch": 222,
-	"./fr-ch.js": 222,
-	"./fr.js": 220,
-	"./fy": 223,
-	"./fy.js": 223,
-	"./gd": 224,
-	"./gd.js": 224,
-	"./gl": 225,
-	"./gl.js": 225,
-	"./gom-latn": 226,
-	"./gom-latn.js": 226,
-	"./he": 227,
-	"./he.js": 227,
-	"./hi": 228,
-	"./hi.js": 228,
-	"./hr": 229,
-	"./hr.js": 229,
-	"./hu": 230,
-	"./hu.js": 230,
-	"./hy-am": 231,
-	"./hy-am.js": 231,
-	"./id": 232,
-	"./id.js": 232,
-	"./is": 233,
-	"./is.js": 233,
-	"./it": 234,
-	"./it.js": 234,
-	"./ja": 235,
-	"./ja.js": 235,
-	"./jv": 236,
-	"./jv.js": 236,
-	"./ka": 237,
-	"./ka.js": 237,
-	"./kk": 238,
-	"./kk.js": 238,
-	"./km": 239,
-	"./km.js": 239,
-	"./kn": 240,
-	"./kn.js": 240,
-	"./ko": 241,
-	"./ko.js": 241,
-	"./ky": 242,
-	"./ky.js": 242,
-	"./lb": 243,
-	"./lb.js": 243,
-	"./lo": 244,
-	"./lo.js": 244,
-	"./lt": 245,
-	"./lt.js": 245,
-	"./lv": 246,
-	"./lv.js": 246,
-	"./me": 247,
-	"./me.js": 247,
-	"./mi": 248,
-	"./mi.js": 248,
-	"./mk": 249,
-	"./mk.js": 249,
-	"./ml": 250,
-	"./ml.js": 250,
-	"./mr": 251,
-	"./mr.js": 251,
-	"./ms": 252,
-	"./ms-my": 253,
-	"./ms-my.js": 253,
-	"./ms.js": 252,
-	"./my": 254,
-	"./my.js": 254,
-	"./nb": 255,
-	"./nb.js": 255,
-	"./ne": 256,
-	"./ne.js": 256,
-	"./nl": 257,
-	"./nl-be": 258,
-	"./nl-be.js": 258,
-	"./nl.js": 257,
-	"./nn": 259,
-	"./nn.js": 259,
-	"./pa-in": 260,
-	"./pa-in.js": 260,
-	"./pl": 261,
-	"./pl.js": 261,
-	"./pt": 262,
-	"./pt-br": 263,
-	"./pt-br.js": 263,
-	"./pt.js": 262,
-	"./ro": 264,
-	"./ro.js": 264,
-	"./ru": 265,
-	"./ru.js": 265,
-	"./sd": 266,
-	"./sd.js": 266,
-	"./se": 267,
-	"./se.js": 267,
-	"./si": 268,
-	"./si.js": 268,
-	"./sk": 269,
-	"./sk.js": 269,
-	"./sl": 270,
-	"./sl.js": 270,
-	"./sq": 271,
-	"./sq.js": 271,
-	"./sr": 272,
-	"./sr-cyrl": 273,
-	"./sr-cyrl.js": 273,
-	"./sr.js": 272,
-	"./ss": 274,
-	"./ss.js": 274,
-	"./sv": 275,
-	"./sv.js": 275,
-	"./sw": 276,
-	"./sw.js": 276,
-	"./ta": 277,
-	"./ta.js": 277,
-	"./te": 278,
-	"./te.js": 278,
-	"./tet": 279,
-	"./tet.js": 279,
-	"./th": 280,
-	"./th.js": 280,
-	"./tl-ph": 281,
-	"./tl-ph.js": 281,
-	"./tlh": 282,
-	"./tlh.js": 282,
-	"./tr": 283,
-	"./tr.js": 283,
-	"./tzl": 284,
-	"./tzl.js": 284,
-	"./tzm": 285,
-	"./tzm-latn": 286,
-	"./tzm-latn.js": 286,
-	"./tzm.js": 285,
-	"./uk": 287,
-	"./uk.js": 287,
-	"./ur": 288,
-	"./ur.js": 288,
-	"./uz": 289,
-	"./uz-latn": 290,
-	"./uz-latn.js": 290,
-	"./uz.js": 289,
-	"./vi": 291,
-	"./vi.js": 291,
-	"./x-pseudo": 292,
-	"./x-pseudo.js": 292,
-	"./yo": 293,
-	"./yo.js": 293,
-	"./zh-cn": 294,
-	"./zh-cn.js": 294,
-	"./zh-hk": 295,
-	"./zh-hk.js": 295,
-	"./zh-tw": 296,
-	"./zh-tw.js": 296
+	"./af": 181,
+	"./af.js": 181,
+	"./ar": 182,
+	"./ar-dz": 183,
+	"./ar-dz.js": 183,
+	"./ar-kw": 184,
+	"./ar-kw.js": 184,
+	"./ar-ly": 185,
+	"./ar-ly.js": 185,
+	"./ar-ma": 186,
+	"./ar-ma.js": 186,
+	"./ar-sa": 187,
+	"./ar-sa.js": 187,
+	"./ar-tn": 188,
+	"./ar-tn.js": 188,
+	"./ar.js": 182,
+	"./az": 189,
+	"./az.js": 189,
+	"./be": 190,
+	"./be.js": 190,
+	"./bg": 191,
+	"./bg.js": 191,
+	"./bn": 192,
+	"./bn.js": 192,
+	"./bo": 193,
+	"./bo.js": 193,
+	"./br": 194,
+	"./br.js": 194,
+	"./bs": 195,
+	"./bs.js": 195,
+	"./ca": 196,
+	"./ca.js": 196,
+	"./cs": 197,
+	"./cs.js": 197,
+	"./cv": 198,
+	"./cv.js": 198,
+	"./cy": 199,
+	"./cy.js": 199,
+	"./da": 200,
+	"./da.js": 200,
+	"./de": 201,
+	"./de-at": 202,
+	"./de-at.js": 202,
+	"./de-ch": 203,
+	"./de-ch.js": 203,
+	"./de.js": 201,
+	"./dv": 204,
+	"./dv.js": 204,
+	"./el": 205,
+	"./el.js": 205,
+	"./en-au": 206,
+	"./en-au.js": 206,
+	"./en-ca": 207,
+	"./en-ca.js": 207,
+	"./en-gb": 208,
+	"./en-gb.js": 208,
+	"./en-ie": 209,
+	"./en-ie.js": 209,
+	"./en-nz": 210,
+	"./en-nz.js": 210,
+	"./eo": 211,
+	"./eo.js": 211,
+	"./es": 212,
+	"./es-do": 213,
+	"./es-do.js": 213,
+	"./es.js": 212,
+	"./et": 214,
+	"./et.js": 214,
+	"./eu": 215,
+	"./eu.js": 215,
+	"./fa": 216,
+	"./fa.js": 216,
+	"./fi": 217,
+	"./fi.js": 217,
+	"./fo": 218,
+	"./fo.js": 218,
+	"./fr": 219,
+	"./fr-ca": 220,
+	"./fr-ca.js": 220,
+	"./fr-ch": 221,
+	"./fr-ch.js": 221,
+	"./fr.js": 219,
+	"./fy": 222,
+	"./fy.js": 222,
+	"./gd": 223,
+	"./gd.js": 223,
+	"./gl": 224,
+	"./gl.js": 224,
+	"./gom-latn": 225,
+	"./gom-latn.js": 225,
+	"./he": 226,
+	"./he.js": 226,
+	"./hi": 227,
+	"./hi.js": 227,
+	"./hr": 228,
+	"./hr.js": 228,
+	"./hu": 229,
+	"./hu.js": 229,
+	"./hy-am": 230,
+	"./hy-am.js": 230,
+	"./id": 231,
+	"./id.js": 231,
+	"./is": 232,
+	"./is.js": 232,
+	"./it": 233,
+	"./it.js": 233,
+	"./ja": 234,
+	"./ja.js": 234,
+	"./jv": 235,
+	"./jv.js": 235,
+	"./ka": 236,
+	"./ka.js": 236,
+	"./kk": 237,
+	"./kk.js": 237,
+	"./km": 238,
+	"./km.js": 238,
+	"./kn": 239,
+	"./kn.js": 239,
+	"./ko": 240,
+	"./ko.js": 240,
+	"./ky": 241,
+	"./ky.js": 241,
+	"./lb": 242,
+	"./lb.js": 242,
+	"./lo": 243,
+	"./lo.js": 243,
+	"./lt": 244,
+	"./lt.js": 244,
+	"./lv": 245,
+	"./lv.js": 245,
+	"./me": 246,
+	"./me.js": 246,
+	"./mi": 247,
+	"./mi.js": 247,
+	"./mk": 248,
+	"./mk.js": 248,
+	"./ml": 249,
+	"./ml.js": 249,
+	"./mr": 250,
+	"./mr.js": 250,
+	"./ms": 251,
+	"./ms-my": 252,
+	"./ms-my.js": 252,
+	"./ms.js": 251,
+	"./my": 253,
+	"./my.js": 253,
+	"./nb": 254,
+	"./nb.js": 254,
+	"./ne": 255,
+	"./ne.js": 255,
+	"./nl": 256,
+	"./nl-be": 257,
+	"./nl-be.js": 257,
+	"./nl.js": 256,
+	"./nn": 258,
+	"./nn.js": 258,
+	"./pa-in": 259,
+	"./pa-in.js": 259,
+	"./pl": 260,
+	"./pl.js": 260,
+	"./pt": 261,
+	"./pt-br": 262,
+	"./pt-br.js": 262,
+	"./pt.js": 261,
+	"./ro": 263,
+	"./ro.js": 263,
+	"./ru": 264,
+	"./ru.js": 264,
+	"./sd": 265,
+	"./sd.js": 265,
+	"./se": 266,
+	"./se.js": 266,
+	"./si": 267,
+	"./si.js": 267,
+	"./sk": 268,
+	"./sk.js": 268,
+	"./sl": 269,
+	"./sl.js": 269,
+	"./sq": 270,
+	"./sq.js": 270,
+	"./sr": 271,
+	"./sr-cyrl": 272,
+	"./sr-cyrl.js": 272,
+	"./sr.js": 271,
+	"./ss": 273,
+	"./ss.js": 273,
+	"./sv": 274,
+	"./sv.js": 274,
+	"./sw": 275,
+	"./sw.js": 275,
+	"./ta": 276,
+	"./ta.js": 276,
+	"./te": 277,
+	"./te.js": 277,
+	"./tet": 278,
+	"./tet.js": 278,
+	"./th": 279,
+	"./th.js": 279,
+	"./tl-ph": 280,
+	"./tl-ph.js": 280,
+	"./tlh": 281,
+	"./tlh.js": 281,
+	"./tr": 282,
+	"./tr.js": 282,
+	"./tzl": 283,
+	"./tzl.js": 283,
+	"./tzm": 284,
+	"./tzm-latn": 285,
+	"./tzm-latn.js": 285,
+	"./tzm.js": 284,
+	"./uk": 286,
+	"./uk.js": 286,
+	"./ur": 287,
+	"./ur.js": 287,
+	"./uz": 288,
+	"./uz-latn": 289,
+	"./uz-latn.js": 289,
+	"./uz.js": 288,
+	"./vi": 290,
+	"./vi.js": 290,
+	"./x-pseudo": 291,
+	"./x-pseudo.js": 291,
+	"./yo": 292,
+	"./yo.js": 292,
+	"./zh-cn": 293,
+	"./zh-cn.js": 293,
+	"./zh-hk": 294,
+	"./zh-hk.js": 294,
+	"./zh-tw": 295,
+	"./zh-tw.js": 295
 };
 function webpackContext(req) {
 	return __webpack_require__(webpackContextResolve(req));
@@ -1754,18 +1699,18 @@ webpackContext.keys = function webpackContextKeys() {
 };
 webpackContext.resolve = webpackContextResolve;
 module.exports = webpackContext;
-webpackContext.id = 421;
+webpackContext.id = 427;
 
 /***/ }),
 
-/***/ 458:
+/***/ 463:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HeartLink; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(13);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(337);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(336);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(88);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_splash_splash__ = __webpack_require__(114);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -1792,7 +1737,7 @@ var HeartLink = /** @class */ (function () {
         });
     }
     HeartLink = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({template:/*ion-inline-start:"/home/tung/Documents/learnIonic/heart/src/app/app.html"*/'<ion-nav [root]="rootPage"></ion-nav>\n'/*ion-inline-end:"/home/tung/Documents/learnIonic/heart/src/app/app.html"*/
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({template:/*ion-inline-start:"/home/tung/Documents/learnIonic/Heart_Health/src/app/app.html"*/'<ion-nav [root]="rootPage"></ion-nav>\n'/*ion-inline-end:"/home/tung/Documents/learnIonic/Heart_Health/src/app/app.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* Platform */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* ModalController */]])
     ], HeartLink);
@@ -1811,7 +1756,7 @@ var HeartLink = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(13);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_auth_service_auth_service__ = __webpack_require__(17);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_chart_js__ = __webpack_require__(176);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_chart_js__ = __webpack_require__(177);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_chart_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_chart_js__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -1826,12 +1771,6 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-/**
- * Generated class for the ChartPage page.
- *
- * See http://ionicframework.com/docs/components/#navigation for more info
- * on Ionic pages and navigation.
- */
 var ChartPage = /** @class */ (function () {
     function ChartPage(navCtrl, navParams, auth) {
         this.navCtrl = navCtrl;
@@ -2057,31 +1996,30 @@ var ChartPage = /** @class */ (function () {
             }
         });
     };
-    ChartPage.prototype.back = function () {
-        this.navCtrl.pop();
-    };
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_14" /* ViewChild */])('Emotion'),
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_13" /* ViewChild */])('Emotion'),
         __metadata("design:type", Object)
     ], ChartPage.prototype, "Emotion", void 0);
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_14" /* ViewChild */])('BP'),
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_13" /* ViewChild */])('BP'),
         __metadata("design:type", Object)
     ], ChartPage.prototype, "BP", void 0);
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_14" /* ViewChild */])('heart_rate'),
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_13" /* ViewChild */])('heart_rate'),
         __metadata("design:type", Object)
     ], ChartPage.prototype, "heart_rate", void 0);
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_14" /* ViewChild */])('bmi'),
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_13" /* ViewChild */])('bmi'),
         __metadata("design:type", Object)
     ], ChartPage.prototype, "bmi", void 0);
     ChartPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* IonicPage */])(),
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-            selector: 'page-chart',template:/*ion-inline-start:"/home/tung/Documents/learnIonic/heart/src/pages/chart/chart.html"*/'<!--\n  Generated template for the ChartPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n</ion-header>\n\n\n<ion-content class="no-scroll" padding>\n  <ion-card>\n    <ion-card-header class="header">\n      Heart Rate\n    </ion-card-header>\n    <ion-card-content>\n      <canvas #heart_rate></canvas>\n    </ion-card-content>\n  </ion-card>\n\n  <ion-card>\n    <ion-card-header class="header">\n      Blood Pressure\n    </ion-card-header>\n    <ion-card-content>\n      <canvas #BP></canvas>\n    </ion-card-content>\n  </ion-card>\n\n  <ion-card>\n    <ion-card-header class="header">\n      BMI\n    </ion-card-header>\n    <ion-card-content>\n      <canvas #bmi></canvas>\n    </ion-card-content>\n  </ion-card>\n\n  <ion-card>\n    <ion-card-header class="header">\n      Emotion\n    </ion-card-header>\n    <ion-card-content>\n      <canvas #Emotion></canvas>\n    </ion-card-content>\n  </ion-card>\n</ion-content>\n'/*ion-inline-end:"/home/tung/Documents/learnIonic/heart/src/pages/chart/chart.html"*/,
+            selector: 'page-chart',template:/*ion-inline-start:"/home/tung/Documents/learnIonic/Heart_Health/src/pages/chart/chart.html"*/'<ion-header>\n\n</ion-header>\n\n\n<ion-content class="no-scroll" padding>\n  <ion-card>\n    <ion-card-header class="header">\n      Heart Rate\n    </ion-card-header>\n    <ion-card-content>\n      <canvas #heart_rate></canvas>\n    </ion-card-content>\n  </ion-card>\n\n  <ion-card>\n    <ion-card-header class="header">\n      Blood Pressure\n    </ion-card-header>\n    <ion-card-content>\n      <canvas #BP></canvas>\n    </ion-card-content>\n  </ion-card>\n\n  <ion-card>\n    <ion-card-header class="header">\n      BMI\n    </ion-card-header>\n    <ion-card-content>\n      <canvas #bmi></canvas>\n    </ion-card-content>\n  </ion-card>\n\n  <ion-card>\n    <ion-card-header class="header">\n      Emotion\n    </ion-card-header>\n    <ion-card-content>\n      <canvas #Emotion></canvas>\n    </ion-card-content>\n  </ion-card>\n</ion-content>\n'/*ion-inline-end:"/home/tung/Documents/learnIonic/Heart_Health/src/pages/chart/chart.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__providers_auth_service_auth_service__["a" /* AuthServiceProvider */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavController */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* NavParams */],
+            __WEBPACK_IMPORTED_MODULE_2__providers_auth_service_auth_service__["a" /* AuthServiceProvider */]])
     ], ChartPage);
     return ChartPage;
 }());
@@ -2090,5 +2028,5 @@ var ChartPage = /** @class */ (function () {
 
 /***/ })
 
-},[341]);
+},[340]);
 //# sourceMappingURL=main.js.map

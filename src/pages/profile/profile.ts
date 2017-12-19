@@ -7,13 +7,6 @@ import { CallNumber } from '@ionic-native/call-number';
 import { ChartPage} from "../chart/chart";
 import { ChangeDoctorPage} from "../change-doctor/change-doctor";
 
-/**
- * Generated class for the ProfilePage page.
- *
- * See http://ionicframework.com/docs/components/#navigation for more info
- * on Ionic pages and navigation.
- */
-
 @IonicPage()
 @Component({
   selector: 'page-profile',
