@@ -1,14 +1,21 @@
 
 # Heart Link App User Manual
 ## 0. Contribute or Modify
+0. There is a demo video from my business partner to show how to use this App:
+<br/>***[Demo Video](https://www.youtube.com/watch?v=axoGf56lM9w&t=122s)***
 
-1. If you like, please fork the [GitHub](https://github.com/zen-z0ri/Heart_Health) and contribute.
-2.  The App is built by Ionic and Cordova. The test back-end is built by Node.js and MongoDB.
-  * Node.js --> v8.4.0
-  * npm  --> v4.2.0 
-  * MongoDB --> v3.4.9
+1.  The App is built by Ionic and Cordova. The test back-end is built by Node.js and MongoDB.
+
+  | Dependence    |Version  |
+  |:---------------:|:-----:|
+  | Node.js       | v7.8.0 |
+  | npm           | v4.2.0 |
+  | MongoDB       | v3.4.10 |
+  | Ionic         | v3.19.0|
+  | Cordova        | v7.1.0|
+  | Typescript     | v2.5.2 |
   * For more information please see ```Heart_healh/package.json ```, ```Heart_healh/server/package.json ``` and other config file.
-3. Config environment:
+2. Config environment:
   <br/>3.1 ```$ npm install``` at **Heart_healh** folder
   <br/>3.2 ```$ npm install``` at **Heart_healh/server** folder
   <br/>3.3 Start service of MongoDB.
@@ -16,13 +23,13 @@
   ```$ mongoimport --jsonArray --db heart --collection information --file sampleData.json```
   <br/>3.5 Start the server js at **Heart_healh/server** folder: ```$ node server.js```
   <br/>3.6 Change the file **Heart_healh/src/providers/auth-service/auth-service.ts** to connect your local host: change
-  ```javascript 
-  API_URL: string = "http://10.19.202.128:8080/api/";
-  ```
-    to your own ip of server. exp ```10.19.202.128``` to ```123.13.203.13```
+    ```javascript 
+    API_URL: string = "http://10.19.202.128:8080/api/";
+    ```
+      to your own ip of server. For example ```10.19.202.128``` to ```123.13.203.13```
   <br/>3.7 Start ionic build at **Heart_healh** folder: see [GitHub](http://ionicframework.com/) and [Cordova](https://cordova.apache.org/)
 <br/>
-4. The issue you might have:
+3. The issues you might have:
   * [Failed to connect to 127.0.0.1:27017, reason: errno:111 Connection refused](https://stackoverflow.com/questions/26211671/failed-to-connect-to-127-0-0-127017-reason-errno111-connection-refused)
   * [cordova run android executes fine. But Android doesn't start the app](https://stackoverflow.com/questions/29956031/cordova-run-android-executes-fine-but-android-4-1-2-doesnt-start-the-app)
   * [Could not install ‘node_modules/cordova-plugin-app-event’](https://forum.ionicframework.com/t/could-not-install-node-modules-cordova-plugin-app-event/106810)
