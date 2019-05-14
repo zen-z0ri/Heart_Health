@@ -2,7 +2,7 @@
 # Heart Link App User Manual
 ## 0. Contribute or Modify
 0. There is a demo video from my business partner to show how to use this App:
-<br/>***[Demo Video](https://www.youtube.com/watch?v=axoGf56lM9w&t=122s)***
+<br/>***[Demo Video](https://www.bilibili.com/video/av52436137)***
 
 1.  The App is built by Ionic and Cordova. The test back-end is built by Node.js and MongoDB.
 
